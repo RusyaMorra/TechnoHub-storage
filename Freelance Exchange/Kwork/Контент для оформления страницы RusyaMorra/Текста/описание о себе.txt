@@ -1,0 +1,10 @@
+Fullstack developer - Php/Python/Js
+
+_____________________________________
+Специализация и навыки:
+? Языки: PHP, JS,python, HTML5, CSS3
+? Фреймворки:react,vue,laravel,django
+? CMS:Wordpress, Opencart и другие
+? Чистый код
+? Так же: Дизайн, CEO и Маркетинг на базовом уровне
+_____________________________________

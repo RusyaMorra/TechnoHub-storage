@@ -1,0 +1,42 @@
+[
+    {
+        "id": 1,
+        "tag-name": "All Photo"
+    },
+    {
+        "id": 2,
+        "tag-name": "Paper Work"
+    },
+    {
+        "id": 3,
+        "tag-name": "Portal"
+    },
+    {
+        "id": 4,
+        "tag-name": "Phlegm"
+    },
+    {
+        "id": 5,
+        "tag-name": "Compact"
+    },
+    {
+        "id": 6,
+        "tag-name": "Jellyfish"
+    },
+    {
+        "id": 7,
+        "tag-name": "Series"
+    },
+    {
+        "id": 8,
+        "tag-name": "Single"
+    },
+    {
+        "id": 9,
+        "tag-name": "Colored"
+    },
+    {
+        "id": 10,
+        "tag-name": "B&W"
+    }
+]

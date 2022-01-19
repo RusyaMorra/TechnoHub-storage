@@ -1,0 +1,77 @@
+[
+    {
+        "id": 1,
+        "name": "название",
+        "neccessarily": true,
+        "is-default": true,
+        "photo": {
+            "photo-path-1": "src/img/пример-фото.jpeg"
+        },
+        "year-of-creation": null,
+        "tags": true,
+        "colored": true,
+        "description": true,
+        "is-available": false,
+        "if-available": {
+            "size": true,
+            "link": "http://",
+            "price": null,
+            "tirage-is-open": true,
+            "if-tirage-is-open": {
+                "is-available": false,
+                "number of instances": 30,
+                "current instance": "название экземпляра"
+            }
+        }
+    },
+    {
+        "id": 2,
+        "name": "название",
+        "neccessarily": true,
+        "is-default": true,
+        "photo": {
+            "photo-path-1": "src/img/пример-фото.jpeg"
+        },
+        "year-of-creation": null,
+        "tags": true,
+        "colored": true,
+        "description": true,
+        "is-available": false,
+        "if-available": {
+            "size": true,
+            "link": "http://",
+            "price": null,
+            "tirage-is-open": true,
+            "if-tirage-is-open": {
+                "is-available": false,
+                "number of instances": 30,
+                "current instance": "название экземпляра"
+            }
+        }
+    },
+    {
+        "id": 3,
+        "name": "название",
+        "neccessarily": true,
+        "is-default": true,
+        "photo": {
+            "photo-path-1": "src/img/пример-фото.jpeg"
+        },
+        "year-of-creation": null,
+        "tags": true,
+        "colored": true,
+        "description": true,
+        "is-available": false,
+        "if-available": {
+            "size": true,
+            "link": "http://",
+            "price": null,
+            "tirage-is-open": true,
+            "if-tirage-is-open": {
+                "is-available": false,
+                "number of instances": 30,
+                "current instance": "название экземпляра"
+            }
+        }
+    }
+]

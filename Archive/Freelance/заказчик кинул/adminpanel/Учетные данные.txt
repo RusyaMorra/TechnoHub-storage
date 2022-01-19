@@ -1,0 +1,8 @@
+name:Walter
+surname:Sullivan
+user:admin
+mail:admin@mail.ru
+password:123456789qQ
+
+
+в вкладке Setting/Users - поменяйте потом как вам нужно 

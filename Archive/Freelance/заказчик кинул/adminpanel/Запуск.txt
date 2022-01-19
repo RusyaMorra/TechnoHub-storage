@@ -1,0 +1,7 @@
+Полная документация: https://docs.strapi.io/developer-docs/latest/setup-deployment-guides/deployment.html
+Для работы нужно: node.js,npm
+
+
+
+
+Запуск в режиме разработки (имееться доступ до структуры в админке) - npm run develop

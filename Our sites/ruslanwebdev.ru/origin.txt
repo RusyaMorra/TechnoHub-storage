@@ -1,0 +1,424 @@
+Uri: https://alexwebdev.pro/
+File Name: c:\Downloaded Web Sites\alexwebdev.pro\index.htm
+Content Type: text/html
+
+Uri: https://alexwebdev.pro/wp-content/plugins/wp-rocket/assets/img/youtube.png
+File Name: c:\Downloaded Web Sites\alexwebdev.pro\wp-content\plugins\wp-rocket\assets\img\youtube.png
+Content Type: image/png
+
+Uri: https://alexwebdev.pro/wp-content/uploads/2017/05/bg.png
+File Name: c:\Downloaded Web Sites\alexwebdev.pro\wp-content\uploads\2017\05\bg.png
+Content Type: image/png
+
+Uri: https://alexwebdev.pro/wp-content/uploads/2018/10/icons8-internet-50.png
+File Name: c:\Downloaded Web Sites\alexwebdev.pro\wp-content\uploads\2018\10\icons8-internet-50.png
+Content Type: image/png
+
+Uri: https://alexwebdev.pro/wp-content/cache/min/1/c26fc67519af08dfb590b7d04c08df0f.css
+File Name: c:\Downloaded Web Sites\alexwebdev.pro\wp-content\cache\min\1\c26fc67519af08dfb590b7d04c08df0f.css
+Content Type: text/css
+
+Uri: https://alexwebdev.pro/feed/
+File Name: c:\Downloaded Web Sites\alexwebdev.pro\feed\index.rss
+Content Type: application/rss+xml
+
+Uri: https://alexwebdev.pro/wp-json/
+File Name: c:\Downloaded Web Sites\alexwebdev.pro\wp-json\index.json
+Content Type: application/json
+
+Uri: https://alexwebdev.pro/wp-json/wp/v2/pages/4
+File Name: c:\Downloaded Web Sites\alexwebdev.pro\wp-json\wp\v2\pages\4.json
+Content Type: application/json
+
+Uri: https://alexwebdev.pro/xmlrpc.php?rsd
+File Name: c:\Downloaded Web Sites\alexwebdev.pro\xmlrpc.xml
+Content Type: text/xml
+
+Uri: https://alexwebdev.pro/wp-includes/wlwmanifest.xml
+File Name: c:\Downloaded Web Sites\alexwebdev.pro\wp-includes\wlwmanifest.xml
+Content Type: text/xml
+
+Uri: https://alexwebdev.pro/project/moood-ru/
+File Name: c:\Downloaded Web Sites\alexwebdev.pro\project\moood-ru\index.htm
+Content Type: text/html
+
+Uri: https://alexwebdev.pro/project/remont-oknauk-kz/
+File Name: c:\Downloaded Web Sites\alexwebdev.pro\project\remont-oknauk-kz\index.htm
+Content Type: text/html
+
+Uri: https://alexwebdev.pro/project/elado-by/
+File Name: c:\Downloaded Web Sites\alexwebdev.pro\project\elado-by\index.htm
+Content Type: text/html
+
+Uri: https://alexwebdev.pro/project/amberkid-ru/
+File Name: c:\Downloaded Web Sites\alexwebdev.pro\project\amberkid-ru\index.htm
+Content Type: text/html
+
+Uri: https://alexwebdev.pro/project/sportguard-ru/
+File Name: c:\Downloaded Web Sites\alexwebdev.pro\project\sportguard-ru\index.htm
+Content Type: text/html
+
+Uri: https://alexwebdev.pro/project/medisart-ru/
+File Name: c:\Downloaded Web Sites\alexwebdev.pro\project\medisart-ru\index.htm
+Content Type: text/html
+
+Uri: https://alexwebdev.pro/project/inplastblagrb-ru/
+File Name: c:\Downloaded Web Sites\alexwebdev.pro\project\inplastblagrb-ru\index.htm
+Content Type: text/html
+
+Uri: https://alexwebdev.pro/project/http-etc-86-ru/
+File Name: c:\Downloaded Web Sites\alexwebdev.pro\project\http-etc-86-ru\index.htm
+Content Type: text/html
+
+Uri: https://alexwebdev.pro/project/refrestore-ru/
+File Name: c:\Downloaded Web Sites\alexwebdev.pro\project\refrestore-ru\index.htm
+Content Type: text/html
+
+Uri: https://alexwebdev.pro/wp-content/cache/busting/1/wp-includes/js/jquery/jquery.min-3.6.0.js
+File Name: c:\Downloaded Web Sites\alexwebdev.pro\wp-content\cache\busting\1\wp-includes\js\jquery\jquery.min-3.6.0.js
+Content Type: application/javascript
+
+Uri: https://alexwebdev.pro/wp-content/uploads/2018/10/20181004_122520.jpg
+File Name: c:\Downloaded Web Sites\alexwebdev.pro\wp-content\uploads\2018\10\20181004_122520.jpg
+Content Type: image/jpeg
+
+Uri: https://alexwebdev.pro/wp-content/uploads/2018/10/photo.jpg
+File Name: c:\Downloaded Web Sites\alexwebdev.pro\wp-content\uploads\2018\10\photo.jpg
+Content Type: image/jpeg
+
+Uri: https://alexwebdev.pro/wp-content/uploads/2017/05/web_design_icon.png
+File Name: c:\Downloaded Web Sites\alexwebdev.pro\wp-content\uploads\2017\05\web_design_icon.png
+Content Type: image/png
+
+Uri: https://alexwebdev.pro/wp-content/uploads/2017/05/photography_icon.png
+File Name: c:\Downloaded Web Sites\alexwebdev.pro\wp-content\uploads\2017\05\photography_icon.png
+Content Type: image/png
+
+Uri: https://alexwebdev.pro/wp-content/uploads/2017/05/creativity_icon.png
+File Name: c:\Downloaded Web Sites\alexwebdev.pro\wp-content\uploads\2017\05\creativity_icon.png
+Content Type: image/png
+
+Uri: https://alexwebdev.pro/wp-content/uploads/2017/05/advetising_icon.png
+File Name: c:\Downloaded Web Sites\alexwebdev.pro\wp-content\uploads\2017\05\advetising_icon.png
+Content Type: image/png
+
+Uri: https://alexwebdev.pro/wp-content/uploads/2017/05/testimonial_photo_1.jpg
+File Name: c:\Downloaded Web Sites\alexwebdev.pro\wp-content\uploads\2017\05\testimonial_photo_1.jpg
+Content Type: image/jpeg
+
+Uri: https://alexwebdev.pro/wp-content/uploads/2018/10/mooood.ru_.png
+File Name: c:\Downloaded Web Sites\alexwebdev.pro\wp-content\uploads\2018\10\mooood.ru_.png
+Content Type: image/png
+
+Uri: https://alexwebdev.pro/wp-content/uploads/2018/10/remont.oknauk.kz_.jpg
+File Name: c:\Downloaded Web Sites\alexwebdev.pro\wp-content\uploads\2018\10\remont.oknauk.kz_.jpg
+Content Type: image/jpeg
+
+Uri: https://alexwebdev.pro/wp-content/uploads/2018/10/elado.by_.png
+File Name: c:\Downloaded Web Sites\alexwebdev.pro\wp-content\uploads\2018\10\elado.by_.png
+Content Type: image/png
+
+Uri: https://alexwebdev.pro/wp-content/uploads/2018/10/amberkid.ru_.png
+File Name: c:\Downloaded Web Sites\alexwebdev.pro\wp-content\uploads\2018\10\amberkid.ru_.png
+Content Type: image/png
+
+Uri: https://alexwebdev.pro/wp-content/uploads/2018/10/sportguard.png
+File Name: c:\Downloaded Web Sites\alexwebdev.pro\wp-content\uploads\2018\10\sportguard.png
+Content Type: image/png
+
+Uri: https://alexwebdev.pro/wp-content/uploads/2018/10/medisart.png
+File Name: c:\Downloaded Web Sites\alexwebdev.pro\wp-content\uploads\2018\10\medisart.png
+Content Type: image/png
+
+Uri: https://alexwebdev.pro/wp-content/uploads/2018/10/Inplast.jpg
+File Name: c:\Downloaded Web Sites\alexwebdev.pro\wp-content\uploads\2018\10\Inplast.jpg
+Content Type: image/jpeg
+
+Uri: https://alexwebdev.pro/wp-content/uploads/2018/10/chrome_2018-10-30_19-30-50.png
+File Name: c:\Downloaded Web Sites\alexwebdev.pro\wp-content\uploads\2018\10\chrome_2018-10-30_19-30-50.png
+Content Type: image/png
+
+Uri: https://alexwebdev.pro/wp-content/uploads/2018/10/refrestore.jpg
+File Name: c:\Downloaded Web Sites\alexwebdev.pro\wp-content\uploads\2018\10\refrestore.jpg
+Content Type: image/jpeg
+
+Uri: https://alexwebdev.pro/wp-content/plugins/wp-rocket/assets/js/lazyload/11.0.6/lazyload.min.js
+File Name: c:\Downloaded Web Sites\alexwebdev.pro\wp-content\plugins\wp-rocket\assets\js\lazyload\11.0.6\lazyload.min.js
+Content Type: application/javascript
+
+Uri: https://alexwebdev.pro/wp-content/cache/min/1/a99a255931dbfb3bd45785631afcece9.js
+File Name: c:\Downloaded Web Sites\alexwebdev.pro\wp-content\cache\min\1\a99a255931dbfb3bd45785631afcece9.js
+Content Type: application/javascript
+
+Uri: https://alexwebdev.pro/wp-content/uploads/2018/10/mooood.ru_-300x149.png
+File Name: c:\Downloaded Web Sites\alexwebdev.pro\wp-content\uploads\2018\10\mooood.ru_-300x149.png
+Content Type: image/png
+
+Uri: https://alexwebdev.pro/wp-content/uploads/2018/10/mooood.ru_-768x383.png
+File Name: c:\Downloaded Web Sites\alexwebdev.pro\wp-content\uploads\2018\10\mooood.ru_-768x383.png
+Content Type: image/png
+
+Uri: https://alexwebdev.pro/wp-content/uploads/2018/10/mooood.ru_-1024x510.png
+File Name: c:\Downloaded Web Sites\alexwebdev.pro\wp-content\uploads\2018\10\mooood.ru_-1024x510.png
+Content Type: image/png
+
+Uri: https://alexwebdev.pro/wp-content/uploads/2018/10/remont.oknauk.kz_-300x148.jpg
+File Name: c:\Downloaded Web Sites\alexwebdev.pro\wp-content\uploads\2018\10\remont.oknauk.kz_-300x148.jpg
+Content Type: image/jpeg
+
+Uri: https://alexwebdev.pro/wp-content/uploads/2018/10/remont.oknauk.kz_-768x380.jpg
+File Name: c:\Downloaded Web Sites\alexwebdev.pro\wp-content\uploads\2018\10\remont.oknauk.kz_-768x380.jpg
+Content Type: image/jpeg
+
+Uri: https://alexwebdev.pro/wp-content/uploads/2018/10/remont.oknauk.kz_-1024x507.jpg
+File Name: c:\Downloaded Web Sites\alexwebdev.pro\wp-content\uploads\2018\10\remont.oknauk.kz_-1024x507.jpg
+Content Type: image/jpeg
+
+Uri: https://alexwebdev.pro/wp-content/uploads/2018/10/elado.by_-300x148.png
+File Name: c:\Downloaded Web Sites\alexwebdev.pro\wp-content\uploads\2018\10\elado.by_-300x148.png
+Content Type: image/png
+
+Uri: https://alexwebdev.pro/wp-content/uploads/2018/10/elado.by_-768x380.png
+File Name: c:\Downloaded Web Sites\alexwebdev.pro\wp-content\uploads\2018\10\elado.by_-768x380.png
+Content Type: image/png
+
+Uri: https://alexwebdev.pro/wp-content/uploads/2018/10/elado.by_-1024x506.png
+File Name: c:\Downloaded Web Sites\alexwebdev.pro\wp-content\uploads\2018\10\elado.by_-1024x506.png
+Content Type: image/png
+
+Uri: https://alexwebdev.pro/wp-content/uploads/2018/10/amberkid.ru_-300x149.png
+File Name: c:\Downloaded Web Sites\alexwebdev.pro\wp-content\uploads\2018\10\amberkid.ru_-300x149.png
+Content Type: image/png
+
+Uri: https://alexwebdev.pro/wp-content/uploads/2018/10/amberkid.ru_-768x381.png
+File Name: c:\Downloaded Web Sites\alexwebdev.pro\wp-content\uploads\2018\10\amberkid.ru_-768x381.png
+Content Type: image/png
+
+Uri: https://alexwebdev.pro/wp-content/uploads/2018/10/amberkid.ru_-1024x507.png
+File Name: c:\Downloaded Web Sites\alexwebdev.pro\wp-content\uploads\2018\10\amberkid.ru_-1024x507.png
+Content Type: image/png
+
+Uri: https://alexwebdev.pro/wp-content/uploads/2018/10/sportguard-300x149.png
+File Name: c:\Downloaded Web Sites\alexwebdev.pro\wp-content\uploads\2018\10\sportguard-300x149.png
+Content Type: image/png
+
+Uri: https://alexwebdev.pro/wp-content/uploads/2018/10/sportguard-768x383.png
+File Name: c:\Downloaded Web Sites\alexwebdev.pro\wp-content\uploads\2018\10\sportguard-768x383.png
+Content Type: image/png
+
+Uri: https://alexwebdev.pro/wp-content/uploads/2018/10/sportguard-1024x510.png
+File Name: c:\Downloaded Web Sites\alexwebdev.pro\wp-content\uploads\2018\10\sportguard-1024x510.png
+Content Type: image/png
+
+Uri: https://alexwebdev.pro/wp-content/uploads/2018/10/medisart-300x151.png
+File Name: c:\Downloaded Web Sites\alexwebdev.pro\wp-content\uploads\2018\10\medisart-300x151.png
+Content Type: image/png
+
+Uri: https://alexwebdev.pro/wp-content/uploads/2018/10/medisart-768x387.png
+File Name: c:\Downloaded Web Sites\alexwebdev.pro\wp-content\uploads\2018\10\medisart-768x387.png
+Content Type: image/png
+
+Uri: https://alexwebdev.pro/wp-content/uploads/2018/10/medisart-1024x516.png
+File Name: c:\Downloaded Web Sites\alexwebdev.pro\wp-content\uploads\2018\10\medisart-1024x516.png
+Content Type: image/png
+
+Uri: https://alexwebdev.pro/wp-content/uploads/2018/10/Inplast-300x143.jpg
+File Name: c:\Downloaded Web Sites\alexwebdev.pro\wp-content\uploads\2018\10\Inplast-300x143.jpg
+Content Type: image/jpeg
+
+Uri: https://alexwebdev.pro/wp-content/uploads/2018/10/Inplast-768x365.jpg
+File Name: c:\Downloaded Web Sites\alexwebdev.pro\wp-content\uploads\2018\10\Inplast-768x365.jpg
+Content Type: image/jpeg
+
+Uri: https://alexwebdev.pro/wp-content/uploads/2018/10/Inplast-1024x487.jpg
+File Name: c:\Downloaded Web Sites\alexwebdev.pro\wp-content\uploads\2018\10\Inplast-1024x487.jpg
+Content Type: image/jpeg
+
+Uri: https://alexwebdev.pro/wp-content/uploads/2018/10/chrome_2018-10-30_19-30-50-300x150.png
+File Name: c:\Downloaded Web Sites\alexwebdev.pro\wp-content\uploads\2018\10\chrome_2018-10-30_19-30-50-300x150.png
+Content Type: image/png
+
+Uri: https://alexwebdev.pro/wp-content/uploads/2018/10/chrome_2018-10-30_19-30-50-768x383.png
+File Name: c:\Downloaded Web Sites\alexwebdev.pro\wp-content\uploads\2018\10\chrome_2018-10-30_19-30-50-768x383.png
+Content Type: image/png
+
+Uri: https://alexwebdev.pro/wp-content/uploads/2018/10/chrome_2018-10-30_19-30-50-1024x510.png
+File Name: c:\Downloaded Web Sites\alexwebdev.pro\wp-content\uploads\2018\10\chrome_2018-10-30_19-30-50-1024x510.png
+Content Type: image/png
+
+Uri: https://alexwebdev.pro/wp-content/uploads/2018/10/refrestore-300x149.jpg
+File Name: c:\Downloaded Web Sites\alexwebdev.pro\wp-content\uploads\2018\10\refrestore-300x149.jpg
+Content Type: image/jpeg
+
+Uri: https://alexwebdev.pro/wp-content/uploads/2018/10/refrestore-768x382.jpg
+File Name: c:\Downloaded Web Sites\alexwebdev.pro\wp-content\uploads\2018\10\refrestore-768x382.jpg
+Content Type: image/jpeg
+
+Uri: https://alexwebdev.pro/wp-content/uploads/2018/10/refrestore-1024x509.jpg
+File Name: c:\Downloaded Web Sites\alexwebdev.pro\wp-content\uploads\2018\10\refrestore-1024x509.jpg
+Content Type: image/jpeg
+
+Uri: https://alexwebdev.pro/wp-content/plugins/unyson/framework/static/libs/font-awesome/fonts/fontawesome-webfont.eot?v=4.7.0
+File Name: c:\Downloaded Web Sites\alexwebdev.pro\wp-content\plugins\unyson\framework\static\libs\font-awesome\fonts\fontawesome-webfont.eot
+Content Type: application/vnd.ms-fontobject
+
+Uri: https://alexwebdev.pro/wp-content/plugins/unyson/framework/static/libs/font-awesome/fonts/fontawesome-webfont.eot?
+File Name: c:\Downloaded Web Sites\alexwebdev.pro\wp-content\plugins\unyson\framework\static\libs\font-awesome\fonts\fontawesome-webfont-1.eot
+Content Type: application/vnd.ms-fontobject
+
+Uri: https://alexwebdev.pro/wp-content/plugins/unyson/framework/static/libs/font-awesome/fonts/fontawesome-webfont.woff2?v=4.7.0
+File Name: c:\Downloaded Web Sites\alexwebdev.pro\wp-content\plugins\unyson\framework\static\libs\font-awesome\fonts\fontawesome-webfont.woff2
+Content Type: 
+
+Uri: https://alexwebdev.pro/wp-content/plugins/unyson/framework/static/libs/font-awesome/fonts/fontawesome-webfont.woff?v=4.7.0
+File Name: c:\Downloaded Web Sites\alexwebdev.pro\wp-content\plugins\unyson\framework\static\libs\font-awesome\fonts\fontawesome-webfont.woff
+Content Type: application/font-woff
+
+Uri: https://alexwebdev.pro/wp-content/plugins/unyson/framework/static/libs/font-awesome/fonts/fontawesome-webfont.ttf?v=4.7.0
+File Name: c:\Downloaded Web Sites\alexwebdev.pro\wp-content\plugins\unyson\framework\static\libs\font-awesome\fonts\fontawesome-webfont.ttf
+Content Type: application/font-sfnt
+
+Uri: https://alexwebdev.pro/wp-content/plugins/unyson/framework/static/libs/font-awesome/fonts/fontawesome-webfont.svg?v=4.7.0
+File Name: c:\Downloaded Web Sites\alexwebdev.pro\wp-content\plugins\unyson\framework\static\libs\font-awesome\fonts\fontawesome-webfont.svg
+Content Type: image/svg+xml
+
+Uri: https://alexwebdev.pro/wp-content/themes/unique/css/pe-icon-7-stroke/fonts/Pe-icon-7-stroke.eot?d7yf1v
+File Name: c:\Downloaded Web Sites\alexwebdev.pro\wp-content\themes\unique\css\pe-icon-7-stroke\fonts\Pe-icon-7-stroke.eot
+Content Type: application/vnd.ms-fontobject
+
+Uri: https://alexwebdev.pro/wp-content/themes/unique/css/pe-icon-7-stroke/fonts/Pe-icon-7-stroke.eot?
+File Name: c:\Downloaded Web Sites\alexwebdev.pro\wp-content\themes\unique\css\pe-icon-7-stroke\fonts\Pe-icon-7-stroke-1.eot
+Content Type: application/vnd.ms-fontobject
+
+Uri: https://alexwebdev.pro/wp-content/themes/unique/css/pe-icon-7-stroke/fonts/Pe-icon-7-stroke.woff?d7yf1v
+File Name: c:\Downloaded Web Sites\alexwebdev.pro\wp-content\themes\unique\css\pe-icon-7-stroke\fonts\Pe-icon-7-stroke.woff
+Content Type: application/font-woff
+
+Uri: https://alexwebdev.pro/wp-content/themes/unique/css/pe-icon-7-stroke/fonts/Pe-icon-7-stroke.ttf?d7yf1v
+File Name: c:\Downloaded Web Sites\alexwebdev.pro\wp-content\themes\unique\css\pe-icon-7-stroke\fonts\Pe-icon-7-stroke.ttf
+Content Type: application/font-sfnt
+
+Uri: https://alexwebdev.pro/wp-content/themes/unique/css/pe-icon-7-stroke/fonts/Pe-icon-7-stroke.svg?d7yf1v
+File Name: c:\Downloaded Web Sites\alexwebdev.pro\wp-content\themes\unique\css\pe-icon-7-stroke\fonts\Pe-icon-7-stroke.svg
+Content Type: image/svg+xml
+
+Uri: https://alexwebdev.pro/wp-content/themes/unique/images/pattern-light.svg
+File Name: c:\Downloaded Web Sites\alexwebdev.pro\wp-content\themes\unique\images\pattern-light.svg
+Content Type: image/svg+xml
+
+Uri: https://alexwebdev.pro/wp-includes/fonts/dashicons.eot?99ac726223c749443b642ce33df8b800
+File Name: c:\Downloaded Web Sites\alexwebdev.pro\wp-includes\fonts\dashicons.eot
+Content Type: application/vnd.ms-fontobject
+
+Uri: https://alexwebdev.pro/wp-includes/fonts/dashicons.ttf?99ac726223c749443b642ce33df8b800
+File Name: c:\Downloaded Web Sites\alexwebdev.pro\wp-includes\fonts\dashicons.ttf
+Content Type: application/font-sfnt
+
+Uri: https://alexwebdev.pro/wp-content/plugins/unyson/framework/static/libs/linecons/fonts/linecons.eot
+File Name: c:\Downloaded Web Sites\alexwebdev.pro\wp-content\plugins\unyson\framework\static\libs\linecons\fonts\linecons.eot
+Content Type: application/vnd.ms-fontobject
+
+Uri: https://alexwebdev.pro/wp-content/plugins/unyson/framework/static/libs/entypo/fonts/entypo.eot
+File Name: c:\Downloaded Web Sites\alexwebdev.pro\wp-content\plugins\unyson\framework\static\libs\entypo\fonts\entypo.eot
+Content Type: application/vnd.ms-fontobject
+
+Uri: https://alexwebdev.pro/wp-content/plugins/unyson/framework/static/libs/entypo/fonts/entypo.eot?
+File Name: c:\Downloaded Web Sites\alexwebdev.pro\wp-content\plugins\unyson\framework\static\libs\entypo\fonts\entypo-1.eot
+Content Type: application/vnd.ms-fontobject
+
+Uri: https://alexwebdev.pro/wp-content/plugins/unyson/framework/static/libs/entypo/fonts/entypo.woff
+File Name: c:\Downloaded Web Sites\alexwebdev.pro\wp-content\plugins\unyson\framework\static\libs\entypo\fonts\entypo.woff
+Content Type: application/font-woff
+
+Uri: https://alexwebdev.pro/wp-content/plugins/unyson/framework/static/libs/entypo/fonts/entypo.ttf
+File Name: c:\Downloaded Web Sites\alexwebdev.pro\wp-content\plugins\unyson\framework\static\libs\entypo\fonts\entypo.ttf
+Content Type: application/font-sfnt
+
+Uri: https://alexwebdev.pro/wp-content/plugins/unyson/framework/static/libs/entypo/fonts/entypo.svg
+File Name: c:\Downloaded Web Sites\alexwebdev.pro\wp-content\plugins\unyson\framework\static\libs\entypo\fonts\entypo.svg
+Content Type: image/svg+xml
+
+Uri: https://alexwebdev.pro/wp-content/plugins/unyson/framework/static/libs/typcn/fonts/typicons.eot
+File Name: c:\Downloaded Web Sites\alexwebdev.pro\wp-content\plugins\unyson\framework\static\libs\typcn\fonts\typicons.eot
+Content Type: application/vnd.ms-fontobject
+
+Uri: https://alexwebdev.pro/wp-content/plugins/unyson/framework/static/libs/typcn/fonts/typicons.eot?
+File Name: c:\Downloaded Web Sites\alexwebdev.pro\wp-content\plugins\unyson\framework\static\libs\typcn\fonts\typicons-1.eot
+Content Type: application/vnd.ms-fontobject
+
+Uri: https://alexwebdev.pro/wp-content/plugins/unyson/framework/static/libs/typcn/fonts/typicons.woff
+File Name: c:\Downloaded Web Sites\alexwebdev.pro\wp-content\plugins\unyson\framework\static\libs\typcn\fonts\typicons.woff
+Content Type: application/font-woff
+
+Uri: https://alexwebdev.pro/wp-content/plugins/unyson/framework/static/libs/typcn/fonts/typicons.ttf
+File Name: c:\Downloaded Web Sites\alexwebdev.pro\wp-content\plugins\unyson\framework\static\libs\typcn\fonts\typicons.ttf
+Content Type: application/font-sfnt
+
+Uri: https://alexwebdev.pro/wp-content/plugins/unyson/framework/static/libs/typcn/fonts/typicons.svg
+File Name: c:\Downloaded Web Sites\alexwebdev.pro\wp-content\plugins\unyson\framework\static\libs\typcn\fonts\typicons.svg
+Content Type: image/svg+xml
+
+Uri: https://alexwebdev.pro/wp-content/plugins/unyson/framework/static/libs/unycon/fonts/Unycon.eot?-s8ws3j
+File Name: c:\Downloaded Web Sites\alexwebdev.pro\wp-content\plugins\unyson\framework\static\libs\unycon\fonts\Unycon.eot
+Content Type: application/vnd.ms-fontobject
+
+Uri: https://alexwebdev.pro/wp-content/plugins/unyson/framework/static/libs/unycon/fonts/Unycon.eot?
+File Name: c:\Downloaded Web Sites\alexwebdev.pro\wp-content\plugins\unyson\framework\static\libs\unycon\fonts\Unycon-1.eot
+Content Type: application/vnd.ms-fontobject
+
+Uri: https://alexwebdev.pro/wp-content/plugins/unyson/framework/static/libs/unycon/fonts/Unycon.ttf?-s8ws3j
+File Name: c:\Downloaded Web Sites\alexwebdev.pro\wp-content\plugins\unyson\framework\static\libs\unycon\fonts\Unycon.ttf
+Content Type: application/font-sfnt
+
+Uri: https://alexwebdev.pro/wp-content/plugins/unyson/framework/static/libs/unycon/fonts/Unycon.woff?-s8ws3j
+File Name: c:\Downloaded Web Sites\alexwebdev.pro\wp-content\plugins\unyson\framework\static\libs\unycon\fonts\Unycon.woff
+Content Type: application/font-woff
+
+Uri: https://alexwebdev.pro/wp-content/plugins/unyson/framework/static/libs/unycon/fonts/Unycon.svg?-s8ws3j
+File Name: c:\Downloaded Web Sites\alexwebdev.pro\wp-content\plugins\unyson\framework\static\libs\unycon\fonts\Unycon.svg
+Content Type: image/svg+xml
+
+Uri: https://alexwebdev.pro/wp-content/cache/min/1/ff4deca5ee4ceb2df8bb58b3c991f59d.css
+File Name: c:\Downloaded Web Sites\alexwebdev.pro\wp-content\cache\min\1\ff4deca5ee4ceb2df8bb58b3c991f59d.css
+Content Type: text/css
+
+Uri: https://alexwebdev.pro/wp-json/wp/v2/fw-portfolio/247
+File Name: c:\Downloaded Web Sites\alexwebdev.pro\wp-json\wp\v2\fw-portfolio\247.json
+Content Type: application/json
+
+Uri: https://alexwebdev.pro/wp-content/cache/min/1/9d8258f59184425e4188e340e553b510.js
+File Name: c:\Downloaded Web Sites\alexwebdev.pro\wp-content\cache\min\1\9d8258f59184425e4188e340e553b510.js
+Content Type: application/javascript
+
+Uri: https://alexwebdev.pro/wp-json/wp/v2/fw-portfolio/244
+File Name: c:\Downloaded Web Sites\alexwebdev.pro\wp-json\wp\v2\fw-portfolio\244.json
+Content Type: application/json
+
+Uri: https://alexwebdev.pro/wp-json/wp/v2/fw-portfolio/242
+File Name: c:\Downloaded Web Sites\alexwebdev.pro\wp-json\wp\v2\fw-portfolio\242.json
+Content Type: application/json
+
+Uri: https://alexwebdev.pro/wp-json/wp/v2/fw-portfolio/239
+File Name: c:\Downloaded Web Sites\alexwebdev.pro\wp-json\wp\v2\fw-portfolio\239.json
+Content Type: application/json
+
+Uri: https://alexwebdev.pro/wp-json/wp/v2/fw-portfolio/237
+File Name: c:\Downloaded Web Sites\alexwebdev.pro\wp-json\wp\v2\fw-portfolio\237.json
+Content Type: application/json
+
+Uri: https://alexwebdev.pro/wp-json/wp/v2/fw-portfolio/235
+File Name: c:\Downloaded Web Sites\alexwebdev.pro\wp-json\wp\v2\fw-portfolio\235.json
+Content Type: application/json
+
+Uri: https://alexwebdev.pro/wp-json/wp/v2/fw-portfolio/233
+File Name: c:\Downloaded Web Sites\alexwebdev.pro\wp-json\wp\v2\fw-portfolio\233.json
+Content Type: application/json
+
+Uri: https://alexwebdev.pro/wp-json/wp/v2/fw-portfolio/231
+File Name: c:\Downloaded Web Sites\alexwebdev.pro\wp-json\wp\v2\fw-portfolio\231.json
+Content Type: application/json
+
+Uri: https://alexwebdev.pro/wp-json/wp/v2/fw-portfolio/229
+File Name: c:\Downloaded Web Sites\alexwebdev.pro\wp-json\wp\v2\fw-portfolio\229.json
+Content Type: application/json
+

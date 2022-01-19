@@ -1,0 +1,182 @@
+/*
+ * Name:        Landing Hub - Color Schemes
+ * Written by: 	LiquidThemes
+ */
+/*----------------------------------------
+ [ TABLE OF CONTENTS ]
+
+ 1. COLOR SCHEMES
+		|- 1.1. Scheme dark
+
+-----------------------------------------*/
+/*
+  1. COLOR SCHEMES
+*/
+/* 1.1. Scheme dark */
+.page-scheme-dark {
+  color: #929292;
+}
+.page-scheme-dark #lqd-site-content,
+.page-scheme-dark .titlebar {
+  background-color: #141414;
+}
+.page-scheme-dark .lqd-post-content {
+  color: inherit;
+}
+
+body.page-scheme-dark h1, body.page-scheme-dark .h1,
+body.page-scheme-dark h2, body.page-scheme-dark .h2,
+body.page-scheme-dark h3, body.page-scheme-dark .h3,
+body.page-scheme-dark h4, body.page-scheme-dark .h4,
+body.page-scheme-dark h5, body.page-scheme-dark .h5,
+body.page-scheme-dark h6, body.page-scheme-dark .h6 {
+  color: #fff;
+}
+
+a {
+  color: #fff;
+}
+a:hover {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.add-dropcap:first-letter {
+  color: #fff;
+}
+
+.social-icon-underline li {
+  border-bottom-color: rgba(255, 255, 255, 0.15);
+}
+
+.lqd-lp-title a {
+  color: inherit;
+}
+
+.lqd-lp-date {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.page-scheme-dark .post-author {
+  border-color: rgba(137, 138, 147, 0.3);
+}
+.page-scheme-dark .post-author .author-all-posts,
+.page-scheme-dark .post-author h3 {
+  color: #fff;
+}
+.page-scheme-dark .post-author h6 {
+  color: rgba(137, 138, 147, 0.75);
+}
+.page-scheme-dark .entry-meta,
+.page-scheme-dark .tags-links,
+.page-scheme-dark .share-links {
+  color: rgba(255, 255, 255, 0.8);
+}
+.page-scheme-dark .entry-meta a,
+.page-scheme-dark .tags-links a,
+.page-scheme-dark .share-links a {
+  color: #fff;
+}
+.page-scheme-dark .entry-meta a:hover,
+.page-scheme-dark .tags-links a:hover,
+.page-scheme-dark .share-links a:hover {
+  color: rgba(255, 255, 255, 0.7);
+}
+.page-scheme-dark .tags-links a {
+  background: none;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+.page-scheme-dark .tags-links a:hover {
+  border-color: #fff;
+  background-color: #fff;
+  color: #000;
+}
+.page-scheme-dark nav.post-nav a {
+  color: #fff;
+}
+.page-scheme-dark nav.post-nav svg {
+  stroke: rgba(255, 255, 255, 0.5);
+}
+.page-scheme-dark .lqd-post-sticky-stuff .lqd-post-share > span {
+  color: #fff;
+}
+.page-scheme-dark .lqd-post-sticky-stuff .social-icon-underline {
+  color: rgba(255, 255, 255, 0.5);
+}
+.page-scheme-dark .lqd-post-sticky-stuff .social-icon-underline i {
+  color: #fff;
+}
+.page-scheme-dark .comment-form .comment-form-author:before,
+.page-scheme-dark .comment-form .comment-form-email:before,
+.page-scheme-dark .comment-form .comment-form-url:before,
+.page-scheme-dark .comment-form .comment-form-comment:before {
+  background-color: rgba(137, 138, 147, 0.3);
+}
+.page-scheme-dark .comment-form .comment-form-author:after,
+.page-scheme-dark .comment-form .comment-form-email:after,
+.page-scheme-dark .comment-form .comment-form-url:after,
+.page-scheme-dark .comment-form .comment-form-comment:after {
+  background-color: #fff;
+}
+.page-scheme-dark .comment-form input,
+.page-scheme-dark .comment-form textarea {
+  color: #fff;
+}
+.page-scheme-dark .comment-form input[type=submit] {
+  padding-top: 14px;
+  padding-bottom: 14px;
+  border: 1px solid #fff;
+  background-color: transparent;
+  color: #fff;
+  transition: all 0.3s;
+}
+.page-scheme-dark .comment-form input[type=submit]:hover {
+  background-color: #fff;
+  color: #12131a;
+}
+.page-scheme-dark .comment-author {
+  color: #fff;
+}
+.page-scheme-dark .comment .reply a {
+  border-color: rgba(255, 255, 255, 0.55);
+  color: rgba(255, 255, 255, 0.55);
+}
+.page-scheme-dark .comment .reply a:hover {
+  border-color: #fff;
+  background-color: transparent;
+  color: #fff;
+}
+.page-scheme-dark .related-posts .lqd-lp .lqd-lp-footer a,
+.page-scheme-dark .related-posts .lqd-lp-title a {
+  color: #fff;
+}
+.page-scheme-dark .related-posts .lqd-lp h2 .split-inner:after {
+  background-color: var(--color-primary);
+  opacity: 0.6;
+}
+.page-scheme-dark .related-posts .lqd-lp:hover .lqd-lp-title a {
+  color: #fff;
+}
+
+.lqd-blog-post-style-1 .related-posts,
+.lqd-blog-post-style-2 .related-posts,
+.lqd-blog-post-style-7 .related-posts {
+  background-color: #1d1d1d;
+}
+
+.lqd-blog-post-style-4 .lqd-post-header {
+  background-color: #141414;
+}
+.lqd-blog-post-style-4 .blog-post-footer {
+  border-color: rgba(137, 138, 147, 0.3);
+}
+
+@media screen and (max-width: 479px) {
+  .lqd-blog-post-style-4 .lqd-post-header .entry-meta:last-child > div,
+.lqd-blog-post-style-5 .lqd-post-header .entry-meta:last-child > div,
+.lqd-blog-post-style-6 .lqd-post-header .entry-meta:last-child > div,
+.lqd-blog-post-style-7 .lqd-post-header .entry-meta:last-child > div {
+    background-color: #1d1b1b;
+  }
+}
+
+/*# sourceMappingURL=theme-scheme-dark.css.map */

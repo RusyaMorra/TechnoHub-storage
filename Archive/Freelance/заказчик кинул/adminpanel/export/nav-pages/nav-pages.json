@@ -1,0 +1,25 @@
+{
+    "json": {
+        "data": {
+            "id": 1,
+            "attributes": {
+                "page1": "ABOUT",
+                "page1link": "https://nuxt-to-vercel.vercel.app/info/about",
+                "page2": "GALLERY",
+                "page2link": "https://nuxt-to-vercel.vercel.app/",
+                "page3": "PRINTS",
+                "page3link": "https://nuxt-to-vercel.vercel.app/info/prints",
+                "page4": "WORKSHOP",
+                "page4link": "https://nuxt-to-vercel.vercel.app/info/workshop",
+                "page5": "ARTICLES",
+                "page5link": "https://nuxt-to-vercel.vercel.app/articles",
+                "page6": "CONTACT",
+                "page6link": "https://nuxt-to-vercel.vercel.app/info/contact",
+                "createdAt": "2021-12-10T23:41:49.762Z",
+                "updatedAt": "2021-12-10T23:41:57.040Z",
+                "publishedAt": "2021-12-10T23:41:57.035Z"
+            }
+        },
+        "meta": {}
+    }
+}

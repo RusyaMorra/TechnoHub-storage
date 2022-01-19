@@ -1,0 +1,92 @@
+[
+    {
+        "id": 1,
+        "article-name": "Имя статьи",
+        "article-body": {
+            "text-content": {
+                "text": "This two day intensive course is dedicated to fine art  nude photography. It is open for everybody who has a passion to photography and art nude in particular and  interested in my working methods and tricks. This two ",
+                "limit-for-preview": 220
+            },
+            "photo-for-preview": {
+                "default-type": {
+                    "circle-img": true,
+                    "square-img": false
+                },
+                "image-size": {
+                    "min-size": {
+                        "width": 120,
+                        "heigth": 120
+                    },
+                    "max-size": {
+                        "width": 200,
+                        "heigth": 200
+                    }
+                }
+            },
+            "video": {
+                "video-path-1": "src/video/пример-видео.mp4",
+                "video-path-2": "src/video/пример-видео.mp4",
+                "video-path-3": "src/video/пример-видео.mp4",
+                "video-path-4": "src/video/пример-видео.mp4",
+                "video-path-5": "src/video/пример-видео.mp4",
+                "video-path-6": "src/video/пример-видео.mp4",
+                "video-path-7": "src/video/пример-видео.mp4"
+            },
+            "photo": {
+                "photo-path-1": "src/img/пример-фото.jpeg",
+                "photo-path-2": "src/img/пример-фото.jpeg",
+                "photo-path-3": "src/img/пример-фото.jpeg",
+                "photo-path-4": "src/img/пример-фото.jpeg",
+                "photo-path-5": "src/img/пример-фото.jpeg",
+                "photo-path-6": "src/img/пример-фото.jpeg",
+                "photo-path-7": "src/img/пример-фото.jpeg"
+            },
+            "tags": []
+        }
+    },
+    {
+        "id": 2,
+        "article-name": "Имя статьи",
+        "article-body": {
+            "text-content": {
+                "text": "This two day intensive course is dedicated to fine art nude photography. It is open for everybody who has a passion to photography and art nude in particular and  interested in my working methods and tricks. This two ",
+                "limit-for-preview": 220
+            },
+            "photo-for-preview": {
+                "default-type": {
+                    "circle-img": true,
+                    "square-img": false
+                },
+                "image-size": {
+                    "min-size": {
+                        "width": 120,
+                        "heigth": 120
+                    },
+                    "max-size": {
+                        "width": 200,
+                        "heigth": 200
+                    }
+                }
+            },
+            "video": {
+                "video-path-1": "src/video/пример-видео.mp4",
+                "video-path-2": "src/video/пример-видео.mp4",
+                "video-path-3": "src/video/пример-видео.mp4",
+                "video-path-4": "src/video/пример-видео.mp4",
+                "video-path-5": "src/video/пример-видео.mp4",
+                "video-path-6": "src/video/пример-видео.mp4",
+                "video-path-7": "src/video/пример-видео.mp4"
+            },
+            "photo": {
+                "photo-path-1": "src/img/пример-фото.jpeg",
+                "photo-path-2": "src/img/пример-фото.jpeg",
+                "photo-path-3": "src/img/пример-фото.jpeg",
+                "photo-path-4": "src/img/пример-фото.jpeg",
+                "photo-path-5": "src/img/пример-фото.jpeg",
+                "photo-path-6": "src/img/пример-фото.jpeg",
+                "photo-path-7": "src/img/пример-фото.jpeg"
+            },
+            "tags": true
+        }
+    }
+]

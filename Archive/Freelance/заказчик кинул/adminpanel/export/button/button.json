@@ -1,0 +1,15 @@
+{
+    "json": {
+        "data": {
+            "id": 1,
+            "attributes": {
+                "buttoncontent": "buy print",
+                "link": null,
+                "createdAt": "2021-12-10T21:50:58.129Z",
+                "updatedAt": "2021-12-11T16:54:25.849Z",
+                "publishedAt": "2021-12-10T21:51:09.040Z"
+            }
+        },
+        "meta": {}
+    }
+}

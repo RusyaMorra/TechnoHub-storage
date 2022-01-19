@@ -1,0 +1,32 @@
+[
+    {
+        "id": 1,
+        "page-name": "ABOUT",
+        "link": "http://"
+    },
+    {
+        "id": 2,
+        "page-name": "GALLERY",
+        "link": "http://"
+    },
+    {
+        "id": 3,
+        "page-name": "PRINTS",
+        "link": "http://"
+    },
+    {
+        "id": 4,
+        "page-name": "WORKSHOP",
+        "link": "http://"
+    },
+    {
+        "id": 5,
+        "page-name": "ARTICLES",
+        "link": "http://"
+    },
+    {
+        "id": 6,
+        "page-name": "CONTACT",
+        "link": "http://"
+    }
+]

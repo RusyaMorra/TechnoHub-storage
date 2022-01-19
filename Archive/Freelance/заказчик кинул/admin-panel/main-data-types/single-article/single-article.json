@@ -1,0 +1,80 @@
+[
+    {
+        "id": 1,
+        "isfixed": false,
+        "articlename": "Имя статьи",
+        "articlebody": {
+            "text": "Текст статьи  одиночки  бла бла бла бла бла бла бла бла бла бла ",
+            "video": {
+                "videopath1": "src/video/пример-видео.mp4",
+                "videopath2": "src/video/пример-видео.mp4",
+                "videopath3": "src/video/пример-видео.mp4",
+                "videopath4": "src/video/пример-видео.mp4",
+                "videopath5": "src/video/пример-видео.mp4",
+                "videopath6": "src/video/пример-видео.mp4",
+                "videopath7": "src/video/пример-видео.mp4"
+            },
+            "photo": {
+                "photopath1": "src/img/пример-фото.jpeg",
+                "photopath2": "src/img/пример-фото.jpeg",
+                "photopath3": "src/img/пример-фото.jpeg",
+                "photopath4": "src/img/пример-фото.jpeg",
+                "photopath5": "src/img/пример-фото.jpeg",
+                "photopath6": "src/img/пример-фото.jpeg",
+                "photopath7": "src/img/пример-фото.jpeg"
+            }
+        }
+    },
+    {
+        "id": 2,
+        "isfixed": false,
+        "articlename": "Имя статьи",
+        "articlebody": {
+            "text": "Текст статьи  одиночки  бла бла бла бла бла бла бла бла бла бла бла бла ",
+            "video": {
+                "videopath1": "src/video/пример-видео.mp4",
+                "videopath2": "src/video/пример-видео.mp4",
+                "videopath3": "src/video/пример-видео.mp4",
+                "videopath4": "src/video/пример-видео.mp4",
+                "videopath5": "src/video/пример-видео.mp4",
+                "videopath6": "src/video/пример-видео.mp4",
+                "videopath7": "src/video/пример-видео.mp4"
+            },
+            "photo": {
+                "photopath1": "src/img/пример-фото.jpeg",
+                "photopath2": "src/img/пример-фото.jpeg",
+                "photopath3": "src/img/пример-фото.jpeg",
+                "photopath4": "src/img/пример-фото.jpeg",
+                "photopath5": "src/img/пример-фото.jpeg",
+                "photopath6": "src/img/пример-фото.jpeg",
+                "photopath7": "src/img/пример-фото.jpeg"
+            }
+        }
+    },
+    {
+        "id": 3,
+        "isfixed": false,
+        "articlename": "Имя статьи",
+        "articlebody": {
+            "text": "Текст статьи  одиночки  бла бла бла бла бла бла бла бла бла бла бла бла ",
+            "video": {
+                "videopath1": "src/video/пример-видео.mp4",
+                "videopath2": "src/video/пример-видео.mp4",
+                "videopath3": "src/video/пример-видео.mp4",
+                "videopath4": "src/video/пример-видео.mp4",
+                "videopath5": "src/video/пример-видео.mp4",
+                "videopath6": "src/video/пример-видео.mp4",
+                "videopath7": "src/video/пример-видео.mp4"
+            },
+            "photo": {
+                "photopath1": "src/img/пример-фото.jpeg",
+                "photopath2": "src/img/пример-фото.jpeg",
+                "photopath3": "src/img/пример-фото.jpeg",
+                "photopath4": "src/img/пример-фото.jpeg",
+                "photopath5": "src/img/пример-фото.jpeg",
+                "photopath6": "src/img/пример-фото.jpeg",
+                "photopath7": "src/img/пример-фото.jpeg"
+            }
+        }
+    }
+]

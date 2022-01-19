@@ -1,0 +1,31 @@
+
+@media only screen and (max-width: 767px) {
+   .header{
+      
+      top: 0px;
+   }
+   .content-outer{
+      min-height: 3500px;
+    }
+   .row{
+      padding-top:200px;
+      display:flex;
+      justify-content: space-between;
+      align-self:center;
+      flex-direction: column;
+     
+     }
+     .wp-block-calendar{
+      margin-top: 170px;
+     
+   }
+   .four{
+      margin-bottom: 200px;
+   }
+} 
+
+
+
+
+
+

@@ -1,0 +1,16 @@
+1)Restfull API 
+Сервер конфигурируется на Apache так что для MAC OS можно использовать MAMP на window Open server
+на nginx конфигурация
+http://admin-panel - главный файл при переходе на него Apache сразу  направляет
+все запросы на index.php
+
+separator= '/'
+
+Обьекты галереи{
+Работа с методом GET{
+Статьи с фото и первоначальным текстом превью{
+-Получение всех json обьектов статей: http://admin-panel/artical-title-img
+-Получение json обьекта по ID: http://admin-panel/gallery-objects/${id} 
+  }
+ }
+}

@@ -1,0 +1,23 @@
+{
+    "json": {
+        "data": {
+            "id": 1,
+            "attributes": {
+                "tag1": "All Photo",
+                "tag2": "Jellyfish",
+                "tag3": "Paper Work",
+                "tag4": "Series",
+                "tag5": "Portal",
+                "tag6": "Single",
+                "tag7": "Phlegm",
+                "tag8": "Compact",
+                "tag9": "Colored",
+                "tag10": "B&W",
+                "createdAt": "2021-12-10T21:59:31.359Z",
+                "updatedAt": "2021-12-11T14:34:21.763Z",
+                "publishedAt": "2021-12-10T21:59:33.829Z"
+            }
+        },
+        "meta": {}
+    }
+}

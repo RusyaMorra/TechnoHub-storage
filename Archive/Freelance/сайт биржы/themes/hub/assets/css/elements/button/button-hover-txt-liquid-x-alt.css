@@ -1,0 +1,1 @@
+@keyframes btnHoverTxtLiquidXAlt{50%{opacity:0;transform:translateX(.3em)}51%{opacity:0;transform:translateX(-.3em)}to{opacity:1;transform:translateX(0)}}.btn-hover-txt-liquid-x-alt:hover .lqd-chars{animation:btnHoverTxtLiquidXAlt .6s calc(var(--chars-last-index, 0s)*.03s) cubic-bezier(.23,1,.32,1) both alternate}

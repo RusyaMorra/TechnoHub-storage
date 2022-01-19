@@ -1,0 +1,7 @@
+Name: LeaderClassic;
+Version: 0.2;
+Support Core: 15.0.0;
+Template: LeaderClassiс;
+Description: Шаблон личного кабинета;
+Author: Ruslan;
+Author URI: https://rusyamorra.ru;

@@ -1,0 +1,22 @@
+{
+    "json": {
+        "data": {
+            "id": 1,
+            "attributes": {
+                "tag1": "All tags",
+                "tag2": "Jellyfish in water",
+                "tag3": "About ass",
+                "tag4": "Skins of clash",
+                "tag5": "About ass and shit",
+                "tag6": "Series three hundred bucks",
+                "tag7": "Amout live",
+                "tag8": "My Single",
+                "tag9": "Compact hole",
+                "createdAt": "2021-12-10T22:03:01.917Z",
+                "updatedAt": "2021-12-10T22:03:03.766Z",
+                "publishedAt": "2021-12-10T22:03:03.761Z"
+            }
+        },
+        "meta": {}
+    }
+}

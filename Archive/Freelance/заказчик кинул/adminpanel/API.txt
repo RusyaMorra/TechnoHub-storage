@@ -1,0 +1,13 @@
+
+1)контент кнопки - http://localhost:1337/api/buttoncontent
+2)элемент-галлереи - http://localhost:1337/api/galleryelements
+3)Пост с превью картинкой - http://localhost:1337/api/postwithimgs
+4)одиночный пост - http://localhost:1337/api/singleposts
+5)теги на странице галлереи - http://localhost:1337/api/taglistgallery
+6)теги на странице article - http://localhost:1337/api/taglisttitleimgpost
+7)страници навигации - http://localhost:1337/api/nav
+8)Экспорт- http://localhost:1337/api/export
+
+Более дитальные настройки:  https://docs.strapi.io/developer-docs/latest/developer-resources/database-apis-reference/rest-api.html
+
+

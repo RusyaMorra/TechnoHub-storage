@@ -1,0 +1,335 @@
+.post-content{
+   color: gray;
+}
+.dauthor{
+   color: gray;
+}
+input[type=search]{
+  border: 1px solid black;
+  height: 30px;
+  
+}
+.comment-form-cookies-consent{
+   display: none;
+}
+.comment-form input,textarea{
+   border: 1px solid black;
+   margin-top:5px;
+   margin-bottom: 10px ;
+   color: gray;
+   caret-color: #423e3e;
+}
+.comment-form  label{
+   margin-bottom: 200px;
+}
+.submit{
+   height: 40px;
+   width: 280px;
+   border: 1px solid black;
+   background-color:#6d335c ;
+   color: white !important;
+   outline: none;
+   border: none;
+   border-radius: 5px;
+   margin-left: 5px;
+   cursor: pointer;
+   margin-top: 10px;
+ 
+}
+.tag-cloud-link {
+   font-size: 15pt !important;
+}
+.depth-1{
+ margin-top: 30px;
+}
+.respond h3{
+   color:#6d335c ;
+   margin-bottom: 20px;
+}
+.respond{
+   margin-bottom: 300px;
+}
+
+.wp-block-search__input{
+   color:gray;
+}
+.wp-block-search__label{
+   font-size: 25px;
+   
+  
+}
+.wp-block-calendar{
+   margin-top: 200px;
+  
+}
+.wp-block-search__inside-wrapper{
+   margin-top: 5px;
+  
+}
+.widget h2{
+   margin-top: 30px;
+   font-size: 23px;
+}
+.widget h3{
+   margin-top: 300px;
+   font-size: 24px;
+ 
+}
+.wp-block-categories{
+   font-size: 20px;
+   margin-top: -15px;
+}
+p a{
+   margin-left: 5px;
+}
+.wp-block-search__button{
+   height: 30px;
+   width: 80px;
+   border: 1px solid black;
+   background-color:#6d335c ;
+   color: white;
+   outline: none;
+   border: none;
+   border-radius: 5px;
+   margin-left: 5px;
+   cursor: pointer;
+   
+}
+
+
+.cat-item-1{
+   margin-top: 0px;
+}
+.cat-item:hover{
+ opacity: .7;
+}
+.cat-item a{
+   position: relative;
+   
+}
+.cat-item{
+   margin-top: 20px;
+}
+.cat-item a::before{
+ content: '';
+ width: 10px;
+ height: 10px;
+ position: absolute;
+ left: -15px;
+ bottom: 4px;
+ background-color:#6d335c ;
+}
+.wp-block-categories{
+margin-left: 15px;
+}
+.wp-block-search__inside-wrapper{
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   flex-direction: row;
+}
+.post-thumb{
+   width: 100%;
+   height: 100%;
+}
+.size-post-thumb {
+   width: 100%;
+   height: 300px;
+}
+.post {
+   padding-top: 24px;
+   padding-bottom: 18px;
+}
+.post .entry-header {
+   position: relative;
+   width: 100%;
+}
+.post .entry-header h1 {
+   font: 39px/48px raleway-semibold, sans-serif;
+   margin-bottom: 18px;
+}
+.post .entry-header h1 a,
+.post .entry-header h1 a:visited { color: #313131; }
+.post .entry-header h1 a:hover,
+.post .entry-header h1 a:focus { color: #6d335c; }
+
+.post .post-meta {
+   font: 15px/24px notosans-regular, sans-serif;
+}
+.post .post-meta a,
+.post .post-meta a:visited { color: #AFB4BB; }
+.post .post-meta a:hover,
+.post .post-meta a:focus { color:  #6d335c; }
+
+.post .post-meta .date {
+   display: inline-block;
+   font: 15px/24px notosans-bold, sans-serif;
+   color: #313131;
+}
+.post .post-meta .categories {
+   display: inline-block;
+}
+.post .post-meta .categories a { display: inline-block; }
+
+
+/* post image */
+.post .post-thumb {
+   margin: 6px 0 18px 0;
+   width: 100%;
+}
+
+/* post content */
+.post .post-content {
+   margin-bottom: 18px;
+}
+
+/* tags */
+.post .post-content .tags {
+  margin-top: 18px;
+  font-family: notosans-regular, sans-serif;
+}
+.post .post-content .tags a { font-family: notosans-bold, sans-serif; }
+
+/* bio */
+.post .bio {
+   margin-top: 30px;
+   padding-top: 30px;
+   padding: 36px;
+   background: #EFF1F0;
+
+	border-radius: 3px;
+}
+.post .bio .gravatar {
+   width: 16.66667%;
+   float: left;
+   width: 72px;
+   height: 72px;
+}
+.post .bio .gravatar img {
+   margin-top: 12px;
+	border-radius: 100%;
+}
+.post .bio .about {
+   width: 78%;
+   float: right;
+}
+.post .bio .about h5 {
+   font: 18px/30px notosans-bold, sans-serif;
+   margin-bottom: 6px;
+}
+
+
+/* Comments
+/* ------------------------------------------------------------------ */
+#comments {
+   padding-top: 12px;
+   padding-bottom: 12px;
+}
+#comments h3 {
+   font: 20px/30px notosans-bold, sans-serif;
+   margin-bottom: 6px;
+}
+
+/* Comments List */
+ol.commentlist {
+   border-top: 1px dotted #E1E5E3;
+	margin: 29px 0 54px 0;
+	padding: 0;
+   margin-left: 16.66667%;
+}
+.commentlist > li {
+   position: relative;
+	list-style: none;
+	margin: 0;
+	padding: 18px 0 17px 0;
+	border-bottom: 1px dotted #D9DEDB;
+}
+.commentlist  li .avatar {
+   position: absolute;
+   left: -50px;
+   display: block;
+
+   height: 50px;
+   width: 50px;
+}
+.commentlist li .avatar img {
+   margin-top: 6px;
+   height: 50px;
+   width: 50px;
+
+  	border-radius: 100% 100% 100% 100%;
+}
+.commentlist li .comment-info cite {
+   font: 16px/30px notosans-bold, sans-serif;
+   color: #454545;
+}
+.commentlist li .comment-info .comment-meta {
+   font-size: 14px;
+   line-height: 24px;
+   display: block;
+}
+.commentlist li .comment-info .comment-meta .reply {
+   font-family: notosans-bold, sans-serif;
+}
+.commentlist li .comment-info .comment-meta .sep {
+   margin: 0 5px;
+   color: #AEB6B7;
+}
+.commentlist li .comment-text {
+	clear: both;
+	margin: 24px 0 0 0;
+   padding: 0;
+   line-height: 24px;
+}
+
+/* children */
+.commentlist li ul.children {
+   margin: 0;
+   padding: 18px 0 0 0;
+}
+.commentlist li ul.children li {
+   padding-left:  5% ;
+   padding-top: 17px;
+   border-top: 1px dotted #D9DEDB;
+}
+
+
+/* comment form */
+#comments form {
+   margin-top: 36px;
+}
+#comments form label {
+   font: 16px/24px notosans-bold, sans-serif;
+	margin: 12px 0;
+   padding-left: 24px;
+   width: 41.66667%;
+   float: right;
+}
+#comments form div {
+   margin: 12px 0 18px 0;
+}
+#comments form input,
+#comments form textarea,
+#comments form select {
+   width: 58.33333%;
+   float: left;
+}
+#comments form .message label {
+   display: none;
+}
+#comments form textarea {
+   width: 100%;
+}
+#comments form button.submit {
+	text-transform: uppercase;
+	letter-spacing: 2px;
+   display: block;
+   margin-top: 12px;
+}
+#comments form span.required {
+	color: #6d335c ;
+	font-size: 13px;
+}
+
+/* Pagination  */
+.pagination { margin: 0 auto 42px auto; }

@@ -1,0 +1,1 @@
+.btn-icon-ripple .btn-icon:before{content:"";display:inline-block;position:absolute;top:-2px;left:-2px;bottom:-2px;right:-2px;border-radius:inherit;border:1px solid var(--color-primary);animation:btnIconRipple 2s cubic-bezier(.23,1,.32,1) both infinite}

@@ -1,0 +1,1 @@
+.btn-solid{background:var(--color-primary);box-shadow:0 0 0 transparent;color:#fff;overflow:hidden}.btn-solid:hover{border-color:transparent;background-color:var(--color-primary);color:#fff;transform:translate3d(0,-2px,0);box-shadow:0 12px 28px rgba(0,0,0,.12)}

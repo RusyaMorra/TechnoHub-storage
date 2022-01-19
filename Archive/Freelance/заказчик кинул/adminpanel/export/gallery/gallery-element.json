@@ -1,0 +1,39 @@
+{
+    "json": {
+        "data": [
+            {
+                "id": 1,
+                "attributes": {
+                    "createdAt": "2021-12-10T21:45:51.939Z",
+                    "updatedAt": "2021-12-10T21:45:58.234Z",
+                    "publishedAt": "2021-12-10T21:45:58.228Z",
+                    "name": "painting naked girls",
+                    "yearofcreating": 2020,
+                    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+                    "isprin": false,
+                    "size": "SIZE60 cm * 90 cm",
+                    "isterageopen": true,
+                    "numberofinstances": "EDITION 10",
+                    "isavailable": true,
+                    "currentinstances": "test",
+                    "price": 300,
+                    "tags": "#Colored   #Compact",
+                    "iscolored": true,
+                    "isfixed": false,
+                    "linkforbutton": "https://robokassa.com/",
+                    "islimited": true,
+                    "whichedition": "LIMITED EDITION OF20+2AP",
+                    "slug": null
+                }
+            }
+        ],
+        "meta": {
+            "pagination": {
+                "page": 1,
+                "pageSize": 25,
+                "pageCount": 1,
+                "total": 1
+            }
+        }
+    }
+}
