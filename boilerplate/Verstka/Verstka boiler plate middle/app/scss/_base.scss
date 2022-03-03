@@ -1,0 +1,127 @@
+@import '_fonts.scss';
+@import '_reset.scss';
+@import '_mixins.scss';
+@import '_variables.scss';
+
+html,
+body,
+ul,
+ol {
+  margin:  0;
+  padding: 0;
+}
+
+
+
+body{
+  width: 100%;
+  -ms-user-select: none; 
+	-moz-user-select: none; 
+	-webkit-user-select: none; 
+	user-select: none; 
+  position: relative;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  margin: 0px auto ;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5{
+@include titles(2rem,"OpenSans-Medium")
+}
+
+.arrow-up{
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  position: fixed;
+  width: 80px;
+  cursor: pointer;
+  z-index: 30;
+}
+
+
+.container{
+  margin: 0px auto;
+  height: 100%;
+  max-width: 1200px;
+  padding: 0px 15px 0px;
+ // overflow: hidden;
+ // overflow-x: hidden;
+}
+
+.main{
+  width: 100%;
+}
+%flex-center2{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+%flex-center2align-and{
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+%flex-center1horisont{
+  display: flex;
+  justify-content: center;
+}
+%flex-center1vertikal{
+  display: flex;
+  align-items: center;
+}
+%flex-derectionrow-and-center2{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+%flex-derectionrow-and-center2-spasebetween{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+%flex-derectionrow-and-center2-spasearound{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+%flex-derectionrow-and-center2-spasearound2{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: flex-end;
+}
+%flex-derectioncolumn-and-center2{
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+%flex-derectioncolumn-and-between{
+  flex-direction: column;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+%flex-starthorizont{
+  display: flex;
+  justify-content:center;
+  align-items:flex-start;
+  flex-direction: column;
+}
+
+%flexnew1{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;   
+  flex-direction: row;
+}   
