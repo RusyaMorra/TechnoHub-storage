@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>E-mail рассылка / myMail PHP script</title>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<h1>E-mail рассылка / myMail PHP script</h1><br/>
+	<form action="mail.php" enctype="multipart/form-data" method="post">
+		<label>
+			<span class="label">Заголовок письма (прим: Здравствуй, дорогой друг)</span>
+			<input type="text" name="subject" required />
+		</label>
+		<label>
+			<span class="label">База E-mail адресов в формате CSV (прим: base.csv):</span>
+			<input type="file" name="db" required />
+		</label>
+		<label>
+			<span class="label">HTML шаблон письма (прим: email.html):</span>
+			<input type="file" name="html" required />
+		</label>
+		<button>Разослать письмо</button>
+	</form>
+	<script src="js/jquery-1.11.1.min.js"></script>
+	<script src="js/script.js"></script>
+</body>
+</html>

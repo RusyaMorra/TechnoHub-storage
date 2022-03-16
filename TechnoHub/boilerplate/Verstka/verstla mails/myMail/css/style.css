@@ -1,0 +1,44 @@
+body {
+	background-color: #000;
+	color: #fff;
+	font-family: sans-serif;
+	text-align: center;
+	margin: 0;
+	padding: 80px 0 0;
+}
+label, button {
+	display: block;
+	margin: 20px auto;
+}
+input {
+	border: 2px solid #d5d5d5;
+	line-height: 22px;
+	margin-left: 20px;
+	min-width: 230px;
+}
+.label {
+	display: inline-block;
+	min-width: 400px;
+	text-align: left;
+}
+button {
+	background-color: green;
+	border: medium none;
+	color: #fff;
+	font-size: 20px;
+	line-height: 40px;
+	margin-top: 40px;
+	padding: 0 30px;
+	cursor: pointer;
+	text-transform: uppercase;
+}
+label {
+	margin: 0;
+	padding: 12px 0;
+	-webkit-transition: all .25s;
+	-o-transition: all .25s;
+	transition: all .25s;
+}
+label:hover {
+	background-color: rgba(255, 255, 255, .2);
+}
