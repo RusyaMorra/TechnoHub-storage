@@ -1,0 +1,93 @@
+.slider__container {
+    width: 100%;
+    max-width: 768px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    border: 5px solid gray;
+    height: 400px;
+    margin-bottom: 50px;
+  }
+  
+  .slider__container .slider-item {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    transition: all ease 1s;
+  }
+  
+  .slider__control {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .slider__control-item {
+    border: solid #fff;
+    border-width: 0 5px 5px 0;
+    padding: 15px;
+  }
+  
+  .slider__control-item:hover {
+    opacity: .7;
+    cursor: pointer;
+  }
+  
+  .next {
+    margin-right: 25px;
+    transform: rotate(-45deg);
+  }
+  
+  .prev {
+    margin-left: 25px;
+    transform: rotate(135deg);
+  }
+  
+  .slider__dots {
+    width: 100%;
+    position: absolute;
+    align-self: flex-end;
+    display: inline-flex;
+    justify-content: center;
+    bottom: 0;
+  }
+  
+  .slider__dots-item {
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    background-color: #fff;
+    margin: 25px 10px;
+  }
+  
+  .slider__dots-item:hover {
+    opacity: .7;
+    cursor: pointer;
+  }
+  
+  .slider__dots-item.active {
+    background-color: gray;
+  }
+  
+  /* fade off */
+  .slider__container .content.fade-off {
+    position: relative;
+    top: 0;
+    left: 0;
+    display: flex;
+    height: 100%;
+    transition: all 1s ease;
+  }
+  
+  .slider__container .slider-item.fade-off {
+    position: static;
+  }

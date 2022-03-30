@@ -1,0 +1,64 @@
+section.gallery{
+    position: relative;
+    padding: 45px 0;
+  }
+  .gallery-list{
+      width: 80%;
+      margin: 0 auto;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+    font-size: 0;
+    margin-top: 30px;
+  }
+  .gallery-item{
+    display: block;
+    flex: 33%;
+    overflow: hidden;
+    position: relative;
+  }
+  .gallery-item-hover{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(22, 20, 18, 0.8);;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    font-family: 'Zen Kaku Gothic Antique', sans-serif;
+    opacity: 0;
+    transition: opacity .5s ease;
+    z-index: 2;
+
+  }
+  .gallery-item:hover .gallery-item-hover{
+    opacity: 1;
+  }
+  .gallery-item:hover img{
+    transform: scale(1.3) rotate(5deg);
+  }
+  .gallery-item img{
+    max-width: 100%;
+    height: auto;
+    transition: all .5s ease;
+  }
+  @media (max-width: 991px){
+    .gallery-item{
+      flex: 33.3%;
+    }
+  }
+  @media (max-width: 768px){
+    .gallery-item{
+      flex: 50%;
+    }
+  }
+  @media (max-width: 530px){
+    .gallery-item{
+      flex: 100%;
+    }
+  }

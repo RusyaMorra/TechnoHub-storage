@@ -1,0 +1,23 @@
+{
+  "name": "projectforjob",
+  "version": "1.0.0",
+  "description": "test work",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "rusya morra",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.27.1",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-sass": "^4.1.1",
+    "gulp-uglify-es": "^2.0.0"
+  },
+  "dependencies": {
+    "del": "^6.0.0"
+  }
+}

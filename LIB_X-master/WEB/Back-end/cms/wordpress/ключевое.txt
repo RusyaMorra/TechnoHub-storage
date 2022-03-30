@@ -1,0 +1,75 @@
+Underscores: фреймворк что бы быстро создавать файлы тем
+Wp-kama.ru:  спецификация 
+Codex:  спецификация 
+ирархия шаблонов читать по ссылке: https://wp-kama.ru/id_7654/ierarhiya-fajlov-temy-shablona.html 
+шпаршадка по wordpress:https://wp-kama.ru/handbook/cheatsheet
+важные методы:
+стили и скрипты нужно подключать обсолютным путем: get_template_directory_uri()
+functions.php: главный файл функций
+виды хуков: filters и actions
+add_action()-перехватывает событие и добавляет свое
+wp_enqueue_scripts- срабатывает в момент подключения файлов и скриптов
+wp_head() ставиться этот хук в конце head
+wp_footer()ставиться этот хук в конце footer
+wp_enqueue_style( $handle, $src, $deps, $ver, $media ); подключает стили
+get_stylesheet_uri(): прописывает путь до нашей темы и подключает style.css
+
+functions.php - всегда подключается автоматически при загрузке темы.
+header.php - get_header()
+sidebar.php - get_sidebar()
+footer.php - get_footer()
+searchform.php - get_search_form()
+
+
+<?php  bloginfo(атрибут) ?> https://wp-kama.ru/function/bloginfo
+
+register_nav_menu() для регистарции меню указать хук after_setup_theme
+wp_nav_menu() выводит меню
+dynamic_sidebar() вывод активного виджета
+
+
+
+
+
+                 для вывода статей:
+
+<?php if (have_posts()) {while (have_posts()) {the_post(); ?>
+
+         
+                   <article>
+                       <h1><?php the_title();  ?></h1>
+                          <?php the_content();  ?>
+                   </article>
+                
+<?php } //конец if } //конец while ?>
+
+
+
+
+<?php the_permalink();  ?>- вывод ссылки на определенный пост
+
+<?php the_time('F jS, Y');  ?> - для вывода времени
+<?php the_content()?> выводить тело поста тоесть сам пост записи
+<?php the_excerpt()?> выводи окраниченое количество текста для  записи
+<?php the_posts_pagination()?> добавляет пагинацию
+<?php the_category($separator='/', $parents = '', $post_id=false);  ?> вывод вложености категорий в статье
+<?php the_tags($before=null, $sep = ',', after='');  ?> вывод тегов
+add_theme_support() вставка для подджеки темы 
+<?php the_post_thumbnail('thumbnails') ?> устанавливает картинку посту
+add_image_size( 'post', '1300px', '500px', true );  задать фиксированые значения в настройках для типа фоток
+<?get_posts> для того что бы выводить посты где угодно фильтруя их
+<?php the_author(); ?> автор
+
+
+
+Возможно кому-то пригодится. В уроке этого нет, а я промучился долго. Итак, алгоритм, чтобы вывести все записи (вне зависимости от категории) на одной странице:
+1. Создаём шаблон home.php – он отвечает за вывод всех записей.
+2. Создаём страницу, например Блог
+3. Идём в настройки->чтение, выбираем «отображать на главной статическую страницу», указываем для окошка записи нашу страницу «Блог». 
+4. Добавляем её в меню.
+Готово! По ссылке на страницу Блог теперь показывается виртуальная страница, на которой идут все записи. Редактировать её через шаблон home.php
+
+
+
+the_field('названия поля'); метод ля добавления полей в плагине custom_field
+

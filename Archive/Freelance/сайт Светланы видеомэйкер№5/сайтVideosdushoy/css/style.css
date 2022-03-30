@@ -1,0 +1,2534 @@
+* {
+  outline: none;
+  text-decoration: none;
+}
+
+.E-mail{
+  float:right;
+  width:30%;
+  padding-top: 10%;
+  color: #FF8A00;
+  text-shadow: 2px 2px 3px rgba(255,255,255,0.1);
+  font-size: 35px;
+}
+.mobail{
+  float:right;
+  width:0%;
+  padding-top: 15%;
+  color: #FF8A00;
+  font-size: 35px;
+}
+.AllContent{
+  max-width: 1775px;
+  margin: 0 auto;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Zen+Kaku+Gothic+Antique:wght@300&display=swap');
+::selection{
+  background-color: #FF8A00;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+
+.MainContent{
+width: 100%;
+	margin: 0 auto;
+  -webkit-box-shadow: -1px 5px 29px 0px rgba(34, 60, 80, 0.25);
+  -moz-box-shadow: -1px 5px 29px 0px rgba(34, 60, 80, 0.25);
+  box-shadow: -1px 5px 29px 0px rgba(34, 60, 80, 0.25);
+  padding-bottom: 100px;
+}
+body::-webkit-scrollbar{
+  width: 15px;
+  background-color: #f9f9fd;
+}
+body::-webkit-scrollbar{
+  width: 15px;
+  background-color: #f9f9fd;
+}
+body::-webkit-scrollbar-thumb{
+  background-color: #FF8A00;
+}
+
+body::-webkit-scrollbar-track{
+  border-radius: 10px;
+  background-color: #ffff;
+}
+
+body textarea::-webkit-scrollbar {
+  width: 15px;
+  background-color: #f9f9fd;
+}
+
+body textarea::-webkit-scrollbar-thumb {
+  background-color: #FF8A00;
+}
+
+body textarea::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background-color: #ffff;
+}
+header{
+    max-width: 100%;     
+    min-height: 450px;   
+    background-color: #ffffff;
+    display: inline-block;  
+  }
+
+.LOGO img{
+	margin-left: 80px;
+}
+
+.Service {
+	min-height: 30px;
+	padding: 16px;
+  min-width: 300px;
+	max-width: 840px;
+	background: #FFFFFF;
+	-webkit-box-shadow: 5px 4px 35px -2px rgba(34, 60, 80, 0.2);
+	-moz-box-shadow: 5px 4px 35px -2px rgba(34, 60, 80, 0.2);
+	box-shadow: 5px 4px 35px -2px rgba(34, 60, 80, 0.2);
+	margin-top: 20px;
+  margin-left: 80px;
+  overflow: hidden;
+  
+    
+}
+.ServiceLogo a{
+    text-decoration: none;
+	display: inline-block;
+	font-size: 26px;
+    cursor: pointer;
+    color: #FF8A00;
+    letter-spacing: 5px;
+    line-height: 30px;
+    position: relative;
+	margin-left: 40px;
+	margin-bottom: 20px;
+  font-family: 'Lato', sans-serif;
+  font-family: 'Zen Kaku Gothic Antique', sans-serif;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 24px;
+	line-height: 28px;
+	text-align: center;
+	letter-spacing:2px;
+  }
+  
+  .ServiceLogo a:after {
+    background-color: rgb(250, 135, 4);
+    display: block;
+    content: "";
+    height: 3px;
+    width: 0%;
+    left: 50%;
+    position: absolute;
+    -webkit-transition: width .3s ease-in-out;
+    -moz--transition: width .3s ease-in-out;
+    transition: width .3s ease-in-out;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    transform: translateX(-50%);
+  }
+  .ServiceLogo a:hover:after,
+  .ServiceLogo a:focus:after {
+      width: 100%;
+  }
+  
+  .ServiceText{
+    font-size: 18px;
+    letter-spacing: 1px;
+    line-height: 30px;
+    color: rgb(27, 19, 41);
+    font-family: 'Lato', sans-serif;
+    font-family: 'Zen Kaku Gothic Antique', sans-serif;
+    text-align: center;
+  }
+  .ProductsPage{
+    margin: 0 auto;
+    margin-top: 50px;
+    width: 90%;
+  }
+  .Products{
+    margin-top: 40px;
+    max-width: 1500px;
+    min-height: 100px;
+  }
+.Product{
+  display: inline-block;
+  min-width: 100px;
+  max-width: 275px;
+  max-height: 420px;
+  -webkit-box-shadow: 5px -2px 25px 6px rgba(11, 10, 26, 0.28);
+  -moz-box-shadow: 5px -2px 25px 6px rgba(11, 10, 26, 0.28);
+  box-shadow: 5px -2px 25px 6px rgba(11, 10, 26, 0.28);
+  margin-left: 80px;
+  margin-bottom: 80px;
+}
+.ProductLogo{
+  color: #484646;
+  font-family: 'Lato', sans-serif;
+  font-family: 'Zen Kaku Gothic Antique', sans-serif;
+width: 275px;
+height: 37px;
+font-style: normal;
+font-weight: normal;
+font-size: 26px;
+line-height: 30px;
+text-align: center;
+letter-spacing: 0.05em;
+color: #484646;
+margin-top: 20px;
+
+}
+.ProductImg{
+  width: 240px;
+  height: 190px;
+  overflow: hidden;
+  margin: 0 auto;
+  margin-top: 30px;
+  transition: 500ms;
+}
+.ProductImg:hover .ProductImg img {
+  transform: scale(1.05);
+  }
+.ProductImg img{
+  width: 260px;
+  height: 190px;
+  overflow: hidden;
+}
+.ProductPrice{
+  color: #484646;
+  text-align: center;
+  font-size: 26px;
+  font-weight: bold;
+  font-style: normal;
+  font-family: 'Lato', sans-serif;
+  font-family: 'Zen Kaku Gothic Antique', sans-serif;
+  margin-top: 10px;
+}
+.ProductHref{
+  margin: 0 auto;
+  margin-top: 10px;
+  width: 70%;
+  height: 60px;
+  text-align: center;
+  padding-top: 20px;
+}
+.ProductButton{  
+  width: 100%;
+  height: 100%;
+  padding: 15px;
+  font-size: 26px;
+  background-color: #FF8A00;
+  color: #ffffff;
+  font-family: 'Lato', sans-serif;
+  font-family: 'Zen Kaku Gothic Antique', sans-serif;
+  font-weight: bold;
+  text-align: center;
+  transition: all 500ms ease; 
+  box-sizing: border-box;
+  border: 0px;
+
+}
+.ProductButton:hover{
+  background: #ffffff;
+  color: #FF8A00;
+  box-shadow: inset 0 0 0 4px #FF8A00;
+}
+
+.Product a{
+  text-decoration: none;
+  cursor: pointer;
+}
+.Content{
+  display: inline-block;
+}
+.Sidebar{
+  width: 380px;
+  float: right;
+  margin-right: 50px;
+height: 800px; /* высота нашего блока */
+background: #fff; /* цвет фона, белый */
+overflow-y: scroll; /* прокрутка по вертикали */
+padding: 10px;
+-webkit-box-shadow: 5px 4px 50px 0px rgba(0, 0, 0, 0.25);
+-moz-box-shadow: 5px 4px 50px 0px rgba(0, 0, 0, 0.25);
+box-shadow: 5px 4px 50px 0px rgba(0, 0, 0, 0.25);
+top: 100px;
+}
+.Sidebar::-webkit-scrollbar {
+  width: 10px;
+  background-color: #f9f9fd;
+}
+
+.Sidebar::-webkit-scrollbar-thumb {
+  background-color: #FF8A00;
+}
+
+.Sidebar::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background-color: #ffff;
+}
+.GalleryLogo{
+  font-family: 'Lato', sans-serif;
+  font-family: 'Zen Kaku Gothic Antique', sans-serif;
+font-weight: 200;
+color: #484646;
+  width: 100%;
+  text-align: center;
+  padding-top: 20px;
+  font-size: 40px;  
+  letter-spacing: 3px;
+  margin-bottom: 20px;
+}
+.GalleryImage{
+  margin: 0 auto;
+  width: 350px;
+  height: 310px;
+  overflow: hidden;
+  margin-bottom: 20px;
+  -webkit-box-shadow: -1px 4px 20px 0px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: -1px 4px 20px 0px rgba(0, 0, 0, 0.25);
+  box-shadow: -1px 4px 20px 0px rgba(0, 0, 0, 0.25);
+}
+.GalleryImage img{
+  width: 350px;
+  height: 310px;
+  overflow: hidden;
+}
+.cd-testimonials-wrapper li h1{
+  font-family: 'Lato', sans-serif;
+  font-family: 'Zen Kaku Gothic Antique', sans-serif;
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  letter-spacing: 2px;
+
+}
+
+.cd-testimonials-wrapper {
+  position: relative;
+  width: 90%;
+  max-width: 768px;
+  background-color: #ffffff;
+  margin: 81px;
+  margin-bottom: 30px;
+
+
+}
+
+@media only screen and (min-width: 768px) {
+  .cd-testimonials-wrapper {
+   
+    padding: 32px 25px 57px;
+  }
+}
+
+
+.cd-testimonials {
+  color: #484646;
+  text-align: center;
+}
+.cd-testimonials h1{
+  color: #FF8A00;
+}
+.cd-testimonials::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+.cd-testimonials > li {
+  position: absolute;
+  opacity: 0;
+}
+.cd-testimonials > li:first-child {
+  position: relative;
+  opacity: 1;
+}
+.cd-testimonials p {
+  font-family: 'Lato', sans-serif;
+  font-family: 'Zen Kaku Gothic Antique', sans-serif;
+  font-style: normal;
+  line-height:30px;
+  margin-bottom: 1em;
+  padding: 0 14px;
+  font-weight: lighter;
+  font-size: 20px;
+}
+@media only screen and (min-width: 768px) {
+  .cd-testimonials p {
+    font-size: 16px;
+    font-size: 1.375rem;
+  }
+}
+
+
+
+.SliderJs {
+  color: #484646;
+  text-align: center;
+}
+.SliderJs h1{
+  color: #FF8A00;
+}
+.SliderJs::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+.SliderJs > li {
+  position: absolute;
+  opacity: 0;
+}
+.SliderJs > li:first-child {
+  position: relative;
+  opacity: 1;
+}
+.SliderJs p {
+  font-family: 'Lato', sans-serif;
+  font-family: 'Zen Kaku Gothic Antique', sans-serif;
+  font-style: normal;
+  line-height:30px;
+  margin-bottom: 1em;
+  padding: 0 14px;
+  font-weight: lighter;
+  font-size: 20px;
+}
+
+
+
+
+.flex-direction-nav li {
+  position: absolute;
+  height: 100%;
+  width: 70px;
+  top: 0;
+}
+.flex-direction-nav li:first-child {
+  left: 0;
+}
+.flex-direction-nav li:last-child {
+  right: 0;
+}
+.flex-direction-nav li a {
+  display: block;
+  height: 100%;
+  width: 100%;
+  /* image replacement */
+  overflow: hidden;
+  text-indent: 100%;
+  white-space: nowrap;
+  -webkit-transition: .2s;
+  -moz-transition:  0.2s;
+  transition:  .5s ease;
+}
+.no-touch .flex-direction-nav li a:hover {
+  box-shadow: inset 0 0 0 4px #FF8A00;
+
+}
+.flex-direction-nav li a::before, .flex-direction-nav li a::after {
+
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 2px;
+  height: 13px;
+  background-color: #FF8A00;
+
+}
+.SliderHref{
+  text-decoration: none;
+  font-family: 'Lato', sans-serif;
+  font-family: 'Zen Kaku Gothic Antique', sans-serif;
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  letter-spacing: 2px;
+  transition: .5s ease;
+
+
+}
+.SliderHref:hover{
+  background-color: #FF8A00;
+  color: #fff;
+}
+
+.flex-direction-nav li a:hover {
+background-color: #fff;
+}
+
+.flex-direction-nav li a::before {
+  -webkit-transform: translateY(-35px) rotate(45deg);
+  -moz-transform: translateY(-35px) rotate(45deg);
+  -ms-transform: translateY(-35px) rotate(45deg);
+  -o-transform: translateY(-35px) rotate(45deg);
+  transform: translateY(-35px) rotate(45deg);
+}
+.flex-direction-nav li a::after {
+  -webkit-transform: translateY(-27px) rotate(-45deg);
+  -moz-transform: translateY(-27px) rotate(-45deg);
+  -ms-transform: translateY(-27px) rotate(-45deg);
+  -o-transform: translateY(-27px) rotate(-45deg);
+  transform: translateY(-27px) rotate(-45deg);
+}
+.flex-direction-nav li:last-child a::before {
+  -webkit-transform: translateY(-35px) rotate(-45deg);
+  -moz-transform: translateY(-35px) rotate(-45deg);
+  -ms-transform: translateY(-35px) rotate(-45deg);
+  -o-transform: translateY(-35px) rotate(-45deg);
+  transform: translateY(-35px) rotate(-45deg);
+}
+.flex-direction-nav li:last-child a::after {
+  -webkit-transform: translateY(-27px) rotate(45deg);
+  -moz-transform: translateY(-27px) rotate(45deg);
+  -ms-transform: translateY(-27px) rotate(45deg);
+  -o-transform: translateY(-27px) rotate(45deg);
+  transform: translateY(-27px) rotate(45deg);
+}
+@media only screen and (min-width: 768px) {
+  .flex-direction-nav li {
+    width: 50px;
+  }
+}
+
+
+.Adress{
+  float: right;
+  margin-right: 60px;
+  margin-top: 250px;
+  color: #484646;
+  font-family: 'Lato', sans-serif;
+  font-family: 'Zen Kaku Gothic Antique', sans-serif;
+  font-style: normal;
+  font-size: 26px;
+  letter-spacing: 2px;
+}
+.AdressItem{
+  margin-bottom: 40px;
+
+}
+.AdressH a{
+  font-size: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  font-style: normal;
+  font-family: 'Lato', sans-serif;
+  font-family: 'Zen Kaku Gothic Antique', sans-serif;
+  color: #FF8A00; 
+  padding: 5px;
+  transition: 0.25s;
+}
+.AdressH a:hover{
+  color: #8d427a;
+}
+.AdressH{
+  font-size: 30px;
+  font-weight: bold;
+  font-style: normal;
+  font-family: 'Lato', sans-serif;
+  font-family: 'Zen Kaku Gothic Antique', sans-serif;
+  color: #FF8A00;
+}
+
+
+
+.ContactFormLogo{
+  color: #484646;
+  margin: 0 auto;
+  font-size: 50px;
+  margin-bottom: 20px;
+  text-align: center;
+  font-family: 'Lato', sans-serif;
+  font-family: 'Zen Kaku Gothic Antique', sans-serif;
+	font-style: normal;
+	font-weight:lighter;
+
+}
+.ContactFormLogoText{
+  color: #484646;
+  margin: 0 auto;
+  font-size: 18px;
+  margin-bottom: 50px;
+  text-align: center;
+  width: 400px;
+  font-family: 'Lato', sans-serif;
+  font-family: 'Zen Kaku Gothic Antique', sans-serif;
+	font-style: normal;
+	font-weight:lighter;
+}
+.ContactForm{
+  width: 70%;
+  margin: 0 auto;
+  margin-top: 100px;
+}
+.ContactForm input{
+  width: 400px;
+  height: 80px;
+  margin-bottom: 30px;
+  border: 2px solid #FF8A00;
+  margin-right: 30px;
+  position: relative;
+  font-size: 26px;
+  text-align: center;
+  color: #484646;
+}
+
+.ContactForm input::-webkit-input-placeholder { color: #686565;
+text-align: center;
+align-items: center;
+font-size: 26px;
+font-family: 'Lato', sans-serif;
+font-family: 'Zen Kaku Gothic Antique', sans-serif;
+font-style: normal;
+font-weight:lighter;
+}
+ input::-webkit-input-placeholder :focus{
+ color: #fff;
+}
+.Contacts{
+  width: 300px;
+  margin: 0 auto;
+}
+.ContactForm textarea{
+  width: 700px;
+  height: 220px;
+  resize: none;
+  border: 2px solid #FF8A00;
+  outline: none;
+  font-size: 26px;
+  color: #484646;
+  font-family: 'Lato', sans-serif;
+  font-family: 'Zen Kaku Gothic Antique', sans-serif;
+	font-style: normal;
+	font-weight:lighter;
+}
+.SubmitButton{
+  
+  -webkit-box-shadow: 9px 5px 0px 0px rgba(255, 92, 0, 1);
+-moz-box-shadow: 9px 5px 0px 0px rgba(255, 92, 0, 1);
+box-shadow: 9px 5px 0px 0px rgba(255, 92, 0, 1);
+border: 2px solid #FF8A00;
+background: #fff;
+transition: .5s ease;
+font-family: 'Lato', sans-serif;
+font-family: 'Zen Kaku Gothic Antique', sans-serif;
+font-style: normal;
+font-weight:lighter;
+cursor: pointer;
+}
+.SubmitButton:hover{
+  background: #FF8A00;
+  color: #fff;
+  -webkit-box-shadow: 9px 5px 0px 0px rgba(255, 255, 255, 1);
+  -moz-box-shadow: 9px 5px 0px 0px rgba(255, 255, 255, 1);
+  box-shadow: 9px 5px 0px 0px rgba(255, 255, 255, 1);
+  font-weight: bold;
+}
+.footer-distributed {
+  background-color: #303442;
+  box-sizing: border-box;
+  width: 100%;
+  text-align: left;
+  font-size: 20px;
+  padding: 45px 50px;
+  margin-top: 150px;
+  min-height: 300px;
+display: inline-block;
+font-family: 'Lato', sans-serif;
+font-family: 'Zen Kaku Gothic Antique', sans-serif;
+}
+
+.footer-distributed .footer-left p {
+  color: #8f9296;
+  font-size: 14px;
+  margin: 0;
+}
+/* Footer links */
+
+.footer-distributed .footer-right a {
+  display: inline-block;
+  width: 60px;
+  height: 60spx;
+  background-color: #303442;
+  border-radius: 2px;
+  font-size: 20px;
+  color: #d1d0d0;
+  text-align: center;
+  line-height: 35px;
+  margin-left: 3px;
+  transition:all .25s;
+}
+.footer-left h2{
+  font-size: 26px;
+  color: #d1d0d0;
+  letter-spacing: 2px;
+  font-family: 'Lato', sans-serif;
+  font-family: 'Zen Kaku Gothic Antique', sans-serif;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+.footer-left{
+  margin-bottom: 30px;
+}
+
+.footer-right{
+  float: right;
+  width: 500px;
+  color: #d1d0d0;
+  
+}
+.FooterRightIconsLogo h2{
+  margin-bottom: 20px;
+}
+.footer-left a{
+text-decoration: none;
+margin-left: 20px;
+color: #fff;
+font-size: 20px;
+position: relative;
+}
+
+.footer-left a::before {
+  content: '';
+  position: absolute;
+  left: 0; bottom: -5px;
+  width: 0;
+  height: 2px;
+  background-color: #fff;
+}
+
+.footer-left a:hover:before {
+  width: 100%;
+}
+.footer-left a::before {
+  transition: width 0.3s;
+}
+.footer-distributed .footer-right a:hover{transform:scale(1.3); -webkit-transform:scale(1.3);}
+
+.footer-distributed p.footer-links a:hover{text-decoration:underline;}
+
+
+.BlocksLogo{
+  color: #FF8A00;
+  font-size: 42px;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  font-family: 'Lato', sans-serif;
+  font-family: 'Zen Kaku Gothic Antique', sans-serif;
+  font-style: normal;
+}
+.AboutUs{
+  width: 80%;
+  padding: 20px;
+  margin: 0 auto;
+  min-height: 650px;
+}
+.AboutUsPic{
+  display: inline-block;
+  width: 600px;
+height: 600px;
+overflow: hidden;
+}
+.AboutUsPic img{
+width:600px;
+height: 600px;
+overflow: hidden;
+margin-bottom: 500px;
+}
+.AboutUsLogo{
+  font-size: 30px;
+  font-weight: bold;
+  color: #FF8A00;
+  font-family: 'Zen Kaku Gothic Antique', sans-serif;
+  letter-spacing: 1px;
+  line-height: 32px;
+  margin-bottom: 20px;
+}
+.AboutUsContent{
+  font-size: 22px;
+  color: #484646;
+  letter-spacing: 1px;
+  line-height: 28px;
+  font-family: 'Lato', sans-serif;
+  -webkit-box-shadow: 11px 7px 70px 0px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 11px 7px 70px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: 11px 7px 70px 0px rgba(0, 0, 0, 0.2);
+  padding: 10px;
+  margin-bottom: 120px;
+}
+.AboutUsText{
+max-width: 30%;
+float: right;
+margin-right: 170px;
+margin-top: 30px;
+}
+.AccordionButtons{
+  margin: 0 auto;
+  width: 60%;
+}
+.accordion {
+  background-color: #fff;
+  color: #484646;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 23px;
+  font-weight: bold;
+  transition: 0.3s;
+  font-family: 'Lato', sans-serif;
+  font-family: 'Zen Kaku Gothic Antique', sans-serif;
+  font-style: normal;
+  border-radius: 3px;
+  box-shadow: inset 0 0 0 3px #FF8A00;
+  
+}
+
+.active, .accordion:hover {
+  background-color: #FF8A00;
+  color: #fff;
+
+}
+
+.panel {
+  padding: 0 18px;
+  padding-top: 10px;
+  font-size: 21px;
+  background-color: white;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+  width: 80%;
+  margin-left: 20px;
+  font-family: 'Lato', sans-serif;
+  font-family: 'Zen Kaku Gothic Antique', sans-serif;
+  font-style: normal;
+  color: #484646;
+  margin-bottom: 10px;
+  letter-spacing: 2px;
+  line-height: 27px;
+}
+.back{
+  float: right;
+  display: none;
+  margin-top: 50px;
+
+  color: #FF8A00;
+  text-shadow: 2px 2px 3px rgba(255,255,255,0.1);
+  font-size: 20px;
+}
+
+
+.lbl-jobtype {
+  display: block;
+  color: #FF8A00;
+  font-size: 12px;
+  font-weight: bold;
+  text-align: right;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-right: 20px;
+  font-family: 'Lato', sans-serif;
+  font-family: 'Zen Kaku Gothic Antique', sans-serif;
+  font-style: normal;
+
+  width: -50%;
+  overflow: hidden; 
+}
+.PoemsPage a{
+text-decoration: none;
+}
+.Poems{
+  width: 50%;
+  height: 100%;
+  margin-left: 20px;
+}
+.CategorySidebar{
+  float: right;
+  margin-top: 60px;
+  margin-right: 100px;
+  text-align: center;
+  align-items: center;
+  background: #FF8A00;
+  -webkit-box-shadow: 10px 18px 25px 2px rgba(0, 0, 0, 0.2);
+-moz-box-shadow: 10px 18px 25px 2px rgba(0, 0, 0, 0.2);
+box-shadow: 10px 18px 25px 2px rgba(0, 0, 0, 0.2);
+padding-top: 20px;
+
+}
+.CategorySidebarItem{
+  width: 300px;
+  padding-top:30px;
+  padding-bottom:30px;
+  transition: all 500ms ease; 
+  font-size: 26px;
+  color: #ffffff;
+  font-weight: bold;
+  font-family: 'Lato', sans-serif;
+  font-family: 'Zen Kaku Gothic Antique', sans-serif;
+  font-style: normal;
+  margin-bottom: 20px;
+  text-decoration: none;
+  background: #FF8A00;
+  box-shadow: inset 0 0 0 2px #fff;
+
+}
+.CategorySidebarItem:hover{
+  box-shadow: inset 0 0 0 2px #FF8A00;
+  background-color: #fff;
+  color: #FF8A00;
+}
+.PoemsPage{
+  width: 90%;
+  margin: 0 auto;
+
+}
+.Poem{
+  width: 420px;
+  text-align: center;
+  margin: 0 auto;
+}
+.PoemLogo{
+  font-size: 28px;
+  color: #FF8A00;
+  font-weight: bold;
+  font-family: 'Lato', sans-serif;
+  font-family: 'Zen Kaku Gothic Antique', sans-serif;
+  font-style: normal;
+  margin-bottom: 60px;
+  margin-top: 50px;
+}
+.PoemText{
+  color: #484646;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-size: 22px;
+  line-height: 28px;
+  letter-spacing: 1px;
+  font-family: 'Lato', sans-serif;
+  font-family: 'Zen Kaku Gothic Antique', sans-serif;
+  font-style: normal;
+  -webkit-box-shadow: 9px 0px 60px 2px rgba(0, 0, 0, 0.2);
+-moz-box-shadow: 9px 0px 60px 2px rgba(0, 0, 0, 0.2);
+box-shadow: 9px 0px 60px 2px rgba(0, 0, 0, 0.2);
+}
+.PoemRepostIcons{
+  margin-top: 20px;
+}
+.EducationMain{
+  margin-bottom: 230px;
+}
+.EducationMain a{
+  text-decoration: none;
+}
+.EducationMainPic{
+  float: right;
+  margin-right: 50px;
+}
+.EducationMainText{
+  width: 450px;
+  min-height: 170px;
+  text-align: center;
+  padding: 30px;
+  font-size: 22px;
+  margin-top: 100px;
+  margin-left: 150px;
+  font-family: 'Lato', sans-serif;
+  font-family: 'Zen Kaku Gothic Antique', sans-serif;
+  font-style: normal;
+  color: #484646;
+  letter-spacing: 3px;
+  line-height: 30px;
+  -webkit-box-shadow: 5px 6px 61px 0px rgba(0, 0, 0, 0.25);
+-moz-box-shadow: 5px 6px 61px 0px rgba(0, 0, 0, 0.25);
+box-shadow: 5px 6px 61px 0px rgba(0, 0, 0, 0.25);
+}
+.EducationMainButton{
+  text-align: center;
+  width: 250px;
+  margin-left: 150px;
+  margin-top: 70px;
+  background: #FF8A00;
+  padding-top: 30px;
+  padding-bottom:30px;
+  font-size: 25px;
+  color: #fff;
+  font-weight: bold;
+  font-family: 'Lato', sans-serif;
+  font-family: 'Zen Kaku Gothic Antique', sans-serif;
+  font-style: normal;
+  -webkit-box-shadow: 10px 4px 1px 0px rgba(255, 92, 0, 1);
+  -moz-box-shadow: 10px 4px 1px 0px rgba(255, 92, 0, 1);
+  box-shadow: 10px 4px 1px 0px rgba(255, 92, 0, 1);
+  transition: all 500ms ease; 
+}
+.EducationMainButton:hover{
+  background: #fff;
+  color: rgba(255, 92, 0, 1);
+}
+.EducationLongText br{
+  line-height: 150%;
+}
+.EducationLongText{
+  width: 1000px;
+  text-align: left;
+  margin: 0 auto;
+  font-size: 20px;
+  letter-spacing: 1px;
+  line-height: 27px;
+  font-family: 'Lato', sans-serif;
+  font-family: 'Zen Kaku Gothic Antique', sans-serif;
+  font-style: normal;
+  color: #484646;
+  -webkit-box-shadow: 6px 9px 39px 2px rgba(0, 0, 0, 0.24);
+-moz-box-shadow: 6px 9px 39px 2px rgba(0, 0, 0, 0.24);
+box-shadow: 6px 9px 39px 2px rgba(0, 0, 0, 0.24);
+padding: 30px;
+}
+.EducationLongText li{
+  margin-bottom: 30px;
+
+}
+.SkillsList{
+  width: 60%;
+  margin: 0 auto;
+  text-align: left;
+  font-size: 25px;
+  letter-spacing: 1px;
+  line-height: 27px;
+  font-family: 'Lato', sans-serif;
+  font-family: 'Zen Kaku Gothic Antique', sans-serif;
+  font-style: normal;
+  color: #484646;
+}
+.SkillsList li{
+  margin-bottom: 25px;
+}
+.ListNumber{
+  color: #FF8A00;
+  font-weight: bold;
+}
+.EducationShortText{
+  width: 50%;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 22px;
+  letter-spacing: 1px;
+  line-height: 27px;
+  font-family: 'Lato', sans-serif;
+  font-family: 'Zen Kaku Gothic Antique', sans-serif;
+  font-style: normal;
+  color: #484646;
+}
+.EducationShortText li{
+  margin-bottom: 40px;
+}
+.EducationShortPrice{
+  color: #FF8A00;
+  font-weight: bold;
+  font-size: 24px;
+  margin-bottom: 70px;
+}
+.Teacher{
+  margin-bottom: 150px;
+}
+.TeacherPic{
+  float: right;
+  overflow: hidden;
+  margin-right: 150px;
+}
+.TeacherPic img{
+  width: 375px;
+  height: 472px; 
+  overflow: hidden;
+}
+.TeacherText{
+  width: 50%;
+  margin-left: 200px;
+  font-size: 22px;
+  line-height: 27px;
+  letter-spacing: 1px;
+  font-family: 'Lato', sans-serif;
+  font-family: 'Zen Kaku Gothic Antique', sans-serif;
+  font-style: normal;
+  color: #484646;
+}
+.TeacherText li{
+  margin-bottom: 60px;
+}
+.TeacherName{
+  padding-left: 50px;
+  color: #FF8A00;
+  font-size: 30px;
+  font-weight: bold;
+}
+.PopUp{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 2;
+  transform: translateY(-40.5%) scaleY(0);
+  transition: .5s;
+}
+.PopUp.Active{
+  transform: translateY(0%) scaleY(100%);
+}
+.PopUpContainer{
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+.PopUpBody{
+  margin: 0 auto;
+}
+.PopUpClose{
+  width: 70px;
+  height: 70px;
+  padding-top: 25px;
+  cursor: pointer;
+  margin-bottom: 20px;
+  font-size: 26px;
+  text-align: center;
+  background-color: #FF8A00;
+  color: #fff;
+  transition: 0.2s ease-in-out;
+}
+.PopUpClose:hover{
+  color: #FF8A00;
+  background-color: #fff;
+}
+.ServiceContainer{
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 70px;
+}
+.ServiceContainerLogo{
+  font-size: 30px;
+  font-weight: bold;
+  color: #FF8A00;
+  margin-bottom: 50px;
+  letter-spacing: 1px;
+  font-family: 'Lato', sans-serif;
+  font-style: normal;
+}
+.ServiceContainerText{
+  font-size: 22px;
+  font-family: 'Lato', sans-serif;
+  font-style: normal;
+  letter-spacing: 1px;
+  line-height: 33px;
+  color: #484646;
+  padding: 20px;
+  -webkit-box-shadow: 11px 7px 70px 0px rgba(0, 0, 0, 0.2);
+-moz-box-shadow: 11px 7px 70px 0px rgba(0, 0, 0, 0.2);
+box-shadow: 11px 7px 70px 0px rgba(0, 0, 0, 0.2);
+margin-top: -559px;
+}
+.ServiceContainerDescription{
+  float: right;
+  max-width: 500px;
+  margin-right: 50px;
+
+}
+.ServiceContainerPhoto{
+  width: 700px;
+  height: 555px;
+  overflow: hidden;
+}
+.ServiceContainerPhoto img{
+  overflow: hidden;
+  width: 494px;
+  height: 355px;
+
+}
+.ServiceContainerButton{
+  margin-top: 100px;
+  text-align: center;
+  max-width: 230px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-size: 26px;
+  color: #fff;
+  font-weight: bold;
+  background-color: #FF8A00;
+  font-family: 'Lato', sans-serif;
+  -webkit-box-shadow: 10px 4px 1px 0px rgba(255, 92, 0, 1);
+  -moz-box-shadow: 10px 4px 1px 0px rgba(255, 92, 0, 1);
+  box-shadow: 10px 4px 1px 0px rgba(255, 92, 0, 1);
+  transition: all 500ms ease; 
+}
+.ServiceContainerButton:hover{
+  transform: translateX(5px) translateY(10px);
+  -webkit-box-shadow: 0px 0px 0px 0px rgba(255, 255,255, 1);
+  -moz-box-shadow: 0px 0px 0px 0px rgba(255, 255,255, 1);
+  box-shadow: 0px 0px 0px 0px rgba(255, 255,255, 1);
+}
+
+
+.Works{
+  width: 70%;
+  margin-left: 20px;
+
+}
+.Project{
+  max-width: 410px;
+  text-decoration: none;
+  text-align: center;
+  display: inline-block;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  -webkit-box-shadow: 11px 7px 35px 0px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 11px 7px 35px 0px rgba(0, 0, 0, 0.1);
+  box-shadow: 11px 7px 35px 0px rgba(0, 0, 0, 0.1);
+}
+.Project img{
+  width: 360px;
+  height: 240px;
+  overflow: hidden;
+  margin: 0 auto;
+}
+.ProjectLogo{
+  text-decoration: none;
+  font-size: 24px;
+  font-family: 'Lato', sans-serif;
+  color: #FF8A00;
+  line-height: 28px;
+  letter-spacing: 3px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-weight: bold; 
+}
+.ProjectButton{
+  text-decoration: none;
+  font-size: 26px;
+  width: 50%;
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-family: 'Lato', sans-serif;
+  color: #484646;
+  background-color: #fff;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  transition: .2s ease-in-out;
+  -webkit-box-shadow: 11px 7px 70px 0px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 11px 7px 70px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: 11px 7px 70px 0px rgba(0, 0, 0, 0.2);
+}
+.ProjectButton:hover{
+  background-color: #FF8A00;
+  color: #FFf;
+  -webkit-box-shadow: 11px 7px 70px 0px rgba(255, 138, 0, .5);;
+  -moz-box-shadow: 11px 7px 70px 0px rgba(255, 138, 0, .5);
+  box-shadow: 11px 7px 70px 0px rgba(255, 138, 0, .5);
+}
+.ProjectContainer{
+  max-width: 1280px;
+  margin: 0 auto;
+}
+.ProjectText{
+  font-size: 24px;
+  color: #484646;
+  margin-top: 50px;
+  font-family: 'Lato', sans-serif;
+  line-height: 30px;
+  letter-spacing: 2px;
+  padding: 15px;
+  -webkit-box-shadow: 11px 7px 70px 0px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 11px 7px 70px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: 11px 7px 70px 0px rgba(0, 0, 0, 0.2);
+}
+.ProjectButtonBuy{
+  font-size: 26px;
+  width: 50%;
+  margin: 0 auto;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  font-family: 'Lato', sans-serif;
+  color: #fff;
+  background-color: #FF8A00;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  transition: .2s ease-in-out;
+  -webkit-box-shadow: 11px 7px 20px 0px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 11px 7px 20px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: 11px 7px 20px 0px rgba(0, 0, 0, 0.2);
+}
+.ProjectButtonBuy:hover{
+  background-color: #fff;
+  color: #FF8A00;
+  -webkit-box-shadow: 11px 7px 70px 0px rgba(255, 138, 0, .7);;
+  -moz-box-shadow: 11px 7px 70px 0px rgba(255, 138, 0, .7 );
+  box-shadow: 11px 7px 70px 0px rgba(255, 138, 0, .7);
+}
+.ProjectBigButtonBuy{
+  font-size: 26px;
+  width: 30%;
+  margin: 0 auto;
+  margin-top: 50px;
+  text-align: center;
+  font-family: 'Lato', sans-serif;
+  color: #fff;
+  background-color: #FF8A00;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  transition: .2s ease-in-out;
+  -webkit-box-shadow: 11px 7px 20px 0px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 11px 7px 20px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: 11px 7px 20px 0px rgba(0, 0, 0, 0.2);
+}
+.ProjectBigButtonBuy:hover{
+  background-color: #fff;
+  color: #FF8A00;
+  -webkit-box-shadow: 11px 7px 70px 0px rgba(255, 138, 0, .7);;
+  -moz-box-shadow: 11px 7px 70px 0px rgba(255, 138, 0, .7 );
+  box-shadow: 11px 7px 70px 0px rgba(255, 138, 0, .7);
+}
+.ProjectBigButton{
+  text-align: center;
+  font-size: 26px;
+  width: 30%;
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-family: 'Lato', sans-serif;
+  color: #484646;
+  background-color: #fff;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  transition: .2s ease-in-out;
+  -webkit-box-shadow: 11px 7px 70px 0px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 11px 7px 70px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: 11px 7px 70px 0px rgba(0, 0, 0, 0.2);
+}
+.ProjectBigButton:hover{
+  background-color: #FF8A00;
+  color: #FFf;
+  -webkit-box-shadow: 11px 7px 70px 0px rgba(255, 138, 0, .5);;
+  -moz-box-shadow: 11px 7px 70px 0px rgba(255, 138, 0, .5);
+  box-shadow: 11px 7px 70px 0px rgba(255, 138, 0, .5);
+}
+.Scroll a{
+  text-decoration: none;
+}
+.Scroll{
+  display: none;
+  animation: NoBlock .3s linear forwards;
+}
+@keyframes NoBlock {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.ServiceScrollActive .Scroll {
+  display: block;
+  background-color:rgba(209, 209, 209, 0.65);
+  z-index: 10;
+  position: fixed;
+  width: 110%;
+  height: 80px;
+  padding-top: 50px;
+   animation: showBlock .3s linear forwards;
+  
+}
+@keyframes showBlock {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.ServiceScrollLogo{
+  width: 80%;
+  display: block;
+  margin: 0 auto;
+}
+.ServiceScrollItem{
+  width: 200px;
+  height: 25px;
+  padding: 20px;
+  margin-top: 20px;
+  margin-left: 35px;
+  background-color: #Fff;
+  letter-spacing: 3px;
+  font-size: 20px;
+  font-family: 'Lato', sans-serif;
+  color: #FF8A00;
+  font-weight: bold;
+  transition: .3s ease-in-out;
+  text-align: center;
+
+}
+.ServiceScrollItem:hover{
+  color: #fff;
+  -webkit-box-shadow: 11px 7px 70px 0px rgba(255, 138, 0, .5);;
+  -moz-box-shadow: 11px 7px 70px 0px rgba(255, 138, 0, .5);
+  box-shadow: 11px 7px 70px 0px rgba(255, 138, 0, .5);
+  background-color: #FF8A00;
+}
+
+@media (min-width: 600px) and (max-width: 1440px) { 
+  body, html {
+    overflow-x: hidden;
+  }
+  .Service {
+    max-width: 900px;
+    margin-left: 20px;
+    font-size: 26px;
+    overflow: hidden;
+    font-display: left;
+  }
+  .Adress{
+    display: none;
+  }
+  .Sidebar{
+    display: none;
+    float: none;
+  }
+  .Product{
+    display: inline-block;
+    z-index: 3;
+    margin-left: 40px;
+    margin-bottom: 50px;
+    overflow: hidden;
+  }
+  .Product img{
+    max-width: 300px;
+    max-height: 420px;
+    overflow: hidden;
+  }
+  .ContactForm{
+    max-width: 1050px;
+    margin-left:70px;
+
+  }
+  .Products{
+    height: auto;
+    overflow: hidden;
+  }
+  .cd-testimonials-wrapper{
+    max-width: 600px;
+    min-width: 400px;
+    font-size: 16px;
+    overflow: hidden;
+  }
+  .ContactForm textarea{
+    width: 400px;
+  }
+  .ServiceLogo a{
+    text-decoration: none;
+	display: inline-block;
+	font-size: 26px;
+    cursor: pointer;
+    letter-spacing: 5px;
+    line-height: 30px;
+    position: relative;
+  margin-bottom: 40px;
+	font-size: 20px;
+	line-height: 30px;
+	text-align: right;
+	letter-spacing:2px;
+  }
+  .flower{
+    width: 50px;
+  }
+  .footer-distributed .footer-right a {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background-color: #303442;
+    border-radius: 2px;
+    font-size: 20px;
+    text-align: center;
+    line-height: 35px;
+    margin-left: 3px;
+    transition:all .25s;
+  }
+  .footer-left h2{
+    font-size: 22px;
+    letter-spacing: 2px;
+    font-family: 'Lato', sans-serif;
+    font-family: 'Zen Kaku Gothic Antique', sans-serif;
+    font-weight: bold;
+    margin-bottom: 30px;
+    margin-top: 20px;
+  }
+  .footer-left{
+    margin-top: 30px;
+    line-height: 35px;
+    font-size: 18px;
+  }
+  .AboutUs{
+    width: 100%;
+    padding: 20px;
+    margin: 0 auto;
+  }
+  .AboutUsPic{
+    display: inline-block;
+  overflow: hidden;
+  display: block;
+  margin: 0 auto;
+  float: none;
+  max-width: 100%;
+  }
+  .AboutUsPic img{
+  margin: 0 auto;
+  }
+  .AboutUsLogo{
+    font-size: 30px;
+    font-weight: bold;
+    font-family: 'Zen Kaku Gothic Antique', sans-serif;
+    letter-spacing: 1px;
+    line-height: 32px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  .AboutUsContent{
+    font-size: 22px;
+    letter-spacing: 1px;
+    line-height: 28px;
+    font-family: 'Lato', sans-serif;
+    padding: 10px;
+    text-align: center;
+  }
+  .AboutUsText{
+  float: none;
+  margin-top: 30px;
+  max-width: 800px;
+  margin: 0 auto;
+  margin-top: 50px;
+  }
+  .AccordionButtons{
+    margin: 0 auto;
+    width: 60%;
+  }
+  .ProjectVideo iframe{
+    width: 600px;
+    height: 500px;
+    margin: 0 auto;
+    display: block;
+  }
+  .EducationMain{
+    margin-bottom: 230px;
+  }
+  .EducationMain a{
+    text-decoration: none;
+  }
+  .EducationMainPic{
+    float: none;
+    width: 600px;
+    display:block;
+    margin: 0 auto;
+  }
+  .EducationMainPic img{
+    width: 600px;
+  }
+  .EducationMainText{
+    width: 450px;
+    min-height: 170px;
+    text-align: center;
+    padding: 30px;
+    font-size: 22px;
+    margin-top: 100px;
+    margin-left: 150px;
+    font-family: 'Lato', sans-serif;
+    font-family: 'Zen Kaku Gothic Antique', sans-serif;
+    font-style: normal;
+    letter-spacing: 3px;
+    line-height: 30px;
+  }
+  .EducationMainButton{
+    text-align: center;
+    width: 250px;
+    margin-left: 150px;
+    margin-top: 70px;
+    padding-top: 30px;
+    padding-bottom:30px;
+    font-size: 25px;
+    font-weight: bold;
+    font-family: 'Lato', sans-serif;
+    font-family: 'Zen Kaku Gothic Antique', sans-serif;
+    font-style: normal;
+    transition: all 500ms ease; 
+  }
+  .EducationLongText br{
+    line-height: 100%;
+  }
+  .EducationLongText{
+    width: 600px;
+    text-align: left;
+    margin: 0 auto;
+    font-size: 20px;
+    letter-spacing: 1px;
+    line-height: 27px;
+    font-family: 'Lato', sans-serif;
+    font-family: 'Zen Kaku Gothic Antique', sans-serif;
+    font-style: normal;
+  padding: 30px;
+  }
+  .EducationLongText li{
+    margin-bottom: 30px;
+  }
+  .SkillsList{
+    width: 60%;
+    margin: 0 auto;
+    text-align: left;
+    font-size: 25px;
+    letter-spacing: 1px;
+    line-height: 27px;
+    font-family: 'Lato', sans-serif;
+    font-family: 'Zen Kaku Gothic Antique', sans-serif;
+    font-style: normal;
+  }
+  .SkillsList li{
+    margin-bottom: 25px;
+  }
+  .ListNumber{
+    font-weight: bold;
+  }
+  .EducationShortText{
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 22px;
+    letter-spacing: 1px;
+    line-height: 27px;
+    font-family: 'Lato', sans-serif;
+    font-family: 'Zen Kaku Gothic Antique', sans-serif;
+    font-style: normal;
+  }
+  .EducationShortText li{
+    margin-bottom: 40px;
+  }
+  .EducationShortPrice{
+    font-weight: bold;
+    font-size: 24px;
+    margin-bottom: 70px;
+  }
+  .Teacher{
+    margin-bottom: 150px;
+  }
+  .TeacherPic{
+    float: right;
+    overflow: hidden;
+    margin-right: 150px;
+  }
+  .TeacherPic img{
+    width: 375px;
+    height: 472px; 
+    overflow: hidden;
+    margin-bottom: 50px;
+  }
+  .TeacherText{
+    width: 50%;
+    margin-left: 200px;
+    font-size: 22px;
+    line-height: 27px;
+    letter-spacing: 1px;
+    font-family: 'Lato', sans-serif;
+    font-family: 'Zen Kaku Gothic Antique', sans-serif;
+    font-style: normal;
+  }
+  .TeacherText li{
+    margin-bottom: 60px;
+  }
+  .TeacherName{
+    padding-left: 50px;
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 27px;
+  }
+  .Project{
+    max-width: 360px;
+  }
+  .Project{
+    max-width: 300px;
+  }
+  .Project img{
+    max-width: 300px;
+  }
+  .CategorySidebarItem{
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-size: 18px;
+    font-weight: normal;
+  }
+  .ProjectButtonBuy{
+    font-size: 18px;
+  }
+  .ProjectButton{
+    font-size: 18px;
+  }
+  .Works{
+    max-width: 360px;
+    margin: 0;
+  }
+  .Poems{
+    width: 50%;
+    height: 100%;
+    margin-left: 20px;
+  }
+  #PoemsSidebar{
+    margin-top: 60px;
+    text-align: center;
+    align-items: center;
+  padding-top: 20px;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 50px;
+  float: none;
+  width: 320px;
+  }
+  .CategorySidebarItem{
+    width: 300px;
+    padding-top:30px;
+    padding-bottom:30px;
+    transition: all 500ms ease; 
+    font-size: 26px;
+    font-weight: bold;
+    font-family: 'Lato', sans-serif;
+    font-family: 'Zen Kaku Gothic Antique', sans-serif;
+    font-style: normal;
+    margin-bottom: 20px;
+    text-decoration: none;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 50px;
+  }
+  .CategorySidebarItem:hover{
+    display: block;
+    margin: 0 auto;
+  }
+  .PoemsPage{
+    width: 90%;
+    margin: 0 auto;
+    margin-bottom: 25;
+  }
+  .Poem{
+    width: 320px;
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    margin-top: 20px;
+  }
+  .PoemLogo{
+    font-size: 22px;
+    font-weight: bold;
+    font-family: 'Lato', sans-serif;
+    font-family: 'Zen Kaku Gothic Antique', sans-serif;
+    font-style: normal;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 30px;
+  }
+  .PoemText{
+    padding-left: 10px;
+    padding-right: 40px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 19px;
+    line-height: 28px;
+    letter-spacing: 1px;
+    font-family: 'Lato', sans-serif;
+    font-family: 'Zen Kaku Gothic Antique', sans-serif;
+    font-style: normal;
+  }
+  .PoemRepostIcons{
+    margin-top: 20px;
+  }
+  .CategorySidebarItem{
+    width: 300px;
+    padding-top:30px;
+    padding-bottom:30px;
+    transition: all 500ms ease; 
+    font-size: 18px;
+    font-weight: bold;
+    font-family: 'Lato', sans-serif;
+    font-family: 'Zen Kaku Gothic Antique', sans-serif;
+    font-style: normal;
+    margin-bottom: 20px;
+    text-decoration: none;
+    box-shadow: inset 0 0 0 2px #fff;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 50px;
+  }
+  .ServiceScrollActive .Scroll {
+    display: block;
+    display: none;
+  }
+  .ServiceContainer{
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 70px;
+  }
+  .ServiceContainerLogo{
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 50px;
+    letter-spacing: 1px;
+    font-family: 'Lato', sans-serif;
+    font-style: normal;
+  }
+  .ServiceContainerText{
+    font-size: 22px;
+    font-family: 'Lato', sans-serif;
+    font-style: normal;
+    letter-spacing: 1px;
+    line-height: 33px;
+    padding: 20px;
+  margin-top: -559px;
+  }
+  .ServiceContainerDescription{
+    float: right;
+    max-width: 500px;
+    margin-right: 50px;
+  }
+  .ServiceContainerPhoto{
+    width: 700px;
+    height: 555px;
+    overflow: hidden;
+  }
+  .ServiceContainerPhoto img{
+    overflow: hidden;
+    width: 494px;
+    height: 355px;
+  }
+  .ServiceContainerButton{
+    margin-top: 100px;
+    text-align: center;
+    max-width: 230px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 26px;
+    font-weight: bold;
+    font-family: 'Lato', sans-serif;
+    transition: all 500ms ease; 
+  }
+  .ServiceContainerButton:hover{
+    transform: translateX(5px) translateY(10px);
+  }
+}
+
+@media (max-width:1200px) {
+  .Sidebar{
+    display: none;
+  }
+  .Service{
+    font-size: 16px;
+  }
+}
+@media (min-width: 320px) and (max-width: 600px) { 
+  body, html {
+    overflow-x: hidden;
+  }
+  .Products{
+    margin: 0 auto;
+  }
+  .Service {
+    max-width: 600px;
+    min-width: 320px;
+    margin-left: 20px;
+    font-size: 18px;
+    overflow: hidden;
+    margin-left: 0;
+    text-align: center;
+  }
+  .Adress{
+    display: none;
+  }
+  .Sidebar{
+    display: none;
+    float: none;
+  }
+  .Product{
+    display: inline-block;
+    z-index: 3;
+    margin-left: 40px;
+    margin-bottom: 50px;
+    overflow: hidden;
+  }
+  .Product img{
+    max-width: 300px;
+    max-height: 420px;
+    overflow: hidden;
+  }
+  .ContactForm{
+    max-width: 600px;
+    margin-left:70px;
+  }
+  .Products{
+    height: auto;
+    overflow: hidden;
+  }
+  .cd-testimonials-wrapper{
+    max-width: 600px;
+    min-width: 400px;
+    font-size: 18px;
+    overflow: hidden;
+  }
+  .ContactForm textarea{
+    width: 400px;
+  }
+  .ServiceLogo a{
+    text-decoration: none;
+	  display: inline-block;;
+    cursor: pointer;
+    letter-spacing: 5px;
+    line-height: 30px;
+    position: relative;
+  margin-bottom: 40px;
+	font-size: 16px;
+	line-height: 20px;
+	text-align: right;
+	letter-spacing:2px;
+  }
+  .ContactFormLogo{
+    margin: 0 auto;
+    font-size: 50px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-family: 'Lato', sans-serif;
+    font-family: 'Zen Kaku Gothic Antique', sans-serif;
+    font-style: normal;
+    font-weight:lighter;
+  }
+  .ContactFormLogoText{
+    margin: 0 auto;
+    font-size: 18px;
+    margin-bottom: 50px;
+    text-align: center;
+    width: 360px;
+    font-family: 'Lato', sans-serif;
+    font-family: 'Zen Kaku Gothic Antique', sans-serif;
+    font-style: normal;
+    font-weight:lighter;
+  }
+  .ContactForm{
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 100px;
+  }
+  .ContactForm input{
+    width: 340px;
+    max-width: 0 auto;
+    height: 80px;
+    margin-bottom: 30px;
+    margin-right: 30px;
+    position: relative;
+    font-size: 26px;
+    text-align: center;
+    margin-left: 10px;
+  }
+  .ContactForm input::-webkit-input-placeholder { color: #686565;
+  text-align: center;
+  align-items: center;
+  font-size: 22px;
+  font-family: 'Lato', sans-serif;
+  font-family: 'Zen Kaku Gothic Antique', sans-serif;
+  font-style: normal;
+  font-weight:lighter;
+  }
+  .Contacts{
+    width: 300px;
+    margin: 0 auto;
+  }
+  .ContactForm textarea{
+    width: 340px;
+    height: 220px;
+    resize: none;
+    outline: none;
+    font-size: 26px;
+    font-family: 'Lato', sans-serif;
+    font-family: 'Zen Kaku Gothic Antique', sans-serif;
+    font-style: normal;
+    font-weight:lighter;
+    margin-left: 10px;
+  }
+  .SubmitButton{
+  transition: .5s ease;
+  font-family: 'Lato', sans-serif;
+  font-family: 'Zen Kaku Gothic Antique', sans-serif;
+  font-style: normal;
+  font-weight:lighter;
+  cursor: pointer;
+  }
+  .congratulate{
+    width: 250px;
+  }
+  .flower{
+    width: 30px;
+  }
+  .flex-direction-nav li {
+    display: none;
+  }
+  .no-touch .flex-direction-nav li a:hover {
+    display: none;
+  }
+  .SliderJs {
+    text-align: left;
+    padding-left: 0;
+    padding-right: 20px;
+    font-size: 12px;
+  }
+  #SlJS{
+    padding: 0 0px;
+  }
+  .cd-testimonials-wrapper{
+   margin: 5px;
+   font-size: 12px;
+   overflow: hidden;
+   width: 355px;
+   margin-bottom: 20px; 
+  }
+  #sl-d{
+    margin: 0px;
+  }
+  .SliderJs h1{
+    font-size: 14px;
+  }
+  .footer-distributed .footer-right a {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border-radius: 2px;
+    font-size: 20px;
+    text-align: center;
+    line-height: 35px;
+    margin-left: 3px;
+    transition:all .25s;
+  }
+  .footer-left h2{
+    font-size: 22px;
+    letter-spacing: 2px;
+    font-family: 'Lato', sans-serif;
+    font-family: 'Zen Kaku Gothic Antique', sans-serif;
+    font-weight: bold;
+    margin-bottom: 30px;
+    margin-top: 20px;
+  }
+  .footer-left{
+    margin-top: 30px;
+  }
+  .footer-right{
+    width: 300px;
+    margin-bottom: 30px;
+  }
+  .FooterRightIconsLogo h2{
+    margin-bottom: 20px;
+  }
+  .footer-left a{
+  text-decoration: none;
+  margin-left: 20px;
+  font-size: 16px;
+  line-height: 35px;
+  position: relative;
+  }
+  
+  .accordion {
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 23px;
+    font-weight: bold;
+    transition: 0.3s;
+    font-family: 'Lato', sans-serif;
+    font-family: 'Zen Kaku Gothic Antique', sans-serif;
+    font-style: normal;
+    border-radius: 3px;
+  }
+  .Service a{
+    width:250px;
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 22px;
+    font-size: 18px;
+  }
+  .flower{
+    display: none;
+  }
+  .accordion {
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 23px;
+    font-weight: bold;
+    transition: 0.3s;
+    font-family: 'Lato', sans-serif;
+    font-family: 'Zen Kaku Gothic Antique', sans-serif;
+    font-style: normal;
+    border-radius: 3px;
+  }
+  .AboutUs{
+    width: 100%;
+    padding: 20px;
+    margin: 0 auto;
+  }
+  .AboutUsPic{
+    display: inline-block;
+  overflow: hidden;
+  display: block;
+  margin: 0 auto;
+  float: none;
+  max-width:360px;
+  max-height: 360px;
+  }
+  .AboutUsPic img{
+    max-width:360px;
+    max-height: 360px;
+  margin: 0 auto;
+  }
+  .AboutUsLogo{
+    font-size: 30px;
+    font-weight: bold;
+    font-family: 'Zen Kaku Gothic Antique', sans-serif;
+    letter-spacing: 1px;
+    line-height: 32px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  .AboutUsContent{
+    font-size: 22px;
+    letter-spacing: 1px;
+    line-height: 28px;
+    font-family: 'Lato', sans-serif;
+    padding: 10px;
+    text-align: center;
+  }
+  .AboutUsText{
+  float: none;
+  margin-top: 30px;
+  max-width: 800px;
+  margin: 0 auto;
+  margin-top: 50px;
+  }
+  .AccordionButtons{
+    margin: 0 auto;
+    width: 60%;
+  }
+  .ProjectVideo iframe{
+    width: 360px;
+    height: 200px;
+    margin: 0 auto;
+    display: block;
+  }
+  .ProjectBigButton{
+    width: 200px;
+  }
+  .ProjectBigButtonBuy{
+    width: 200px;
+  }
+  .EducationMain{
+    margin-bottom: 230px;
+  }
+  .EducationMain a{
+    text-decoration: none;
+  }
+  .EducationMainPic{
+    float: none;
+    display: block;
+    margin: 0 auto;
+    max-width: 350px;
+  }
+  .EducationMainPic img{
+    float: none;
+    max-width: 350px;
+    margin-bottom: 50px;
+  }
+  .EducationMainText{
+    width: 360px;
+    min-height: 170px;
+    text-align: center;
+    font-size: 22px;
+    margin-top: 100px;
+    font-family: 'Lato', sans-serif;
+    font-family: 'Zen Kaku Gothic Antique', sans-serif;
+    font-style: normal;
+    letter-spacing: 3px;
+    line-height: 30px;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 50px;
+  }
+  .EducationMainButton{
+    text-align: center;
+    width: 250px;
+    margin-top: 70px;
+    padding-top: 30px;
+    padding-bottom:30px;
+    font-size: 25px;
+    font-weight: bold;
+    font-family: 'Lato', sans-serif;
+    font-family: 'Zen Kaku Gothic Antique', sans-serif;
+    font-style: normal;
+    transition: all 500ms ease; 
+    display: block;
+    margin: 0 auto;
+  }
+  .EducationLongText br{
+    line-height: 100%;
+  }
+  .EducationLongText{
+    width: 360px;
+    text-align: center;
+    margin: 0 auto;
+    font-size: 20px;
+    letter-spacing: 1px;
+    line-height: 27px;
+    font-family: 'Lato', sans-serif;
+    font-family: 'Zen Kaku Gothic Antique', sans-serif;
+    font-style: normal;
+  padding: 30px;
+  }
+  .EducationLongText li{
+    margin-bottom: 30px;
+  
+  }
+  .SkillsList{
+    width: 60%;
+    margin: 0 auto;
+    text-align: left;
+    font-size: 25px;
+    letter-spacing: 1px;
+    line-height: 27px;
+    font-family: 'Lato', sans-serif;
+    font-family: 'Zen Kaku Gothic Antique', sans-serif;
+    font-style: normal;
+  }
+  .SkillsList li{
+    margin-bottom: 25px;
+  }
+  .ListNumber{
+
+    font-weight: bold;
+  }
+  .EducationShortText{
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 22px;
+    letter-spacing: 1px;
+    line-height: 27px;
+    font-family: 'Lato', sans-serif;
+    font-family: 'Zen Kaku Gothic Antique', sans-serif;
+    font-style: normal;
+  }
+  .EducationShortText li{
+    margin-bottom: 40px;
+  }
+  .EducationShortPrice{
+
+    font-weight: bold;
+    font-size: 24px;
+    margin-bottom: 70px;
+  }
+  .Teacher{
+    margin-bottom: 150px;
+  }
+  .TeacherPic{
+    width: 360px;
+    display: block;
+    margin: 0 auto;
+  }
+  .TeacherPic img{
+    width: 360px;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 50px;
+  }
+  .TeacherText{
+    width: 85%;
+    font-size: 22px;
+    line-height: 27px;
+    letter-spacing: 1px;
+    font-family: 'Lato', sans-serif;
+    font-family: 'Zen Kaku Gothic Antique', sans-serif;
+    font-style: normal;
+    display: block;
+    margin: 0 auto;
+  }
+  .TeacherText li{
+    margin-bottom: 60px;
+  }
+  .TeacherName{
+    padding-left: 50px;
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 25px;
+  }
+  .Project{
+    max-width: 300px;
+  }
+  .Project img{
+    max-width: 300px;
+  }
+  .CategorySidebar{
+    float: none;
+    margin: 0 auto;
+    display: block;
+    margin-top: 20px;
+    max-width: 300px;
+    font-size: 16px;
+  }
+  .CategorySidebarItem{
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-size: 18px;
+    font-weight: normal;
+  }
+  .Works{
+    max-width: 360px;
+    margin: 0;
+  }
+  .ProjectButtonBuy{
+    font-size: 18px;
+  }
+  .ProjectButton{
+    font-size: 18px;
+  }
+  .BlocksLogo{
+    font-size: 24px;
+  }
+  .PoemsPage a{
+    text-decoration: none;
+    }
+    .Poems{
+      width: 50%;
+      height: 100%;
+      margin-left: 20px;
+    }
+    #PoemsSidebar{
+      margin-top: 60px;
+      text-align: center;
+      align-items: center;
+    padding-top: 20px;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    float: none;}
+    .CategorySidebarItem{
+      width: 300px;
+      padding-top:30px;
+      padding-bottom:30px;
+      transition: all 500ms ease; 
+      font-size: 26px;
+      font-weight: bold;
+      font-family: 'Lato', sans-serif;
+      font-family: 'Zen Kaku Gothic Antique', sans-serif;
+      font-style: normal;
+      margin-bottom: 20px;
+      text-decoration: none;
+      display: block;
+      margin: 0 auto;
+      margin-bottom: 50px;
+    }
+    .CategorySidebarItem:hover{
+      display: block;
+      margin: 0 auto;
+    }
+    .PoemsPage{
+      width: 90%;
+      margin: 0 auto;
+    }
+    .Poem{
+      width: 320px;
+      text-align: center;
+      margin: 0 auto;
+      margin-bottom: 50px;
+    }
+    .PoemLogo{
+      font-size: 22px;
+
+      font-weight: bold;
+      font-family: 'Lato', sans-serif;
+      font-family: 'Zen Kaku Gothic Antique', sans-serif;
+      font-style: normal;    
+      display: block;
+      margin: 0 auto;
+      margin-bottom: 30px
+    }
+    .PoemText{
+      padding-left: 10px;
+      padding-right: 40px;
+      padding-top: 20px;
+      padding-bottom: 20px;
+      font-size: 17px;
+      line-height: 20px;
+      letter-spacing: 1px;
+      font-family: 'Lato', sans-serif;
+      font-family: 'Zen Kaku Gothic Antique', sans-serif;
+      font-style: normal;
+    }
+    .PoemRepostIcons{
+      margin-top: 20px;
+    }
+    .ServiceScrollActive .Scroll {
+      display: block;
+      display: none;
+    }
+    .ServiceContainer{
+      width: 80%;
+      margin: 0 auto;
+      margin-top: 70px;
+    }
+    .ServiceContainerLogo{
+      font-size: 30px;
+      font-weight: bold;
+      margin-bottom: 50px;
+      letter-spacing: 1px;
+      font-family: 'Lato', sans-serif;
+      font-style: normal;
+    }
+    .ServiceContainerText{
+      font-size: 22px;
+      font-family: 'Lato', sans-serif;
+      font-style: normal;
+      letter-spacing: 1px;
+      line-height: 33px;
+      padding: 20px;
+    margin-top: -161px;
+    }
+    .ServiceContainerDescription{
+      float: right;
+      max-width: 500px;
+      margin-right: 50px;
+    }
+    .ServiceContainerPhoto{
+      width: 700px;
+      height: 555px;
+      overflow: hidden;
+    }
+    .ServiceContainerPhoto img{
+      overflow: hidden;
+      width: 494px;
+      height: 355px;
+    }
+    .ServiceContainerButton{
+      margin-top: 100px;
+      text-align: center;
+      max-width: 230px;
+      padding-top: 20px;
+      padding-bottom: 20px;
+      font-size: 26px;
+      font-weight: bold;
+      font-family: 'Lato', sans-serif;
+      transition: all 500ms ease; 
+    }
+}
+
+@media (min-width: 700px) and (max-width: 1328px){
+  .MainContent{
+    padding-bottom: 534px;
+  }
+  .ServiceContainerPhoto img{
+  display: none;
+  }
+  .ServiceContainerPhoto{
+    display: none;
+  }
+  .ServiceContainerText{
+    display: block;
+    font-size: 22px;
+    font-family: 'Lato', sans-serif;
+    font-style: normal;
+    letter-spacing: 1px;
+    line-height: 33px;
+    padding: 20px;
+  margin: 0 auto;
+  }
+}
+
+@media (min-width: 200px) and (max-width: 700px) {
+  .MainContent{
+    padding-bottom: 100%;
+  }
+  .ServiceContainer{
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 70px;
+  }
+  .ServiceContainerLogo{
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 50px;
+    letter-spacing: 1px;
+    font-family: 'Lato', sans-serif;
+    font-style: normal;
+  }
+  .ServiceContainerText{
+    font-size: 22px;
+    font-family: 'Lato', sans-serif;
+    font-style: normal;
+    letter-spacing: 1px;
+    padding: 20px;
+  margin-top: -161px;
+  }
+  .ServiceContainerDescription{
+    float: right;
+    max-width: 500px;
+    margin-right: 50px;
+  }
+  .ServiceContainerPhoto{
+    width: 700px;
+    height: 555px;
+    overflow: hidden;
+  }
+  .ServiceContainerPhoto img{
+    overflow: hidden;
+    width: 494px;
+    height: 355px;
+  }
+  .ServiceContainerButton{
+    margin-top: 100px;
+    text-align: center;
+    max-width: 230px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 26px;
+    font-weight: bold;
+    font-family: 'Lato', sans-serif;
+    transition: all 500ms ease; 
+  }
+  .ServiceContainerButton:hover{
+    transform: translateX(5px) translateY(10px);
+  }
+}
+@media (min-width: 200px) and (max-width: 553px) {
+  #PhotoService img{
+    display: none;
+  }
+  #textService{
+    margin-top: -567px;
+  }
+}
+.GalleryContent{
+  font-size: 18px;
+  font-family: 'Lato', sans-serif;
+  color: #484646;
+  letter-spacing: 0.5px;
+  line-height: 27px;
+  margin-bottom: 15px;
+  padding: 10px;
+}

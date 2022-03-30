@@ -1,0 +1,27 @@
+.breadcrumbs
+    background-color: #fbfbfb
+    padding-top: 15px
+    padding-bottom: 15px
+    position: relative
+    z-index: 1
+
+    &__list
+        align-items: center
+        display: flex
+        flex-wrap: wrap
+        margin: 0
+        font-size: 14px
+        line-height: 1.2
+
+        li
+            a
+                text-decoration: none
+
+            &.is-active
+                color: $gray-600
+
+    &__divider
+        color: $gray-600
+        display: inline-block
+        font-size: 16px
+        margin: 0 10px

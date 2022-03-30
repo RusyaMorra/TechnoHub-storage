@@ -1,0 +1,204 @@
+WordPress	43,81%	    566 000	
+
+1С-Битрикс	13,38%	    172 900	
+
+Joomla	    9,52%	    123 000	
+
+CMS.S3	    3,05%		39 400	
+
+OpenCart	3,02%	    38 900	
+
+Tilda	    2,75%	    35 400	
+
+Drupal	    2,52%	    32 500	
+
+Wix	        2,48%       31 900	
+
+
+
+
+Evolution CMS	                                                    2,40%	31 000	
+
+
+
+
+MODX Revolution	                                                   2,13%	27 500	
+
+
+
+
+
+
+DataLife Engine                                                 	1,72%	22 200	
+
+
+
+
+
+
+Shop-Script	                                                      1,39%   17 900	
+
+
+
+
+
+Nethouse	                                                      1,23%    15 800	
+
+
+
+
+
+Adobe Muse	                                                    1,11%		14 300	
+
+
+
+
+
+uCoz	                                                        0,98%	    12 700	
+
+
+
+
+UMI.CMS	                                                          0,83%	10 700	
+
+
+
+
+
+Битрикс24 Сайты	                                                      0,76%	9 700	
+
+
+
+
+NetCat          	                                                0,70%	9 000	
+
+
+
+
+Setup.ru	                                                          0,61%	7 900	
+
+
+
+StoreLand	                                                          0,56%	7 100	
+
+
+HostCMS	                                                             0,50%     6 400	
+
+
+InSales	                                                                 0,46%	5 900	
+
+
+
+
+Vigbo	                                                             0,45%		5 800	
+
+
+cs.cart      	                                                        0,33%	4 300	
+
+
+
+PrestaShop                                                          	0,32%	4 100	
+
+
+diafan.CMS   	                                                        0,26%	3 400	
+
+
+
+
+Ecwid	                                                              0,24%	   3 000	
+
+
+Simpla      	                                                        0,21%	2 600	
+
+
+
+October CMS  	                                                        0,18%	2 300	
+
+
+
+UralCMS                                                             	0,17%	 2 100	
+
+
+
+Moguta.CMS                                                          	0,16%	  2 000	
+
+
+
+
+Blogger  	                                                            0,14%		1 800	
+
+
+InstantCMS  	                                                            0,13%	1 700	
+
+
+VamShop	                                                                       0,13%	1 600	
+
+
+Amiro.CMS	                                                                     0,11%	1 300	
+
+
+
+
+SiteEdit	                                                                    0,10%       1 200	
+
+
+
+
+CMS Made Simple	                                                                      0,09%   1 100	
+
+
+
+ImageCMS                                                                            	0,07%         900	
+
+
+MaxSite CMS                                                                                  	0,06%	800	
+
+
+
+
+Shopify	                                                                                              0,06%    700	
+
+
+
+
+
+LiveStreet	                                                                                     0,05%	  700	
+
+
+
+S.Builder	                                                                                0,05%	600	
+
+
+
+ShopCMS	                                                                                      0,05%	600	
+
+
+
+Canape CMS	                                                                                     0,04%	500	
+
+
+
+
+TYPO3	                                                                                          0,03%	400	
+
+
+
+
+
+Squarespace	                                                                                   0,03%	  400	
+
+
+Danneo	                                                                                        0,03%	300	
+
+
+
+Umbraco  	                                                                                       0,03%	300	
+
+PHPShop Free	                                                                                   0,02%	200	
+
+
+ABO.CMS     	                                                                                      0,02%	 200	
+
+
+
+CMS Sitebill                                                                                             0,01%	   100
