@@ -1,0 +1,1531 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Создать анимацию в конструкторе онлайн</title>
+<meta name="description" content="Онлайн конструктор для создания анимированного файла GIF и WebP бесплатно. Конструктор создает анимицию превратив статическое изображение в анимированное путём наложения на нее эффектов анимации. Большая коллекция анимированных файлов и клипарта поможет оживить загруженное фото или создать открытку, поздравление ">
+
+<!-- <link href="/content/skin/theme.css" rel="stylesheet" type="text/css"> -->
+
+<link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0">
+
+
+
+
+
+<!-- <script>
+    var EDITOR = 'photoanimation',
+        CANVAS_LOGO = 1,
+        CANVAS_MAX_PAGES = 1,
+        CANVAS_WIDTH = 500,
+        CANVAS_HEIGHT = 500,
+        storageCANVAS_WIDTH = 500,
+        /*первоначальные данные*/ storageCANVAS_HEIGHT = 500,
+        /*первоначальные данные*/ CANVAS_minWIDTH = 100,
+        CANVAS_minHEIGHT = 100,
+        MAX_UPLIMG_WIDTH = 500,
+        MAX_UPLIMG_HEIGHT = 500,
+        MIN_UPLIMG_WIDTH_HEIGHT = 100,
+        MAX_THUMB_WIDTH_HEIGHT = 0,
+        MAX_UPL_IMG = 30;
+</script> -->
+<!-- <script src="/content/js/lib/litip/jquery.liTip.min.js"></script>
+<link href="/content/js/lib/litip/css.css" rel="stylesheet" type="text/css">
+<link href="/content/js/lib/pcolor/jquery.pcolor.css" rel="stylesheet" type="text/css">
+<script src="/content/js/lib/pcolor/jquery.pcolor.js"></script> -->
+
+<!-- <script src="/content/js/lib/fabric.min.3.6.4.js"></script> -->
+
+<script src="fabric.js"></script>
+
+<!-- <link href="/content/skin/range.min.css" rel="stylesheet" type="text/css">
+<link href="/publish/ttf/ttf.css" rel="stylesheet" type="text/css"> -->
+<!-- <link href="theme.css" rel="stylesheet" type="text/css"> -->
+<link href="photo_animation.css" rel="stylesheet" type="text/css" />
+
+<link href="editor.css" rel="stylesheet" type="text/css" />
+
+
+<!-- <link href="/content/skin/theme.css" rel="stylesheet" type="text/css">
+<link href="/content/js/lib/scrollbar/jquery.mCustomScrollbar.custom.css" rel="stylesheet" type="text/css">
+<script src="/content/js/lib/scrollbar/jquery.mCustomScrollbar.min.js"></script> -->
+
+ 
+
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js">
+</script> -->
+
+
+
+
+</head>
+<body>
+<div id="wrapper_box">
+
+         <!-- -------------top_panel_box -->
+
+    <div id="top_panel_box">
+        <div class="top-panel-btn-box"> <a class="liTip out_editor" title="Выйти из редактора" id="out_editor" href="#out-editor">Выйти</a> </div>
+        
+        <div class="top-panel-btn-box" id="page_tools_box">
+        <input title="Создать новое изображение" id="act_page_new" type="button">
+        <input  style="display: none;   title="Дублировать страницу" id="act_page_clone" type="button">
+        <input class="alert" title="Очистить холст" id="act_page_clear" type="button">
+        <input style="display: none;    class="alert" title="Изменить размер" id="act_page_resise" type="button">
+        <input  style="display: none;  class="alert" title="Удалить страницу" id="act_page_delete" type="button">
+        </div>
+        
+        <div class="top-panel-btn-box" id="zoom-box">
+        <input title="Маштаб увеличить" id="zoom_plus" type="button">
+            <div id="canvassizeval">
+            <span id="size_info_val">500×500</span>
+            <span id="zoom-info-val">100%</span> 
+            </div> 
+            <input title="Маштаб уменьшить" id="zoom_minus" type="button">
+        </div>
+        <div class="top-panel-btn-box"> 
+        <input title="Полноэкранный режим on/off" id="F11" type="button">
+        </div>
+        <div class="top-panel-btn-box">
+        <input value="Скачать" title="Скачать" id="download_open_box" type="button"> 
+        </div>
+    </div>     <!-- -------------top_panel_box -->
+    
+    
+     <!-- -------------panel_common_tools -->
+    
+    <div id="panel_common_tools">
+        <ul id="common_tools_box">
+            <li id="tools-delete"> <input class="obj-delete" title="Удалить !" id="delProp" type="button"> </li>
+            <li id="tools-move"> <input class="obj-moveForward" id="moveForward" title="Переместить на слой выше" type="button"> <input class="obj-moveToFront forPc" id="moveToFront" title="Переместить в самый вверх" type="button"> <input class="obj-moveToBack" id="moveBackwards" title="Переместить на слой ниже" type="button"> <input class="obj-moveBackwards forPc" id="moveToBack" title="Переместить в самый вниз" type="button"> </li>
+            <li id="tools-rotation"> <input class="obj-toggleOverX" id="toggleOverX" title="Отразить по горизонтали" type="button"> <input class="obj-toggleOverY" id="toggleOverY" title="Отразить по вертикали" type="button"> </li>
+            <li id="tools-angle"> <input class="obj-rotationLeft" id="rotationLeft" onClick="moveObj(-90)" title="Повернуть на 90 градусов против часовой стрелке" type="button"> <input class="obj-rotationRight" id="rotationRight" onClick="moveObj(90)" title="Повернуть на 90 градусов по часовой стрелке" type="button"> <input class="obj-angle openpop" title="Повернуть на угол" id="angleOpen" data-box="anglebox" type="button"> <input class="obj-angle-null" id="angleNull" onClick="angleObj(0)" title="Сбросить угол наклона" type="button"> </li>
+            <li id="tools-zoom"><input class="obj-zoom openpop" title="Масштаб" data-box="font_size_box" id="size_open" type="button"></li>
+            <li id="tools-lock"> <input class="obj-lock" id="lockObj" title="Заблокировать!" type="button"> <input class="obj-unlock" id="unlockObj" title="Разблокировать" type="button"> <input class="obj-unlockOll" id="unlockOll" title="Разблокировать ВСЕ" type="button"> <input class="obj-transparent openpop" title="Прозрачность" data-box="transparent_box" id="transparent_open" type="button"> </li>
+        </ul>
+    </div>  <!-- -------------panel_common_tools -->
+    
+    
+    <!-- -------------editor_canvases_box -->
+    
+    <ul id="editor_canvases_box">
+    <!--  <div id="demo-result-input">
+                <h3>Редактирование</h3>
+                <hr>
+                <select id="color"  onclick="colorEdit();"   >
+                    <option value="">Выберите цвет</option>
+                    <option >Черный</option>
+                    <option >Белый</option>
+                    <option >Красный</option>
+                    <option >Синий</option>
+                </select>
+                <input type="text"  placeholder="Стикер первый" id="sticker1" size="15"   onkeyup="sticker1Edit();" >
+                <input type="text"  placeholder="Стикер второй" id="sticker2" size="15"   onkeyup="sticker2Edit();" > 
+                <hr>
+                <button id="end-edit"  class="t-btn" onclick="endEdit();"  >Закончить редактирование </button>
+            </div> -->
+         
+ <canvas  id="c" width="500"  height="500"  style="display: block; 
+            position: absolute; left: 200px; top:0px; z-index: 99999;  border: 2px solid #ccc "  ></canvas>
+ 
+    <canvas id="canvas" style="position:absolute; left:150px;top:160px; z-index:9999; transform: rotate(30deg)  "   ></canvas>     
+  
+    
+    
+    </ul>   <!-- -------------editor_canvases_box -->
+    
+    <!-- -------------editor_left_box -->
+    
+    <div id="editor_left_box"> 
+    <input data-box="templatesBox" id="open_template" type="button" style="display: none;">
+    <input data-box="inserttextBox" id="open_text" type="button"> 
+    <input data-box="uplbox" id="open_uplods" type="button">
+    <input data-box="bgBox" id="open_bg" type="button">
+    <input data-box="aniBox" id="open_anilib" type="button"  onclick="ani();"   >
+    <input data-box="clipartBox" id="open_clipart" type="button"   onclick="clip();"   >
+    <input class="forPc" data-box="figureBox" id="open_figure" type="button">
+    <input class="forPc" data-box="qrBox" id="open_qr" type="button"> 
+    <input data-box="playerBox" id="open_player" type="button" style="display: none;"> 
+    <input data-box="" id="open_settings" type="button" style="display: none;"> 
+    </div>   <!--  editor_left_box  -->
+    
+    
+    
+    
+    
+    <!-- <div id="editor_left_box"> <input data-box="templatesBox" id="open_template" type="button"> <input data-box="inserttextBox" id="open_text" type="button"> <input data-box="uplbox" id="open_uplods" type="button"> <input data-box="bgBox" id="open_bg" type="button"> <input data-box="aniBox" id="open_anilib" type="button"> <input data-box="clipartBox" id="open_clipart" type="button"> <input class="forPc" data-box="figureBox" id="open_figure" type="button"> <input class="forPc" data-box="qrBox" id="open_qr" type="button"> <input data-box="playerBox" id="open_player" type="button"> <input data-box="" id="open_settings" type="button">
+
+    </div> -->
+    
+   <!--     editor_left_box   -->
+   
+    <div id="editor_bottom_box"  style="display: none; >
+        <div id="wrap_list_frames">
+            <ul id="list_frames">
+            
+            
+            
+            </ul>
+        </div>  <!--     editor_left_box   --> 
+        
+        
+   <!--  </div> -->   <!-- wrapper_box -->
+    
+    
+   <!-------  playerBox=== -->
+    
+    <!-- <div class="listBox" id="playerBox"  style="display: none";   >
+        <h3>Предпросмотр<i></i></h3>
+        <div class="content-listBox">
+            <div id="playerCanvac"> <canvas width="250" height="250" id="preview"></canvas> </div>
+            <div id="timeLineBox">
+                <div id="timeLine"></div>
+            </div>
+            <div id="playBtnBox"> <input onClick="player.gofirst()" id="player_gofirst" type="button"> <input onClick="player.play()" id="play_play" type="button"> <input id="play_pause" onClick="player.pause()" type="button"> <input onClick="player.golast()" id="player_golast" type="button"> </div>
+            <div id="settingPlayBox">
+                <p>Длительнось кадров: <strong id="timeFramesec">?</strong> сек.</p>
+                <p><input class="" oninput="player.setplaytime(this.value)" id="play_time" type="range" max="1000" min="50" value="150" step="50"></p>
+                <div id="nonstop_box"> <span>Зацикливание:</span> <label title="Бесконечное воспроизведение" class="liTip" id="labelplay_nonstop" for="play_nonstop"></label> </div> <input onChange="player.nonstop()" id="play_nonstop" type="checkbox" value="1" checked>
+            </div>
+        </div>
+    </div>  -->  <!-------  playerBox=== -->
+    
+    <!-------  qrBox -->
+    <div class="listBox" id="qrBox"  style="display: none";   >
+        <h3>Генератор QR-кода<i></i></h3>
+        <div class="content-listBox">
+            <p> <label for="qrfio">Имя:</label> <input name="name" type="text" id="qrfio" placeholder="Фамилия Имя Отчество" value="" maxlength="50"> </p>
+            <p> <label for="qrtitle">Примечание:</label> <input name="title" type="text" id="qrtitle" placeholder="Короткий текс" value="" maxlength="150"> </p>
+            <p> <label for="qrphone">Телефон:</label> <input name="phone" type="text" id="qrphone" placeholder="+72318877990" value="" maxlength="14"> </p>
+            <p> <label for="qremail">E-mail:</label> <input name="email" type="text" id="qremail" placeholder="you-mail@mail.ru" value="" maxlength="50"> </p>
+            <p> <label for="qrurl">Сайт:</label> <input name="url" type="text" id="qrurl" placeholder="https://progif.ru/" value="" maxlength="50"> </p>
+            <div class="btnbox"><input id="insQr" class="" type="button" value="Вставить"></div>
+        </div>
+    </div>    <!-------  qrBox -->
+    
+    <div class="listBox" id="settingsBox"  style="display: none";   >
+        <h3>Настройки<i></i></h3>
+    </div>
+    
+    
+    <div class="listBox" id="figureBox"  style="display: none"; >
+        <h3>Фигуры</h3>
+        
+        
+        <div class="content-listBox" id="figurequery"> 
+        </div>
+    </div>
+    
+    <!-- set-svg-box -->
+    
+    <div class="listBox settings" id="set-svg-box"  style="display: none;   ">
+        <h3>Свойства Фигуры<i></i></h3>
+        <div id="set-svg-scrollbox" class="content-listBox">
+            <p>Заливка: <input id="colorSvg" class="colorpicks" type="button" /></p>
+            <div id="colorfillsvg" class="colorBgBox"></div>
+            <div id="svg_border_box" class="settingsBox">
+                <p><label class="checkbox-small"> <input type="checkbox" id="svg_init_border"> </label> Рамка</p>
+                <div id="svg_border_spoller" class="spoller">
+                    <p>Размер границы: <span id="svg_border_size_text">0</span></p>
+                    <p><input data-size="3" id="svg_border_size" type="range" max="100" min="0" value="0" step="1"></p>
+                    <p> <label for="svg_border_color">Цвет: </label> <input data-defoltcolor="#ffc000" class="colorpick" id="svg_border_color" type="button"> </p>
+                </div>
+            </div>
+        </div>
+    </div>   <!-- set-svg-box -->
+    
+   
+             <!---------------- aniBox ------------>
+             
+ <div class="listBox" id="aniBox" style="display: none;"      >
+    <h3>Анимация<i></i></h3>
+    
+    
+    
+   
+ <!-- content-listBox    1  основаное меню   --> 
+    <div class="content-listBox uploud" id="aniquery"  style="display: none; "    >
+        <div id="aniSelectBox" class="iselectBox"><img src="publish/select.png">Выберите коллекцию</div>
+
+<!-- anicontentBox   основное меню  -->
+
+
+
+
+        <div id="anicontentBox" class="selectContentBox"    >
+        
+        
+            <div id="anicontent">
+                <div id="ani_menu___1" class="anipage ioptionBox scrollbox scrollinit mCustomScrollbar _mCS_2" style="overflow: visible;" style="display: none; "    >
+                    <div id="mCSB_2" class="mCustomScrollBox mCS-vertical mCSB_vertical mCSB_outside" tabindex="0" style="max-height: none;">
+                        <div id="mCSB_2_container" class="mCSB_container" style="position:relative; top:0; left:0;" dir="ltr"       >
+                            <div class="ioption" data-select="animals"><img src="publish/animation/animals/ico.png" class="mCS_img_loaded">Животные</div>
+                            <div class="ioption" data-select="balloon"><img src="publish/animation/balloon/ico.png" class="mCS_img_loaded">Воздушные шары</div>
+                            <div class="ioption" data-select="birds"><img src="publish/animation/birds/ico.png" class="mCS_img_loaded">Птички</div>
+                            <div class="ioption" data-select="butterfly"><img src="publish/animation/butterfly/ico.png" class="mCS_img_loaded">Бабочки</div>
+                            <div class="ioption" data-select="cat"><img src="publish/animation/cat/ico.png" class="mCS_img_loaded">Кошки - Мышки</div>
+                            <div class="ioption" data-select="cloud"><img src="publish/animation/cloud/ico.png" class="mCS_img_loaded">Облака, Гроза</div>
+                            <div class="ioption" data-select="dance"><img src="publish/animation/dance/ico.png" class="mCS_img_loaded">Танцы</div>
+                            <div class="ioption" data-select="elf"><img src="publish/animation/elf/ico.png" class="mCS_img_loaded">Эльфы, Гномы, Феи,...</div>
+                            <div class="ioption" data-select="fire"><img src="publish/animation/fire/ico.png" class="mCS_img_loaded">Огонь</div>
+                            <div class="ioption" data-select="fish"><img src="publish/animation/fish/ico.png" class="mCS_img_loaded">Рыбки</div>
+                            <div class="ioption" data-select="fleck"><img src="publish/animation/fleck/ico.png" class="mCS_img_loaded">Искры, Блеск... </div>
+                            <div class="ioption" data-select="flowers"><img src="publish/animation/flowers/ico.png" class="mCS_img_loaded">Цветы</div>
+                            <div class="ioption" data-select="garland"><img src="publish/animation/garland/ico.png" class="mCS_img_loaded">Мишура, Гирлянды</div>
+                            <div class="ioption" data-select="gift"><img src="publish/animation/gift/ico.png" class="mCS_img_loaded">Подарки</div>
+                            <div class="ioption" data-select="heart"><img src="publish/animation/heart/ico.png" class="mCS_img_loaded">Сердце, Любовь</div>
+                            <div class="ioption" data-select="plant"><img src="publish/animation/plant/ico.png" class="mCS_img_loaded">Деревья, Растения...</div>
+                            <div class="ioption" data-select="sun"><img src="publish/animation/sun/ico.png" class="mCS_img_loaded">Солнце</div>
+                            <div class="ioption" data-select="water"><img src="publish/animation/water/ico.png" class="mCS_img_loaded">Вода</div>
+                        </div>
+                    </div>
+                    <div id="mCSB_2_scrollbar_vertical" class="mCSB_scrollTools mCSB_2_scrollbar mCS-vertical mCSB_scrollTools_vertical" style="display: block;">
+                        <div class="mCSB_draggerContainer">
+                            <div id="mCSB_2_dragger_vertical" class="mCSB_dragger" style="position: absolute; min-height: 30px; display: block; height: 244px; max-height: 414px; top: 0px;">
+                                <div class="mCSB_dragger_bar" style="line-height: 30px;"></div>
+                                <div class="mCSB_draggerRail"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            
+            
+        </div>    <!-- anicontentBox   осн меню-->
+
+        <div id="aniBtnBox">
+            <p> Показать анимацию: <label class="checkbox-small checked"><input type="checkbox" id="aniShow" checked="CHECKED"></label></p>
+        </div>
+    </div>  <!-- content-listBox  удалить  1  меню выбора рыбы, цветы, кошки   --> 
+ 
+ 
+<!-- content-listBox    2  --> 
+ 
+<div class="content-listBox uploud" id="aniquery"  style="";   >
+
+    <div id="aniSelectBox" class="iselectBox"><img src="publish/animation/animals/ico.png" class="mCS_img_loaded">Животные</div>
+
+
+<!-- anicontentBox  Животные   -->
+
+    <div id="anicontentBox" class="selectContentBox">
+    
+<!-- anicontent  -->   
+        <div id="anicontent">
+        
+  <!-- ani_dance  -->     
+            <div id="ani_dance" class="anipage scrollbox search scrollinit mCustomScrollbar _mCS_9 mCS_no_scrollbar" style="overflow: visible; display: none;">
+                <div id="mCSB_9" class="mCustomScrollBox mCS-vertical mCSB_vertical mCSB_outside" tabindex="0" style="max-height: 424px;">
+                    <div id="mCSB_9_container" class="mCSB_container mCS_y_hidden mCS_no_scrollbar_y" style="position:relative; top:0; left:0;" dir="ltr">
+                        <div class="ani_img_box"><img draggable="false" src="publish/animation/dance/-102-120-31-.gif" class="mCS_img_loaded"></div>
+                        <div class="ani_img_box"><img draggable="false" src="publish/animation/dance/-107-249-34-.gif" class="mCS_img_loaded"></div>
+                        <div class="ani_img_box"><img draggable="false" src="publish/animation/dance/-117-137-5-.gif" class="mCS_img_loaded"></div>
+                        <div class="ani_img_box"><img draggable="false" src="publish/animation/dance/-122-300-22-.gif" class="mCS_img_loaded"></div>
+                        <div class="ani_img_box"><img draggable="false" src="publish/animation/dance/-158-250-36-.gif" class="mCS_img_loaded"></div>
+                        <div class="ani_img_box"><img draggable="false" src="publish/animation/dance/-163-300-21-.gif" class="mCS_img_loaded"></div>
+                        <div class="ani_img_box"><img draggable="false" src="publish/animation/dance/-167-245-12-.gif" class="mCS_img_loaded"></div>
+                        <div class="ani_img_box"><img draggable="false" src="publish/animation/dance/-167-88-29-.gif" class="mCS_img_loaded"></div>
+                        <div class="ani_img_box"><img draggable="false" src="publish/animation/dance/-172-300-14-.gif" class="mCS_img_loaded"></div>
+                        <div class="ani_img_box"><img draggable="false" src="publish/animation/dance/-174-300-28-.gif" class="mCS_img_loaded"></div>
+                        <div class="ani_img_box"><img draggable="false" src="publish/animation/dance/-176-250-13-.gif" class="mCS_img_loaded"></div>
+                        <div class="ani_img_box"><img draggable="false" src="publish/animation/dance/-181-267-18-.gif" class="mCS_img_loaded"></div>
+                        <div class="ani_img_box"><img draggable="false" src="publish/animation/dance/-184-186-1-.gif" class="mCS_img_loaded"></div>
+                        <div class="ani_img_box"><img draggable="false" src="publish/animation/dance/-193-300-11-.gif" class="mCS_img_loaded"></div>
+                        <div class="ani_img_box"><img draggable="false" src="publish/animation/dance/-193-300-26-.gif" class="mCS_img_loaded"></div>
+                        <div class="ani_img_box"><img draggable="false" src="publish/animation/dance/-198-175-35-.gif" class="mCS_img_loaded"></div>
+                        <div class="ani_img_box"><img draggable="false" src="publish/animation/dance/-201-286-25-.gif" class="mCS_img_loaded"></div>
+                        <div class="ani_img_box"><img draggable="false" src="publish/animation/dance/-202-300-9-.gif" class="mCS_img_loaded"></div>
+                        <div class="ani_img_box"><img draggable="false" src="publish/animation/dance/-211-240-2-.gif" class="mCS_img_loaded"></div>
+                        <div class="ani_img_box"><img draggable="false" src="publish/animation/dance/-212-300-32-.gif" class="mCS_img_loaded"></div>
+                        <div class="ani_img_box lazeload"><img draggable="false" data-src="publish/animation/dance/-216-300-16-.gif" src="#" class="mCS_img_loaded"></div>
+                        <div class="ani_img_box lazeload"><img draggable="false" data-src="publish/animation/dance/-223-300-10-.gif" src="#" class="mCS_img_loaded"></div>
+                        <div class="ani_img_box lazeload"><img draggable="false" data-src="publish/animation/dance/-225-300-24-.gif" src="#" class="mCS_img_loaded"></div>
+                        <div class="ani_img_box lazeload"><img draggable="false" data-src="publish/animation/dance/-229-300-15-.gif" src="#" class="mCS_img_loaded"></div>
+                        <div class="ani_img_box lazeload"><img draggable="false" data-src="publish/animation/dance/-246-250-41-.gif" src="#" class="mCS_img_loaded"></div>
+                        <div class="ani_img_box lazeload"><img draggable="false" data-src="/publish/animation/dance/-248-300-23-.gif" src="#" class="mCS_img_loaded"></div>
+                        <div class="ani_img_box lazeload"><img draggable="false" data-src="publish/animation/dance/-262-300-17-.gif" src="#" class="mCS_img_loaded"></div>
+                        <div class="ani_img_box lazeload"><img draggable="false" data-src="publish/animation/dance/-267-300-30-.gif" src="#" class="mCS_img_loaded"></div>
+                        <div class="ani_img_box lazeload"><img draggable="false" data-src="/publish/animation/dance/-270-250-40-.gif" src="#" class="mCS_img_loaded"></div>
+                        <div class="ani_img_box lazeload"><img draggable="false" data-src="publish/animation/dance/-270-300-8-.gif" src="#" class="mCS_img_loaded"></div>
+                        <div class="ani_img_box lazeload"><img draggable="false" data-src="publish/animation/dance/-271-300-19-.gif" src="#" class="mCS_img_loaded"></div>
+                        <div class="ani_img_box lazeload"><img draggable="false" data-src="/publish/animation/dance/-280-300-6-.gif" src="#" class="mCS_img_loaded"></div>
+                        <div class="ani_img_box lazeload"><img draggable="false" data-src="publish/animation/dance/-290-148-4-.gif" src="#" class="mCS_img_loaded"></div>
+                        <div class="ani_img_box lazeload"><img draggable="false" data-src="publish/animation/dance/-292-250-37-.gif" src="#" class="mCS_img_loaded"></div>
+                        <div class="ani_img_box lazeload"><img draggable="false" data-src="publish/animation/dance/-296-246-38-.gif" src="#" class="mCS_img_loaded"></div>
+                        <div class="ani_img_box lazeload"><img draggable="false" data-src="publish/animation/dance/-296-246-39-.gif" src="#" class="mCS_img_loaded"></div>
+                        <div class="ani_img_box lazeload"><img draggable="false" data-src="publish/animation/dance/-320-300-7-.gif" src="#" class="mCS_img_loaded"></div>
+                        <div class="ani_img_box lazeload"><img draggable="false" data-src="publish/animation/dance/-379-300-20-.gif" src="#" class="mCS_img_loaded"></div>
+                        <div class="ani_img_box lazeload"><img draggable="false" data-src="publish/animation/dance/-400-177-33-.gif" src="#" class="mCS_img_loaded"></div>
+                        <div class="ani_img_box lazeload"><img draggable="false" data-src="publish/animation/dance/-496-104-3-.gif" src="#" class="mCS_img_loaded"></div>
+                        <div class="ani_img_box lazeload"><img draggable="false" data-src="publish/animation/dance/-90-300-27-.gif" src="#" class="mCS_img_loaded"></div><br clear="all">
+                    </div>
+                </div>
+                <div id="mCSB_9_scrollbar_vertical" class="mCSB_scrollTools mCSB_9_scrollbar mCS-vertical mCSB_scrollTools_vertical" style="display: none;">
+                    <div class="mCSB_draggerContainer">
+                        <div id="mCSB_9_dragger_vertical" class="mCSB_dragger" style="position: absolute; min-height: 30px; display: block; height: 150px; max-height: 414px; top: 0px;">
+                            <div class="mCSB_dragger_bar" style="line-height: 30px;"></div>
+                            <div class="mCSB_draggerRail"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>    <!-- ani_dance  --> 
+            
+ <!-- ani_cloud -->           
+            <div id="ani_cloud" class="anipage scrollbox search scrollinit mCustomScrollbar _mCS_8" style="overflow: visible; display: none;">
+                <div id="mCSB_8" class="mCustomScrollBox mCS-vertical mCSB_vertical mCSB_outside" tabindex="0" style="max-height: none;">
+                    <div id="mCSB_8_container" class="mCSB_container" style="position:relative; top:0; left:0;" dir="ltr">
+                        <div class="ani_img_box"><img draggable="false" src="/publish/animation/cloud/-136-128-8-.gif" class="mCS_img_loaded"></div>
+                        <div class="ani_img_box"><img draggable="false" src="/publish/animation/cloud/-163-250-4-.gif" class="mCS_img_loaded"></div>
+                        <div class="ani_img_box"><img draggable="false" src="/publish/animation/cloud/-168-258-3-.gif" class="mCS_img_loaded"></div>
+                        <div class="ani_img_box"><img draggable="false" src="/publish/animation/cloud/-210-128-9-.gif" class="mCS_img_loaded"></div>
+                        <div class="ani_img_box"><img draggable="false" src="/publish/animation/cloud/-225-233-11-.gif" class="mCS_img_loaded"></div>
+                        <div class="ani_img_box"><img draggable="false" src="/publish/animation/cloud/-247-150-10-.gif" class="mCS_img_loaded"></div>
+                        <div class="ani_img_box"><img draggable="false" src="/publish/animation/cloud/-250-140-2-.gif" class="mCS_img_loaded"></div>
+                        <div class="ani_img_box"><img draggable="false" src="/publish/animation/cloud/-251-240-5-.gif" class="mCS_img_loaded"></div>
+                        <div class="ani_img_box"><img draggable="false" src="/publish/animation/cloud/-300-149-1-.gif" class="mCS_img_loaded"></div>
+                        <div class="ani_img_box"><img draggable="false" src="/publish/animation/cloud/-343-200-7-.gif" class="mCS_img_loaded"></div><br clear="all">
+                    </div>
+                </div>
+                <div id="mCSB_8_scrollbar_vertical" class="mCSB_scrollTools mCSB_8_scrollbar mCS-vertical mCSB_scrollTools_vertical" style="display: block;">
+                    <div class="mCSB_draggerContainer">
+                        <div id="mCSB_8_dragger_vertical" class="mCSB_dragger" style="position: absolute; min-height: 30px; display: block; height: 300px; max-height: 414px; top: 0px;">
+                            <div class="mCSB_dragger_bar" style="line-height: 30px;"></div>
+                            <div class="mCSB_draggerRail"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>   <!-- ani_cloud -->  
+            
+ <!-- ani_cat  -->          
+            <div id="ani_cat" class="anipage scrollbox search scrollinit mCustomScrollbar _mCS_7" style="overflow: visible; display: none;">
+                <div id="mCSB_7" class="mCustomScrollBox mCS-vertical mCSB_vertical mCSB_outside" tabindex="0" style="max-height: none;">
+                    <div id="mCSB_7_container" class="mCSB_container" style="position:relative; top:0; left:0;" dir="ltr">
+                        <div class="ani_img_box"><img draggable="false" src="/publish/animation/cat/-108-250-19-.gif" class="mCS_img_loaded"></div>
+                        <div class="ani_img_box"><img draggable="false" src="/publish/animation/cat/-112-119-20-.gif" class="mCS_img_loaded"></div>
+                        <div class="ani_img_box"><img draggable="false" src="/publish/animation/cat/-115-173-47-.gif" class="mCS_img_loaded"></div>
+                        <div class="ani_img_box"><img draggable="false" src="/publish/animation/cat/-124-114-10-.gif" class="mCS_img_loaded"></div>
+                        <div class="ani_img_box"><img draggable="false" src="/publish/animation/cat/-124-200-40-.gif" class="mCS_img_loaded"></div>
+                        <div class="ani_img_box"><img draggable="false" src="/publish/animation/cat/-125-150-9-.gif" class="mCS_img_loaded"></div>
+                        <div class="ani_img_box"><img draggable="false" src="/publish/animation/cat/-132-190-17-.gif" class="mCS_img_loaded"></div>
+                        <div class="ani_img_box"><img draggable="false" src="/publish/animation/cat/-142-184-26-.gif" class="mCS_img_loaded"></div>
+                        <div class="ani_img_box"><img draggable="false" src="/publish/animation/cat/-142-250-14-.gif" class="mCS_img_loaded"></div>
+                        <div class="ani_img_box"><img draggable="false" src="/publish/animation/cat/-143-200-41-.gif" class="mCS_img_loaded"></div>
+                        <div class="ani_img_box"><img draggable="false" src="/publish/animation/cat/-146-183-39-.gif" class="mCS_img_loaded"></div>
+                        <div class="ani_img_box"><img draggable="false" src="/publish/animation/cat/-155-312-5-.gif" class="mCS_img_loaded"></div>
+                        <div class="ani_img_box"><img draggable="false" src="/publish/animation/cat/-156-200-37-.gif" class="mCS_img_loaded"></div>
+                        <div class="ani_img_box"><img draggable="false" src="/publish/animation/cat/-160-150-22-.gif" class="mCS_img_loaded"></div>
+                        <div class="ani_img_box"><img draggable="false" src="/publish/animation/cat/-166-250-16-.gif" class="mCS_img_loaded"></div>
+                        <div class="ani_img_box"><img draggable="false" src="/publish/animation/cat/-177-250-29-.gif" class="mCS_img_loaded"></div>
+                        <div class="ani_img_box"><img draggable="false" src="/publish/animation/cat/-181.7-250-18-.gif" class="mCS_img_loaded"></div>
+                        <div class="ani_img_box"><img draggable="false" src="/publish/animation/cat/-184-186-50-.gif" class="mCS_img_loaded"></div>
+                        <div class="ani_img_box"><img draggable="false" src="/publish/animation/cat/-189-220-24-.gif" class="mCS_img_loaded"></div>
+                        <div class="ani_img_box"><img draggable="false" src="/publish/animation/cat/-194-250-34-.gif" class="mCS_img_loaded"></div>
+                        <div class="ani_img_box lazeload"><img draggable="false" data-src="/publish/animation/cat/-198-156-12-.gif" src="#" class="mCS_img_loaded"></div>
+                        <div class="ani_img_box lazeload"><img draggable="false" data-src="/publish/animation/cat/-200-188-8-.gif" src="#" class="mCS_img_loaded"></div>
+                        <div class="ani_img_box lazeload"><img draggable="false" data-src="/publish/animation/cat/-210-212-25-.gif" src="#" class="mCS_img_loaded"></div>
+                        <div class="ani_img_box lazeload"><img draggable="false" data-src="/publish/animation/cat/-210-239-11-.gif" src="#" class="mCS_img_loaded"></div>
+                        <div class="ani_img_box lazeload"><img draggable="false" data-src="/publish/animation/cat/-212-187-1-.gif" src="#" class="mCS_img_loaded"></div>
+                        <div class="ani_img_box lazeload"><img draggable="false" data-src="/publish/animation/cat/-216-118-23-.gif" src="#" class="mCS_img_loaded"></div>
+                        <div class="ani_img_box lazeload"><img draggable="false" data-src="/publish/animation/cat/-218-250-48-.gif" src="#" class="mCS_img_loaded"></div>
+                        <div class="ani_img_box lazeload"><img draggable="false" data-src="/publish/animation/cat/-221-180-4-.gif" src="#" class="mCS_img_loaded"></div>
+                        <div class="ani_img_box lazeload"><img draggable="false" data-src="/publish/animation/cat/-231-250-28-.gif" src="#" class="mCS_img_loaded"></div>
+                        <div class="ani_img_box lazeload"><img draggable="false" data-src="/publish/animation/cat/-241-250-36-.gif" src="#" class="mCS_img_loaded"></div>
+                        <div class="ani_img_box lazeload"><img draggable="false" data-src="/publish/animation/cat/-244-170-38-.gif" src="#" class="mCS_img_loaded"></div>
+                        <div class="ani_img_box lazeload"><img draggable="false" data-src="/publish/animation/cat/-244-200-35-.gif" src="#" class="mCS_img_loaded"></div>
+                        <div class="ani_img_box lazeload"><img draggable="false" data-src="/publish/animation/cat/-250-242-13-.gif" src="#" class="mCS_img_loaded"></div>
+                        <div class="ani_img_box lazeload"><img draggable="false" data-src="/publish/animation/cat/-252-250-33-.gif" src="#" class="mCS_img_loaded"></div>
+                        <div class="ani_img_box lazeload"><img draggable="false" data-src="/publish/animation/cat/-256-250-30-.gif" src="#" class="mCS_img_loaded"></div>
+                        <div class="ani_img_box lazeload"><img draggable="false" data-src="/publish/animation/cat/-257-319-7-.gif" src="#" class="mCS_img_loaded"></div>
+                        <div class="ani_img_box lazeload"><img draggable="false" data-src="/publish/animation/cat/-259-154-2-.gif" src="#" class="mCS_img_loaded"></div>
+                        <div class="ani_img_box lazeload"><img draggable="false" data-src="/publish/animation/cat/-259-196-3-.gif" src="#" class="mCS_img_loaded"></div>
+                        <div class="ani_img_box lazeload"><img draggable="false" data-src="/publish/animation/cat/-267-250-32-.gif" src="#" class="mCS_img_loaded"></div>
+                        <div class="ani_img_box lazeload"><img draggable="false" data-src="/publish/animation/cat/-302-250-31-.gif" src="#" class="mCS_img_loaded"></div>
+                        <div class="ani_img_box lazeload"><img draggable="false" data-src="/publish/animation/cat/-350-261-15-.gif" src="#" class="mCS_img_loaded"></div>
+                        <div class="ani_img_box lazeload"><img draggable="false" data-src="/publish/animation/cat/-79-211-6-.gif" src="#" class="mCS_img_loaded"></div>
+                        <div class="ani_img_box lazeload"><img draggable="false" data-src="/publish/animation/cat/-84-150-21-.gif" src="#" class="mCS_img_loaded"></div>
+                        <div class="ani_img_box lazeload"><img draggable="false" data-src="/publish/animation/cat/-88-110-27-.gif" src="#" class="mCS_img_loaded"></div><br clear="all">
+                    </div>
+                </div>
+                <div id="mCSB_7_scrollbar_vertical" class="mCSB_scrollTools mCSB_7_scrollbar mCS-vertical mCSB_scrollTools_vertical" style="display: block;">
+                    <div class="mCSB_draggerContainer">
+                        <div id="mCSB_7_dragger_vertical" class="mCSB_dragger" style="position: absolute; min-height: 30px; display: block; height: 150px; max-height: 414px; top: 0px;">
+                            <div class="mCSB_dragger_bar" style="line-height: 30px;"></div>
+                            <div class="mCSB_draggerRail"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+<!-- ani_cat  -->              
+            
+<!--  ani_butterfly   -->    
+            <div id="ani_butterfly" class="anipage scrollbox search scrollinit mCustomScrollbar _mCS_6" style="overflow: visible; display: none;">
+                <div id="mCSB_6" class="mCustomScrollBox mCS-vertical mCSB_vertical mCSB_outside" tabindex="0" style="max-height: none;">
+                    <div id="mCSB_6_container" class="mCSB_container" style="position:relative; top:0; left:0;" dir="ltr">
+                        <div class="ani_img_box"><img draggable="false" src="/publish/animation/butterfly/-100-100-14-.gif" class="mCS_img_loaded"></div>
+                        <div class="ani_img_box"><img draggable="false" src="/publish/animation/butterfly/-101-100-6-.gif" class="mCS_img_loaded"></div>
+                        <div class="ani_img_box"><img draggable="false" src="/publish/animation/butterfly/-103-100-4-.gif" class="mCS_img_loaded"></div>
+                        <div class="ani_img_box"><img draggable="false" src="/publish/animation/butterfly/-104-100-13-.gif" class="mCS_img_loaded"></div>
+                        <div class="ani_img_box"><img draggable="false" src="/publish/animation/butterfly/-105-100-11-.gif" class="mCS_img_loaded"></div>
+                        <div class="ani_img_box"><img draggable="false" src="/publish/animation/butterfly/-106-100-12-.gif" class="mCS_img_loaded"></div>
+                        <div class="ani_img_box"><img draggable="false" src="/publish/animation/butterfly/-106-100-3-.gif" class="mCS_img_loaded"></div>
+                        <div class="ani_img_box"><img draggable="false" src="/publish/animation/butterfly/-110-100-7-.gif" class="mCS_img_loaded"></div>
+                        <div class="ani_img_box"><img draggable="false" src="/publish/animation/butterfly/-110-100-8-.gif" class="mCS_img_loaded"></div>
+                        <div class="ani_img_box"><img draggable="false" src="/publish/animation/butterfly/-113-100-10-.gif" class="mCS_img_loaded"></div>
+                        <div class="ani_img_box"><img draggable="false" src="/publish/animation/butterfly/-150-142-26-.gif" class="mCS_img_loaded"></div>
+                        <div class="ani_img_box"><img draggable="false" src="/publish/animation/butterfly/-150-149-23-.gif" class="mCS_img_loaded"></div>
+                        <div class="ani_img_box"><img draggable="false" src="/publish/animation/butterfly/-150-150-24-.gif" class="mCS_img_loaded"></div>
+                        <div class="ani_img_box"><img draggable="false" src="/publish/animation/butterfly/-150-154-19-.gif" class="mCS_img_loaded"></div>
+                        <div class="ani_img_box"><img draggable="false" src="/publish/animation/butterfly/-159-150-21-.gif" class="mCS_img_loaded"></div>
+                        <div class="ani_img_box"><img draggable="false" src="/publish/animation/butterfly/-159-150-22-.gif" class="mCS_img_loaded"></div>
+                        <div class="ani_img_box"><img draggable="false" src="/publish/animation/butterfly/-160-150-20-.gif" class="mCS_img_loaded"></div>
+                        <div class="ani_img_box"><img draggable="false" src="/publish/animation/butterfly/-163-150-2-.gif" class="mCS_img_loaded"></div>
+                        <div class="ani_img_box"><img draggable="false" src="/publish/animation/butterfly/-206-200-18-.gif" class="mCS_img_loaded"></div>
+                        <div class="ani_img_box"><img draggable="false" src="/publish/animation/butterfly/-299-118-15-.gif" class="mCS_img_loaded"></div>
+                        <div class="ani_img_box lazeload"><img draggable="false" data-src="/publish/animation/butterfly/-365-150-1-.gif" src="#" class="mCS_img_loaded"></div>
+                        <div class="ani_img_box lazeload"><img draggable="false" data-src="/publish/animation/butterfly/-82-100-5-.gif" src="#" class="mCS_img_loaded"></div>
+                        <div class="ani_img_box lazeload"><img draggable="false" data-src="/publish/animation/butterfly/-83-100-9-.gif" src="#" class="mCS_img_loaded"></div>
+                        <div class="ani_img_box lazeload"><img draggable="false" data-src="/publish/animation/butterfly/-90-100-25-.gif" src="#" class="mCS_img_loaded"></div>
+                        <div class="ani_img_box lazeload"><img draggable="false" data-src="/publish/animation/butterfly/-98-96-16-.gif" src="#" class="mCS_img_loaded"></div>
+                        <div class="ani_img_box lazeload"><img draggable="false" data-src="/publish/animation/butterfly/-98-99-17-.gif" src="#" class="mCS_img_loaded"></div><br clear="all">
+                    </div>
+                </div>
+                <div id="mCSB_6_scrollbar_vertical" class="mCSB_scrollTools mCSB_6_scrollbar mCS-vertical mCSB_scrollTools_vertical" style="display: block;">
+                    <div class="mCSB_draggerContainer">
+                        <div id="mCSB_6_dragger_vertical" class="mCSB_dragger" style="position: absolute; min-height: 30px; display: block; height: 150px; max-height: 414px; top: 0px;">
+                            <div class="mCSB_dragger_bar" style="line-height: 30px;"></div>
+                            <div class="mCSB_draggerRail"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+ <!--  ani_balloon  -->            
+            <div id="ani_balloon" class="anipage scrollbox search scrollinit mCustomScrollbar _mCS_5" style="overflow: visible; display: none;">
+                <div id="mCSB_5" class="mCustomScrollBox mCS-vertical mCSB_vertical mCSB_outside" tabindex="0" style="max-height: none;">
+                    <div id="mCSB_5_container" class="mCSB_container" style="position:relative; top:0; left:0;" dir="ltr">
+                        <div class="ani_img_box"><img draggable="false" src="publish/animation/balloon/-134-150-9-.gif" class="mCS_img_loaded"></div>
+                        <div class="ani_img_box"><img draggable="false" src="publish/animation/balloon/-184-246-16-.gif" class="mCS_img_loaded"></div>
+                        <div class="ani_img_box"><img draggable="false" src="publish/animation/balloon/-248-290-13-.gif" class="mCS_img_loaded"></div>
+                        <div class="ani_img_box"><img draggable="false" src="publish/animation/balloon/-248-290-14-.gif" class="mCS_img_loaded"></div>
+                        <div class="ani_img_box"><img draggable="false" src="publish/animation/balloon/-248-290-8-.gif" class="mCS_img_loaded"></div>
+                        <div class="ani_img_box"><img draggable="false" src="publish/animation/balloon/-38-67-3-.gif" class="mCS_img_loaded"></div>
+                        <div class="ani_img_box"><img draggable="false" src="publish/animation/balloon/-49-104-6-.gif" class="mCS_img_loaded"></div>
+                        <div class="ani_img_box"><img draggable="false" src="publish/animation/balloon/-50-115-12-.gif" class="mCS_img_loaded"></div>
+                        <div class="ani_img_box"><img draggable="false" src="publish/animation/balloon/-50-150-1-.gif" class="mCS_img_loaded"></div>
+                        <div class="ani_img_box"><img draggable="false" src="publish/animation/balloon/-55-150-11-.gif" class="mCS_img_loaded"></div>
+                        <div class="ani_img_box"><img draggable="false" src="publish/animation/balloon/-57-150-5-.gif" class="mCS_img_loaded"></div>
+                        <div class="ani_img_box"><img draggable="false" src="publish/animation/balloon/-65-70-0-.gif" class="mCS_img_loaded"></div>
+                        <div class="ani_img_box"><img draggable="false" src="publish/animation/balloon/-66-120-4-.gif" class="mCS_img_loaded"></div>
+                        <div class="ani_img_box"><img draggable="false" src="publish/animation/balloon/-67-128-10-.gif" class="mCS_img_loaded"></div>
+                        <div class="ani_img_box"><img draggable="false" src="publish/animation/balloon/-75-110-15-.gif" class="mCS_img_loaded"></div>
+                        <div class="ani_img_box"><img draggable="false" src="publish/animation/balloon/-75-125-2-.gif" class="mCS_img_loaded"></div><br clear="all">
+                    </div>
+                </div>
+                <div id="mCSB_5_scrollbar_vertical" class="mCSB_scrollTools mCSB_5_scrollbar mCS-vertical mCSB_scrollTools_vertical" style="display: block;">
+                    <div class="mCSB_draggerContainer">
+                        <div id="mCSB_5_dragger_vertical" class="mCSB_dragger" style="position: absolute; min-height: 30px; display: block; height: 187px; max-height: 414px; top: 0px;">
+                            <div class="mCSB_dragger_bar" style="line-height: 30px;"></div>
+                            <div class="mCSB_draggerRail"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+ <!--  ani_balloon  -->             
+   
+
+ <!-- ani_birds -->  
+            <div id="ani_birds" class="anipage scrollbox search scrollinit mCustomScrollbar _mCS_4" style="overflow: hidden; display: none;">
+                <div id="mCSB_4" class="mCustomScrollBox mCS-vertical mCSB_vertical mCSB_outside" tabindex="0" style="max-height: none;">
+                    <div id="mCSB_4_container" class="mCSB_container" style="position:relative; top:0; left:0;" dir="ltr">
+                        <div class="ani_img_box"><img draggable="false" src="/publish/animation/birds/-105-100-11-.gif" class="mCS_img_loaded"></div>
+                        <div class="ani_img_box"><img draggable="false" src="/publish/animation/birds/-121-150-17-.gif" class="mCS_img_loaded"></div>
+                        <div class="ani_img_box"><img draggable="false" src="/publish/animation/birds/-130-112-16-.gif" class="mCS_img_loaded"></div>
+                        <div class="ani_img_box"><img draggable="false" src="/publish/animation/birds/-150-150-13-.gif" class="mCS_img_loaded"></div>
+                        <div class="ani_img_box"><img draggable="false" src="/publish/animation/birds/-151-150-20-.gif" class="mCS_img_loaded"></div>
+                        <div class="ani_img_box"><img draggable="false" src="/publish/animation/birds/-167-100-8-.gif" class="mCS_img_loaded"></div>
+                        <div class="ani_img_box"><img draggable="false" src="/publish/animation/birds/-170-149-18-.gif" class="mCS_img_loaded"></div>
+                        <div class="ani_img_box"><img draggable="false" src="/publish/animation/birds/-203-130-15-.gif" class="mCS_img_loaded"></div>
+                        <div class="ani_img_box"><img draggable="false" src="/publish/animation/birds/-213-200-21-.gif" class="mCS_img_loaded"></div>
+                        <div class="ani_img_box"><img draggable="false" src="/publish/animation/birds/-57-120-3-.gif" class="mCS_img_loaded"></div>
+                        <div class="ani_img_box"><img draggable="false" src="/publish/animation/birds/-67-120-1-.gif" class="mCS_img_loaded"></div>
+                        <div class="ani_img_box"><img draggable="false" src="/publish/animation/birds/-67-120-6-.gif" class="mCS_img_loaded"></div>
+                        <div class="ani_img_box"><img draggable="false" src="/publish/animation/birds/-72-120-7-.gif" class="mCS_img_loaded"></div>
+                        <div class="ani_img_box"><img draggable="false" src="/publish/animation/birds/-73-120-4-.gif" class="mCS_img_loaded"></div>
+                        <div class="ani_img_box"><img draggable="false" src="/publish/animation/birds/-76-120-9-.gif" class="mCS_img_loaded"></div>
+                        <div class="ani_img_box"><img draggable="false" src="/publish/animation/birds/-79-120-5-.gif" class="mCS_img_loaded"></div>
+                        <div class="ani_img_box"><img draggable="false" src="/publish/animation/birds/-89-100-10-.gif" class="mCS_img_loaded"></div>
+                        <div class="ani_img_box"><img draggable="false" src="/publish/animation/birds/-98-100-2-.gif" class="mCS_img_loaded"></div>
+                        <div class="ani_img_box"><img draggable="false" src="/publish/animation/birds/-98-102-14-.gif" class="mCS_img_loaded"></div>
+                        <div class="ani_img_box"><img draggable="false" src="/publish/animation/birds/-98-120-12-.gif" class="mCS_img_loaded"></div>
+                        <div class="ani_img_box lazeload"><img draggable="false" data-src="/publish/animation/birds/-98-92-19-.gif" src="#" class="mCS_img_loaded"></div><br clear="all">
+                    </div>
+                </div>
+                <div id="mCSB_4_scrollbar_vertical" class="mCSB_scrollTools mCSB_4_scrollbar mCS-vertical mCSB_scrollTools_vertical" style="display: block;">
+                    <div class="mCSB_draggerContainer">
+                        <div id="mCSB_4_dragger_vertical" class="mCSB_dragger" style="position: absolute; min-height: 30px; display: block; height: 150px; max-height: 414px; top: 0px;">
+                            <div class="mCSB_dragger_bar" style="line-height: 30px;"></div>
+                            <div class="mCSB_draggerRail"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+  <!-- ani_birds -->            
+            
+   <!-- ani_animals  -->        
+            <div id="ani_animals" class="anipage scrollbox scrollinit mCustomScrollbar _mCS_3" style="overflow: visible;  display: none;"   >
+                <div id="mCSB_3" class="mCustomScrollBox mCS-vertical mCSB_vertical mCSB_outside" tabindex="0" style="max-height: none;">
+                    <div id="mCSB_3_container" class="mCSB_container" style="position: relative; top: 0px; left: 0px;" dir="ltr">
+                        <div class="ani_img_box"><img draggable="false" src="publish/animation/animals/-101-150-24-.gif" class="mCS_img_loaded"></div>
+                        <div class="ani_img_box"><img draggable="false" src="publish/animation/animals/-110-150-19-.gif" class="mCS_img_loaded"></div>
+                        <div class="ani_img_box"><img draggable="false" src="publish/animation/animals/-114-150-8-.gif" class="mCS_img_loaded"></div>
+                        <div class="ani_img_box"><img draggable="false" src="publish/animation/animals/-121-150-20-.gif" class="mCS_img_loaded"></div>
+                        <div class="ani_img_box"><img draggable="false" src="publish/animation/animals/-126-246-44-.gif" class="mCS_img_loaded"></div>
+                        <div class="ani_img_box"><img draggable="false" src="publish/animation/animals/-127-150-1-.gif" class="mCS_img_loaded"></div>
+                        <div class="ani_img_box"><img draggable="false" src="publish/animation/animals/-134-150-25-.gif" class="mCS_img_loaded"></div>
+                        <div class="ani_img_box"><img draggable="false" src="publish/animation/animals/-160-250-49-.gif" class="mCS_img_loaded"></div>
+                        <div class="ani_img_box"><img draggable="false" src="publish/animation/animals/-174-150-13-.gif" class="mCS_img_loaded"></div>
+                        <div class="ani_img_box"><img draggable="false" src="publish/animation/animals/-180-169-17-.gif" class="mCS_img_loaded"></div>
+                        <div class="ani_img_box"><img draggable="false" src="publish/animation/animals/-185-250-40-.gif" class="mCS_img_loaded"></div>
+                        <div class="ani_img_box"><img draggable="false" src="publish/animation/animals/-187-189-45-.gif" class="mCS_img_loaded"></div>
+                        <div class="ani_img_box"><img draggable="false" src="publish/animation/animals/-226-136-32-.gif" class="mCS_img_loaded"></div>
+                        <div class="ani_img_box"><img draggable="false" src="publish/animation/animals/-226-220-31-.gif" class="mCS_img_loaded"></div>
+                        <div class="ani_img_box"><img draggable="false" src="publish/animation/animals/-227-250-46-.gif" class="mCS_img_loaded"></div>
+                        <div class="ani_img_box"><img draggable="false" src="publish/animation/animals/-230-250-30-.gif" class="mCS_img_loaded"></div>
+                        <div class="ani_img_box"><img draggable="false" src="publish/animation/animals/-231-250-34-.gif" class="mCS_img_loaded"></div>
+                        <div class="ani_img_box"><img draggable="false" src="publish/animation/animals/-234-250-35-.gif" class="mCS_img_loaded"></div>
+                        <div class="ani_img_box"><img draggable="false" src="publish/animation/animals/-243-250-41-.gif" class="mCS_img_loaded"></div>
+                        <div class="ani_img_box"><img draggable="false" src="publish/animation/animals/-250-138-37-.gif" class="mCS_img_loaded"></div>
+                        <div class="ani_img_box"><img draggable="false" data-src="publish/animation/animals/-250-151-39-.gif" src="/publish/animation/animals/-250-151-39-.gif" class="mCS_img_loaded"></div>
+                        <div class="ani_img_box"><img draggable="false" data-src="publish/animation/animals/-250-154-33-.gif" src="publish/animation/animals/-250-154-33-.gif" class="mCS_img_loaded"></div>
+                        <div class="ani_img_box"><img draggable="false" data-src="publish/animation/animals/-250-163-38-.gif" src="publish/animation/animals/-250-163-38-.gif" class="mCS_img_loaded"></div>
+                        <div class="ani_img_box"><img draggable="false" data-src="publish/animation/animals/-250-172-36-.gif" src="publish/animation/animals/-250-172-36-.gif" class="mCS_img_loaded"></div>
+                        <div class="ani_img_box"><img draggable="false" data-src="publish/animation/animals/-250-183-43-.gif" src="publish/animation/animals/-250-183-43-.gif" class="mCS_img_loaded"></div>
+                        <div class="ani_img_box"><img draggable="false" data-src="publish/animation/animals/-250-189-42-.gif" src="publish/animation/animals/-250-189-42-.gif" class="mCS_img_loaded"></div>
+                        <div class="ani_img_box"><img draggable="false" data-src="publish/animation/animals/-250-218-50-.gif" src="publish/animation/animals/-250-218-50-.gif" class="mCS_img_loaded"></div>
+                        <div class="ani_img_box"><img draggable="false" data-src="publish/animation/animals/-265-120-27-.gif" src="publish/animation/animals/-265-120-27-.gif" class="mCS_img_loaded"></div>
+                        <div class="ani_img_box"><img draggable="false" data-src="publish/animation/animals/-269-150-16-.gif" src="publish/animation/animals/-269-150-16-.gif" class="mCS_img_loaded"></div>
+                        <div class="ani_img_box"><img draggable="false" data-src="publish/animation/animals/-72-150-23-.gif" src="publish/animation/animals/-72-150-23-.gif" class="mCS_img_loaded"></div>
+                        <div class="ani_img_box"><img draggable="false" data-src="publish/animation/animals/-74-150-10-.gif" src="publish/animation/animals/-74-150-10-.gif" class="mCS_img_loaded"></div>
+                        <div class="ani_img_box"><img draggable="false" data-src="publish/animation/animals/-84-150-2-.gif" src="publish/animation/animals/-84-150-2-.gif" class="mCS_img_loaded"></div>
+                        <div class="ani_img_box"><img draggable="false" data-src="publish/animation/animals/-86-150-4-.gif" src="publish/animation/animals/-86-150-4-.gif" class="mCS_img_loaded"></div>
+                        <div class="ani_img_box"><img draggable="false" data-src="publish/animation/animals/-86-150-9-.gif" src="publish/animation/animals/-86-150-9-.gif" class="mCS_img_loaded"></div>
+                        <div class="ani_img_box"><img draggable="false" data-src="publish/animation/animals/-93-150-3-.gif" src="publish/animation/animals/-93-150-3-.gif" class="mCS_img_loaded"></div><br clear="all">
+                    </div>
+                </div>
+                <div id="mCSB_3_scrollbar_vertical" class="mCSB_scrollTools mCSB_3_scrollbar mCS-vertical mCSB_scrollTools_vertical" style="display: block;">
+                    <div class="mCSB_draggerContainer">
+                        <div id="mCSB_3_dragger_vertical" class="mCSB_dragger" style="position: absolute; min-height: 30px; display: block; height: 83px; max-height: 414px; top: 0px;">
+                            <div class="mCSB_dragger_bar" style="line-height: 30px;"></div>
+                            <div class="mCSB_draggerRail"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+  <!-- ani_animals  -->             
+            
+            
+ <!--  ani_menu"  -->         
+            <div id="ani_menu" class="anipage ioptionBox scrollbox scrollinit mCustomScrollbar _mCS_2" style="overflow: visible; display: block"      >
+                <div id="mCSB_2" class="mCustomScrollBox mCS-vertical mCSB_vertical mCSB_outside" tabindex="0" style="max-height: none;">
+                    <div id="mCSB_2_container" class="mCSB_container" style="position: relative; top: 0px; left: 0px;" dir="ltr">
+                        <div class="ioption select" data-select="animals"><img src="publish/animation/animals/ico.png" class="mCS_img_loaded">Животные</div>
+                        <div class="ioption" data-select="balloon"><img src="publish/animation/balloon/ico.png" class="mCS_img_loaded">Воздушные шары</div>
+                        <div class="ioption" data-select="birds"><img src="publish/animation/birds/ico.png" class="mCS_img_loaded">Птички</div>
+                        <div class="ioption" data-select="butterfly"><img src="publish/animation/butterfly/ico.png" class="mCS_img_loaded">Бабочки</div>
+                        <div class="ioption" data-select="cat"><img src="publish/animation/cat/ico.png" class="mCS_img_loaded">Кошки - Мышки</div>
+                        <div class="ioption" data-select="cloud"><img src="publish/animation/cloud/ico.png" class="mCS_img_loaded">Облака, Гроза</div>
+                        <div class="ioption" data-select="dance"><img src="publish/animation/dance/ico.png" class="mCS_img_loaded">Танцы</div>
+                        <div class="ioption" data-select="elf"><img src="/publish/animation/elf/ico.png" class="mCS_img_loaded">Эльфы, Гномы, Феи,...</div>
+                        <div class="ioption" data-select="fire"><img src="publish/animation/fire/ico.png" class="mCS_img_loaded">Огонь</div>
+                        <div class="ioption" data-select="fish"><img src="publish/animation/fish/ico.png" class="mCS_img_loaded">Рыбки</div>
+                        <div class="ioption" data-select="fleck"><img src="publish/animation/fleck/ico.png" class="mCS_img_loaded">Искры, Блеск... </div>
+                        <div class="ioption" data-select="flowers"><img src="publish/animation/flowers/ico.png" class="mCS_img_loaded">Цветы</div>
+                        <div class="ioption" data-select="garland"><img src="publish/animation/garland/ico.png" class="mCS_img_loaded">Мишура, Гирлянды</div>
+                        <div class="ioption" data-select="gift"><img src="publish/animation/gift/ico.png" class="mCS_img_loaded">Подарки</div>
+                        <div class="ioption" data-select="heart"><img src="publish/animation/heart/ico.png" class="mCS_img_loaded">Сердце, Любовь</div>
+                        <div class="ioption" data-select="plant"><img src="publish/animation/plant/ico.png" class="mCS_img_loaded">Деревья, Растения...</div>
+                        <div class="ioption" data-select="sun"><img src="publish/animation/sun/ico.png" class="mCS_img_loaded">Солнце</div>
+                        <div class="ioption" data-select="water"><img src="publish/animation/water/ico.png" class="mCS_img_loaded">Вода</div>
+                    </div>
+                </div>
+                <div id="mCSB_2_scrollbar_vertical" class="mCSB_scrollTools mCSB_2_scrollbar mCS-vertical mCSB_scrollTools_vertical" style="display: block;">
+                    <div class="mCSB_draggerContainer">
+                        <div id="mCSB_2_dragger_vertical" class="mCSB_dragger" style="position: absolute; min-height: 30px; display: block; height: 244px; max-height: 414px; top: 0px;">
+                            <div class="mCSB_dragger_bar" style="line-height: 30px;"></div>
+                            <div class="mCSB_draggerRail"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+ <!--  ani_menu"  -->            
+            
+        </div>   <!-- anicontent  -->
+         
+    </div>   <!-- anicontentBox   -->
+
+    <div id="aniBtnBox">
+        <p> Показать анимацию: <label class="checkbox-small checked"><input type="checkbox" id="aniShow" checked="CHECKED"></label></p>
+    </div>
+</div>   <!-- anicontentBox    -->
+
+  
+
+   
+    
+    
+</div>     <!---------------- aniBox ------------>
+ 
+ 
+ 
+ 
+ 
+
+    
+    
+    <!-- <div class="listBox" id="templatesBox">
+        <h3>ШАБЛОН<i></i></h3>
+        <div class="content-listBox" id="templates"> </div>
+    </div> -->
+    
+  <!-- ----------  Цвет фона------------ -->
+    
+<!--     <div class="listBox" id="bgBox">
+        <h3>Цвет фона<i></i></h3>
+        <div id="bgBoxcontent" class="content-listBox scrollbox">
+            <p style="display:none"><label><input type="checkbox" id="fill_bg_transparent"> Прозрачный фон</label></p>
+            <p>Однотонная заливка: <input id="colorBg" class="colorpicks" type="button" /></p>
+            <div id="colorCanvas" class="colorBgBox"></div>
+            <div class="settingsBox open">
+                <p>Градиент:</p>
+                <table width="100%" border="0">
+                    <tr>
+                        <td width="36%" id="colorsGrBG2">Цвет</td>
+                        <td width="64%">Свойства</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div id="colorsGrBG">
+                                <p><input data-color="ffffff" class="grbg" type="button" value="#ffffff" /></p>
+                                <p><input data-color="1ba1e2" class="grbg" type="button" value="#1ba1e2" /></p>
+                            </div>
+                            <p><a id="addcolorsGrBG" href="#">+Добавить</a></p>
+                        </td>
+                        <td>
+                            <p><label><input class="typeGrBg" name="typeGrBg" type="radio" value="radial">Радиальный</label></p>
+                            <p><label><input class="typeGrBg" name="typeGrBg" type="radio" value="linear" checked="CHECKED">Линейный</label></p>
+                            <div id="angleGrBgBox">
+                                <p>Наклон <input type="number" id="number_angleGrBg" min="0" max="360" value="180"></p>
+                                <p><input id="angleGrBg" type="range" max="360" min="0" value="180" step="1"></p>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+                <div class="text-center"><input class="button blue" value="Применить" id="setGrBg" type="button"></div>
+            </div>
+        </div>
+    </div> -->    <!-- ----------  Цвет фона------------ -->
+    
+ <div class="listBox" id="clipartBox" style="">
+    <h3>Клипарт<i></i></h3>
+    <div class="content-listBox uploud" id="cliparts"     >
+        <div id="clipart_animals" class="selectContentBox clipartPage scrollbox scrollinit mCustomScrollbar _mCS_4" style="overflow: visible; display: none;   "      >
+            <div id="mCSB_4" class="mCustomScrollBox mCS-vertical mCSB_vertical mCSB_outside" tabindex="0" style="max-height: none;">
+                <div id="mCSB_4_container" class="mCSB_container" style="position: relative; top: 0px; left: 0px;" dir="ltr">
+                    <div class="column_img_box clipart"><img draggable="false" src="publish/clipart/animals/a01.webp" class="mCS_img_loaded"></div>
+                    <div class="column_img_box clipart"><img draggable="false" src="publish/clipart/animals/a02.webp" class="mCS_img_loaded"></div>
+                    <div class="column_img_box clipart"><img draggable="false" src="publish/clipart/animals/a03.webp" class="mCS_img_loaded"></div>
+                    <div class="column_img_box clipart"><img draggable="false" src="publish/clipart/animals/a04.webp" class="mCS_img_loaded"></div>
+                    <div class="column_img_box clipart"><img draggable="false" src="publish/clipart/animals/a05.webp" class="mCS_img_loaded"></div>
+                    <div class="column_img_box clipart"><img draggable="false" src="publish/clipart/animals/a06.webp" class="mCS_img_loaded"></div>
+                    <div class="column_img_box clipart"><img draggable="false" src="publish/clipart/animals/a07.webp" class="mCS_img_loaded"></div>
+                    <div class="column_img_box clipart"><img draggable="false" src="publish/clipart/animals/a08.webp" class="mCS_img_loaded"></div>
+                    <div class="column_img_box clipart"><img draggable="false" src="publish/clipart/animals/a09.webp" class="mCS_img_loaded"></div>
+                    <div class="column_img_box clipart"><img draggable="false" src="publish/clipart/animals/a10.webp" class="mCS_img_loaded"></div>
+                    <div class="column_img_box clipart"><img draggable="false" src="publish/clipart/animals/a11.webp" class="mCS_img_loaded"></div>
+                    <div class="column_img_box clipart"><img draggable="false" src="publish/clipart/animals/a12.webp" class="mCS_img_loaded"></div>
+                    <div class="column_img_box clipart"><img draggable="false" src="publish/clipart/animals/a13.webp" class="mCS_img_loaded"></div>
+                    <div class="column_img_box clipart"><img draggable="false" src="publish/clipart/animals/a14.webp" class="mCS_img_loaded"></div>
+                    <div class="column_img_box clipart"><img draggable="false" src="publish/clipart/animals/a15.webp" class="mCS_img_loaded"></div>
+                    <div class="column_img_box clipart"><img draggable="false" src="publish/clipart/animals/a16.webp" class="mCS_img_loaded"></div>
+                    <div class="column_img_box clipart"><img draggable="false" src="publish/clipart/animals/a17.webp" class="mCS_img_loaded"></div>
+                    <div class="column_img_box clipart"><img draggable="false" src="publish/clipart/animals/a18.webp" class="mCS_img_loaded"></div>
+                    <div class="column_img_box clipart"><img draggable="false" src="publish/clipart/animals/a19.webp" class="mCS_img_loaded"></div>
+                    <div class="column_img_box clipart"><img draggable="false" src="publish/clipart/animals/a20.webp" class="mCS_img_loaded"></div>
+                    <div class="column_img_box clipart"><img draggable="false" data-src="publish/clipart/animals/a21.webp" src="/publish/clipart/animals/a21.webp" class="mCS_img_loaded"></div>
+                    <div class="column_img_box clipart"><img draggable="false" data-src="publish/clipart/animals/a22.webp" src="/publish/clipart/animals/a22.webp" class="mCS_img_loaded"></div>
+                    <div class="column_img_box clipart"><img draggable="false" data-src="publish/clipart/animals/a23.webp" src="/publish/clipart/animals/a23.webp" class="mCS_img_loaded"></div>
+                    <div class="column_img_box clipart"><img draggable="false" data-src="publish/clipart/animals/a24.webp" src="/publish/clipart/animals/a24.webp" class="mCS_img_loaded"></div>
+                    <div class="column_img_box clipart"><img draggable="false" data-src="publish/clipart/animals/a25.webp" src="/publish/clipart/animals/a25.webp" class="mCS_img_loaded"></div>
+                    <div class="column_img_box clipart"><img draggable="false" data-src="publish/clipart/animals/a26.webp" src="/publish/clipart/animals/a26.webp" class="mCS_img_loaded"></div>
+                    <div class="column_img_box clipart"><img draggable="false" data-src="publish/clipart/animals/a27.webp" src="/publish/clipart/animals/a27.webp" class="mCS_img_loaded"></div>
+                    <div class="column_img_box clipart"><img draggable="false" data-src="publish/clipart/animals/a28.webp" src="/publish/clipart/animals/a28.webp" class="mCS_img_loaded"></div>
+                    <div class="column_img_box clipart"><img draggable="false" data-src="publish/clipart/animals/a29.webp" src="/publish/clipart/animals/a29.webp" class="mCS_img_loaded"></div>
+                    <div class="column_img_box clipart"><img draggable="false" data-src="publish/clipart/animals/a30.webp" src="/publish/clipart/animals/a30.webp" class="mCS_img_loaded"></div>
+                    <div class="column_img_box clipart"><img draggable="false" data-src="publish/clipart/animals/a31.webp" src="/publish/clipart/animals/a31.webp" class="mCS_img_loaded"></div>
+                    <div class="column_img_box clipart"><img draggable="false" data-src="publish/clipart/animals/a32.webp" src="/publish/clipart/animals/a32.webp" class="mCS_img_loaded"></div>
+                    <div class="column_img_box clipart"><img draggable="false" data-src="publish/clipart/animals/a33.webp" src="/publish/clipart/animals/a33.webp" class="mCS_img_loaded"></div>
+                    <div class="column_img_box clipart"><img draggable="false" data-src="publish/clipart/animals/a34.webp" src="/publish/clipart/animals/a34.webp" class="mCS_img_loaded"></div>
+                    <div class="column_img_box clipart"><img draggable="false" data-src="publish/clipart/animals/a35.webp" src="/publish/clipart/animals/a35.webp" class="mCS_img_loaded"></div>
+                    <div class="column_img_box clipart"><img draggable="false" data-src="publish/clipart/animals/a36.webp" src="/publish/clipart/animals/a36.webp" class="mCS_img_loaded"></div>
+                    <div class="column_img_box clipart"><img draggable="false" data-src="publish/clipart/animals/a37.webp" src="/publish/clipart/animals/a37.webp" class="mCS_img_loaded"></div>
+                    <div class="column_img_box clipart"><img draggable="false" data-src="publish/clipart/animals/a38.webp" src="/publish/clipart/animals/a38.webp" class="mCS_img_loaded"></div>
+                    <div class="column_img_box clipart"><img draggable="false" data-src="publish/clipart/animals/a39.webp" src="/publish/clipart/animals/a39.webp" class="mCS_img_loaded"></div>
+                    <div class="column_img_box clipart"><img draggable="false" data-src="publish/clipart/animals/a40.webp" src="/publish/clipart/animals/a40.webp" class="mCS_img_loaded"></div>
+                    <div class="column_img_box clipart"><img draggable="false" data-src="publish/clipart/animals/a41.webp" src="/publish/clipart/animals/a41.webp" class="mCS_img_loaded"></div>
+                    <div class="column_img_box clipart"><img draggable="false" data-src="publish/clipart/animals/a42.webp" src="/publish/clipart/animals/a42.webp" class="mCS_img_loaded"></div>
+                    <div class="column_img_box clipart"><img draggable="false" data-src="publish/clipart/animals/a43.webp" src="/publish/clipart/animals/a43.webp" class="mCS_img_loaded"></div>
+                    <div class="column_img_box clipart"><img draggable="false" data-src="publish/clipart/animals/a44.webp" src="/publish/clipart/animals/a44.webp" class="mCS_img_loaded"></div><br clear="all">
+                </div>
+            </div>
+            <div id="mCSB_4_scrollbar_vertical" class="mCSB_scrollTools mCSB_4_scrollbar mCS-vertical mCSB_scrollTools_vertical" style="display: block;">
+                <div class="mCSB_draggerContainer">
+                    <div id="mCSB_4_dragger_vertical" class="mCSB_dragger" style="position: absolute; min-height: 30px; display: block; height: 85px; max-height: 459px; top: 0px;">
+                        <div class="mCSB_dragger_bar" style="line-height: 30px;"></div>
+                        <div class="mCSB_draggerRail"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        
+        <div id="cliparSelectBox" class="iselectBox"><img src="publish/clipart/animals/ico.png" class="mCS_img_loaded">Звери</div>
+        <div id="clipart_menu" class="selectContentBox ioptionBox scrollbox clipartPage scrollinit mCustomScrollbar _mCS_3" style="overflow: visible;">
+            <div id="mCSB_3" class="mCustomScrollBox mCS-vertical mCSB_vertical mCSB_outside" tabindex="0" style="max-height: none;">
+                <div id="mCSB_3_container" class="mCSB_container" style="position:relative; top:0; left:0;" dir="ltr">
+                    <div class="ioption" data-select="abstraction"><img src="publish/clipart/abstraction/ico.png" class="mCS_img_loaded">Абстракция</div>
+                    <div class="ioption select" data-select="animals"><img src="publish/clipart/animals/ico.png" class="mCS_img_loaded">Звери</div>
+                    <div class="ioption" data-select="autumn"><img src="publish/clipart/autumn/ico.png" class="mCS_img_loaded">Осень</div>
+                    <div class="ioption" data-select="cake"><img src="publish/clipart/cake/ico.png" class="mCS_img_loaded">Торт и тортики</div>
+                    <div class="ioption" data-select="clown"><img src="publish/clipart/clown/ico.png" class="mCS_img_loaded">Клоун</div>
+                    <div class="ioption" data-select="corals"><img src="publish/clipart/corals/ico.png" class="mCS_img_loaded">Кораллы</div>
+                    <div class="ioption" data-select="flowers"><img src="publish/clipart/flowers/ico.png" class="mCS_img_loaded">Цветы</div>
+                    <div class="ioption" data-select="fruits-berries"><img src="publish/clipart/fruits-berries/ico.png" class="mCS_img_loaded">Фрукты Ягоды</div>
+                    <div class="ioption" data-select="galaxy"><img src="publish/clipart/galaxy/ico.png" class="mCS_img_loaded">Космос, Галактика, Планеты</div>
+                    <div class="ioption" data-select="halloween"><img src="publish/clipart/halloween/ico.png" class="mCS_img_loaded">Хэллоуин</div>
+                    <div class="ioption" data-select="holiday"><img src="/publish/clipart/holiday/ico.png" class="mCS_img_loaded">Праздник, Мишура, Подарки</div>
+                    <div class="ioption" data-select="island"><img src="publish/clipart/island/ico.png" class="mCS_img_loaded">Остров</div>
+                    <div class="ioption" data-select="label"><img src="publish/clipart/label/ico.png" class="mCS_img_loaded">Таблички для надписей</div>
+                    <div class="ioption" data-select="love"><img src="publish/clipart/love/ico.png" class="mCS_img_loaded">Любовь, Сердечки, Купидон</div>
+                    <div class="ioption" data-select="popart"><img src="publish/clipart/popart/ico.png" class="mCS_img_loaded">Поп-арт</div>
+                    <div class="ioption" data-select="seashells"><img src="publish/clipart/seashells/ico.png" class="mCS_img_loaded">Ракушки</div>
+                    <div class="ioption" data-select="smiley"><img src="publish/clipart/smiley/ico.png" class="mCS_img_loaded">Смайлик</div>
+                    <div class="ioption" data-select="stickers"><img src="publish/clipart/stickers/ico.png" class="mCS_img_loaded">Стикеры</div>
+                    <div class="ioption" data-select="tea-coffee"><img src="publish/clipart/tea-coffee/ico.png" class="mCS_img_loaded">Кофе - Чай</div>
+                    <div class="ioption" data-select="tourism"><img src="publish/clipart/tourism/ico.png" class="mCS_img_loaded">Туризм</div>
+                    <div class="ioption" data-select="winter"><img src="publish/clipart/winter/ico.png" class="mCS_img_loaded">Зима</div>
+                </div>
+            </div>
+            <div id="mCSB_3_scrollbar_vertical" class="mCSB_scrollTools mCSB_3_scrollbar mCS-vertical mCSB_scrollTools_vertical" style="display: block;">
+                <div class="mCSB_draggerContainer">
+                    <div id="mCSB_3_dragger_vertical" class="mCSB_dragger" style="position: absolute; min-height: 30px; display: block; height: 255px; max-height: 459px; top: 0px;">
+                        <div class="mCSB_dragger_bar" style="line-height: 30px;"></div>
+                        <div class="mCSB_draggerRail"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    
+    
+    
+  <!-- Загрузить изображение -->
+    <!-- <div class="listBox" id="uplbox">
+        <h3>Загрузить изображение<i></i></h3>
+        <div class="wrapinputfile" id="inputifilebox">Выбрать файлы <input accept="image/*" class="baseuplfile" data-box="list_upl_box" multiple type="file" id="inputmultifile" /> </div>
+        <div id="scroll_upl_box" class="content-listBox">
+            <ul id="list_upl_box"></ul>
+        </div>
+    </div>      -->    <!--  Загрузить изображение  -->
+    
+   
+<!-- -------------------inserttextBox -->
+   
+<!--     <div class="listBox" id="inserttextBox">
+        <h3>Вставить текст<i></i></h3>
+        <div id="tabstext"> <a class="open" href="#tabsimpltext">Стиль</a> <a href="#tabfonttext">Шрифт</a> </div>
+        <div id="list_font" class="content-listBox">
+            <ul class="tabtext" id="tabsimpltext">
+                <li><img draggable="false" data-style="black_and_white" src="/content/skin/e/text/t18.png" width="168" height="33"></li>
+                <li><img draggable="false" data-style="blue_blue2" src="/content/skin/e/text/t11.png" width="171" height="25"></li>
+                <li><img draggable="false" data-style="yellow_brown" src="/content/skin/e/text/t12.png" width="173" height="24"></li>
+                <li><img draggable="false" data-style="light_grey" src="/content/skin/e/text/t17.png" width="180" height="31"></li>
+                <li><img draggable="false" data-style="angry_birds" src="/content/skin/e/text/t16.png" width="151" height="29"></li>
+                <li><img draggable="false" data-style="brown_blue" src="/content/skin/e/text/t9.png" width="183" height="30"></li>
+                <li><img draggable="false" data-style="white_green" src="/content/skin/e/text/t10.png" width="196" height="23"></li>
+                <li><img draggable="false" data-style="black_yellow" src="/content/skin/e/text/t1.png" width="194" height="36"></li>
+                <li><img draggable="false" data-style="white_purple" src="/content/skin/e/text/t13.png" width="186" height="36"></li>
+                <li><img draggable="false" data-style="old_cyrillic" src="/content/skin/e/text/t14.png" width="177" height="29"></li>
+                <li><img draggable="false" data-style="green_neon" src="/content/skin/e/text/t15.png" width="209" height="36"></li>
+                <li><img draggable="false" data-style="purple_white" src="/content/skin/e/text/t2.png" width="192" height="51"></li>
+                <li><img draggable="false" data-style="blue_shadow" src="/content/skin/e/text/t3.png" width="211" height="38"></li>
+                <li><img draggable="false" data-style="gray_shadow" src="/content/skin/e/text/t4.png" width="207" height="34"></li>
+                <li><img draggable="false" data-style="neon_purple" src="/content/skin/e/text/t5.png" width="233" height="38"></li>
+                <li><img draggable="false" data-style="shadow_fire" src="/content/skin/e/text/t6.png" width="233" height="39"></li>
+                <li><img draggable="false" data-style="grey_3d" src="/content/skin/e/text/t7.png" width="223" height="29"></li>
+                <li><img draggable="false" data-style="blue_blue" src="/content/skin/e/text/t8.png" width="220" height="28"></li>
+            </ul>
+            <div class="tabtext" id="tabfonttext">
+                <div class="ch-font-family" data-font="Arial" style="font-family:Arial"><span>Пример текста</span>Arial </div>
+                <div class="ch-font-family" data-font="Comic Sans MS" style="font-family:Comic Sans MS"><span>Пример текста</span>Comic Sans MS </div>
+                <div class="ch-font-family" data-font="Courier New" style="font-family:Courier New"><span>Пример текста</span>Courier New </div>
+                <div class="ch-font-family" data-font="Georgia" style="font-family:Georgia"><span>Пример текста</span>Georgia </div>
+                <div class="ch-font-family" data-font="Impact" style="font-family:Impact"><span>Пример текста</span>Impact </div>
+                <div class="ch-font-family" data-font="Times New Roman" style="font-family:Times New Roman"><span>Пример текста</span>Times New Roman </div>
+                <div class="ch-font-family" data-font="Trebuchet MS" style="font-family:Trebuchet MS"><span>Пример текста</span>Trebuchet MS </div>
+                <div class="ch-font-family" data-font="Verdana" style="font-family:Verdana"><span>Пример текста</span>Verdana </div>
+                <div class="ch-font-family" data-font="Sans" style="font-family:Sans"><span>Пример текста</span>Sans </div>
+                <div class="ch-font-family" data-font="Andantino" style="font-family:Andantino"><span>Пример текста</span>Andantino </div>
+                <div class="ch-font-family" data-font="Angry Birds" style="font-family:Angry Birds"><span>Пример текста</span>Angry Birds </div>
+                <div class="ch-font-family" data-font="Arbat" style="font-family:Arbat"><span>Пример текста</span>Arbat </div>
+                <div class="ch-font-family" data-font="Casanova" style="font-family:Casanova"><span>Пример текста</span>Casanova </div>
+                <div class="ch-font-family" data-font="Caveat" style="font-family:Caveat"><span>Пример текста</span>Caveat </div>
+                <div class="ch-font-family" data-font="Comfortaa" style="font-family:Comfortaa"><span>Пример текста</span>Comfortaa </div>
+                <div class="ch-font-family" data-font="Denistina" style="font-family:Denistina"><span>Пример текста</span>Denistina </div>
+                <div class="ch-font-family" data-font="Fantazyor" style="font-family:Fantazyor"><span>Пример текста</span>Fantazyor </div>
+                <div class="ch-font-family" data-font="Iron" style="font-family:Iron"><span>Пример текста</span>Iron </div>
+                <div class="ch-font-family" data-font="Izhitsa" style="font-family:Izhitsa"><span>Пример текста</span>Izhitsa </div>
+                <div class="ch-font-family" data-font="Lobster" style="font-family:Lobster"><span>Пример текста</span>Lobster </div>
+                <div class="ch-font-family" data-font="Malahit" style="font-family:Malahit"><span>Пример текста</span>Malahit </div>
+                <div class="ch-font-family" data-font="Matreshka" style="font-family:Matreshka"><span>Пример текста</span>Matreshka </div>
+                <div class="ch-font-family" data-font="Olietta" style="font-family:Olietta"><span>Пример текста</span>Olietta </div>
+                <div class="ch-font-family" data-font="Telegraphshodwn" style="font-family:Telegraphshodwn"><span>Пример текста</span>Telegraphshodwn </div>
+            </div>
+        </div>
+    </div> -->   <!-- -------------------inserttextBox -->
+    
+   <!--  set-text-box -->
+<!--     
+    <div class="listBox" id="set-text-box">
+        <h3>Свойства текста<i></i></h3>
+        <div class="content-listBox" id="set-text-scrollbox">
+            <p>Шрифт: <input data-box="fontFamily_list" class="openpop" value="verdana" id="fontFamily" type="button"> </p>
+            <p>Форматирование: </p>
+            <p class="textbtn"> <input data-box="text_colortbox" title="Цвет текста" id="text_color" class="openpop" type="button" /> <input title="Жирный" onClick="font_bold()" id="font_bold" type="button" /> <input title="Курсив" onClick="font_italic()" id="font_italic" type="button" /> <input title="Подчеркнутый" onClick="font_underline()" id="font_underline" type="button" /> <input title="Регистр" data-box="font_register_opt" class="openpop" id="font_register" type="button" /> </p>
+            <p>Выравнивание: </p>
+            <p class="textbtn"> <input title="Выровнять текст по левому краю" onClick="text_align('left')" id="text_align_left" class="align" type="button" /> <input title="По центру" onClick="text_align('center')" id="text_align_center" class="align" type="button" /> <input title="Выровнять текст по правому краю" onClick="text_align('right')" id="text_align_right" class="align" type="button" /> <input title="По ширине" onClick="text_align('justify')" id="text_align_justify" class="align" type="button" /> </p>
+            <div class="forPc">
+                <p>Интервал:</p>
+                <div class="settingsBox open">
+                    <p>Межбуквенный: <span id="txtcharSpacingt">0</span></p>
+                    <p><input oninput="charSpacingt(this.value)" id="charspacingt" type="range" max="1000" min="-200" value="0" step="10"></p>
+                </div>
+                <div class="settingsBox open">
+                    <p>Междустрочный: <span id="txtTextline">0</span></p>
+                    <p><input oninput="setLineInterval(this.value,1)" id="textline" type="range" max="2" min="0.8" value="0" step="0.05"></p>
+                </div>
+            </div>
+            <div class="forPc">
+                <p>Эффекты: </p>
+                <div class="settingsBox">
+                    <p><label class="checkbox-small"> <input type="checkbox" id="fill-text-set"> </label> Заливка текста:</p>
+                    <div class="spoller">
+                        <p> <label for="fortext_fill">Цвет: </label> <input data-color="FF0000" class="colorpick" id="fortext_fill" type="button"> </p>
+                    </div>
+                </div>
+            </div>
+            <div class="settingsBox forPc">
+                <p><label class="checkbox-small"> <input type="checkbox" id="fill-textbox-set"> </label> Заливка области текста:</p>
+                <div class="spoller">
+                    <p> <label for="fortext_box">Цвет: </label> <input data-color="FF0000" class="colorpick" id="fortext_box" type="button"> </p>
+                </div>
+            </div>
+            <div class="settingsBox forPc">
+                <p> <label class="checkbox-small"> <input type="checkbox" id="stroke-text-set"> </label> Обводка текста:</p>
+                <div class="spoller">
+                    <p><label for="textstrokecolor">Цвет:</label> <input data-color="#FF0000" class="colorpick" id="textstrokecolor" type="button"> &nbsp; <label> <input id="textstrokeOutline" type="checkbox" value="1">Снаружи </label> </p>
+                    <table width="100%" border="0">
+                        <tr>
+                            <td><input data-size="1" id="textstrokesize" max="20" min="0" value="1" step="1" type="range"></td>
+                            <td><input value="0" min="0" max="20" id="textstrokenumber" type="number"></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="settingsBox forPc">
+                <p><label class="checkbox-small"><input type="checkbox" id="shadow-text-set"></label> Тень:</p>
+                <div class="spoller">
+                    <p>Сдвиг по оси X: <span id="txtshadow_x">0</span><br> <input class="" id="shadow_x" oninput="txtshadow()" max="10" min="-10" value="0" step="1" type="range"> </p>
+                    <p>Сдвиг по оси Y: <span id="txtshadow_y">0</span><br> <input class="" id="shadow_y" oninput="txtshadow()" max="10" min="-10" value="0" step="1" type="range"> </p>
+                    <p>Радиус размытия: <span id="txtshadow_blur">0</span><br> <input class="" id="shadow_blur" oninput="txtshadow()" max="10" min="0" value="0" step="1" type="range"> </p>
+                    <p><label for="textshadowcolor">Цвет:</label> <input data-color="000000" class="colorpick" id="textshadowcolor" type="button"> </p>
+                </div>
+            </div> <br>
+        </div>
+    </div -->>  <!--  set-text-box -->
+    
+    
+    
+    <!-- Свойства Изображения -->
+    
+<!--     <div class="listBox settings" id="set-image-box">
+        <h3>Свойства Изображения<i></i></h3>
+        <div id="set-image-scrollbox" class="content-listBox">
+            <div id="set-border-image-box">
+                <div class="settingsBox">
+                    <p> <label class="checkbox-small"> <input type="checkbox" id="border-image"> </label> <span>Рамка</span> </p>
+                    <div class="spoller"> <input class="set-border" type="range" id="border-image-value" data-border="10" value="10" min="0" max="50" step="1">
+                        <p>Цвет: <input data-color="bfbfbf" class="objborderFill" id="border-image-fill-value" type="button"></p>
+                    </div>
+                </div>
+            </div>
+            <p><strong>Цветокоррекция:</strong></p>
+            <div id="photo_color_correction">
+                <div class="settingsBox">
+                    <p> <label class="checkbox-small"> <input type="checkbox" id="brightness"> </label> <span>Яркость</span> </p>
+                    <div class="spoller"><input type="range" id="brightness-value" data-value="0.05" value="0.05" min="-1" max="1" step="0.003921"></div>
+                </div>
+                <div class="settingsBox">
+                    <p> <label class="checkbox-small"> <input type="checkbox" id="contrast"></label> <span>Контраст</span> </p>
+                    <div class="spoller"><input type="range" id="contrast-value" data-value="0.05" value="0.05" min="-1" max="1" step="0.003921"></div>
+                </div>
+                <div class="settingsBox">
+                    <p> <label class="checkbox-small"> <input type="checkbox" id="saturation"> </label> <span>Насыщенность</span> </p>
+                    <div class="spoller"><input type="range" id="saturation-value" data-value="0.235115" value="0.235115" min="-1" max="1" step="0.003921"></div>
+                </div>
+                <div class="settingsBox">
+                    <p> <label class="checkbox-small"> <input type="checkbox" id="hue"> </label> <span>Оттенок</span> </p>
+                    <div class="spoller"><input type="range" id="hue-value" data-value="0" value="0" min="-2" max="2" step="0.002"></div>
+                </div>
+                <div class="settingsBox">
+                    <p> <label class="checkbox-small"> <input type="checkbox" id="gamma"> </label> <span>Цветовой баланс</span> </p>
+                    <div class="spoller" id="gamma-spoller">
+                        <div class="gamma" id="gamma_red"><input type="range" id="gamma-red" value="1" min="0.2" max="2.2" step="0.003921"></div> <br>
+                        <div class="gamma" id="gamma_green"><input type="range" id="gamma-green" value="1" min="0.2" max="2.2" step="0.003921"></div> <br>
+                        <div class="gamma" id="gamma_blue"><input type="range" id="gamma-blue" value="1" min="0.2" max="2.2" step="0.003921"></div>
+                    </div>
+                </div>
+            </div>
+            <div id="photo_filters"> <strong>Фильтры:</strong>
+                <div class="settingsBox">
+                    <p><label class="checkbox-small"><input type="checkbox" id="sharpen"></label><span>Резкость</span></p>
+                    <div class="spoller"><input type="range" id="sharpen-value" data-value="0.1" value="0.1" min="0.1" max="1" step="0.1"></div>
+                </div>
+                <div class="settingsBox">
+                    <p><label class="checkbox-small"><input type="checkbox" id="blur"></label><span>Размытие</span></p>
+                    <div class="spoller"><input type="range" id="blur-value" data-value="0.1" value="0.1" min="0" max="1" step="0.01"></div>
+                </div>
+                <div class="settingsBox">
+                    <p><label class="checkbox-small"><input type="checkbox" id="noise"></label><span>Шум</span></p>
+                    <div class="spoller"><input type="range" id="noise-value" data-value="100" value="100" min="0" max="1000"></div>
+                </div>
+                <div class="settingsBox">
+                    <p><label class="checkbox-small"><input type="checkbox" id="pixelate"></label><span>Пикселизация</span></p>
+                    <div class="spoller"><input type="range" id="pixelate-value" data-value="4" value="4" min="2" max="20" step="1"></div>
+                </div>
+                <p class="filters"> <label class="checkbox-small"><input type="checkbox" id="invert"></label> <span>Инвертировать</span> </p>
+                <p class="filters"> <label class="checkbox-small"><input type="checkbox" id="blackwhite"></label> <span>Черно-Белая</span> </p>
+                <p class="filters"> <label class="checkbox-small"><input type="checkbox" id="sepia"></label> <span>Сепия</span> </p>
+                <p class="filters"> <label class="checkbox-small"><input type="checkbox" id="vintage"></label> <span>Винтаж</span> </p>
+                <p class="filters"> <label class="checkbox-small"><input type="checkbox" id="brownie"></label> <span>Брауни</span> </p>
+                <p class="filters"> <label class="checkbox-small"><input type="checkbox" id="kodachrome"></label> <span>Кодахром</span> </p>
+                <p class="filters"> <label class="checkbox-small"> <input type="checkbox" id="technicolor"></label> <span>Техниколор</span> </p>
+                <p class="filters"> <label class="checkbox-small"><input type="checkbox" id="polaroid"></label> <span>Полароид</span> </p>
+                <p class="filters"> <label class="checkbox-small"><input type="checkbox" id="emboss"></label> <span>Тиснение</span> </p>
+            </div>
+        </div>
+    </div>  -->   <!-- Свойства Изображения -->
+    
+    
+   <!--  <div class="listBox">
+        <h3>ЗАГРУЗКА...<i></i></h3> <span style="font-family:Arial">А</span><span style="font-family:Comic Sans MS">А</span><span style="font-family:Courier New">А</span><span style="font-family:Georgia">А</span><span style="font-family:Impact">А</span><span style="font-family:Times New Roman">А</span><span style="font-family:Trebuchet MS">А</span><span style="font-family:Verdana">А</span><span style="font-family:Sans">А</span><span style="font-family:Andantino">А</span><span style="font-family:Angry Birds">А</span><span style="font-family:Arbat">А</span><span style="font-family:Casanova">А</span><span style="font-family:Caveat">А</span><span style="font-family:Comfortaa">А</span><span style="font-family:Denistina">А</span><span style="font-family:Fantazyor">А</span><span style="font-family:Iron">А</span><span style="font-family:Izhitsa">А</span><span style="font-family:Lobster">А</span><span style="font-family:Malahit">А</span><span style="font-family:Matreshka">А</span><span style="font-family:Olietta">А</span><span style="font-family:Telegraphshodwn">А</span>
+    </div> -->
+</div>       <!--   =========== -->         
+
+<!-- ---------------------------------------------------- -->
+
+                 <!--     canvasOptSizeBox    -->     
+
+<div id="canvasOptSizeBox" class="winPop">
+    <div id="canvasOptSizeTabs"> 
+    <a class="open" id="emptyTabs" href="#emptyTab">Пустая страница</a> 
+    <a id="fileTabs" href="#fileTab">Из фото</a>
+    <input id="canvasOptSizeClose" type="button" value="">
+    </div>
+    
+    <div id="canvasOptSizeContent">
+        <div id="emptyTab">
+            <h4>Выберите размер</h4>
+            <div id="canvasOptSizeVal">
+                <div id="canvasOptSizeValBtn"> <span data-width="1240" data-height="1754" id="canvasOptSizeInfo">А4: 1240 × 1754 px</span> <img src="content/skin/e/arr-b.svg"> </div>
+                <div id="canvasOptSizeSelect">
+                    <ul>
+                        <li data-width="1205" data-height="1795">10×15см: 1205х1795 px</li>
+                        <li class="select" data-width="1240" data-height="1754">А4: 1240×1754 px</li>
+                        <li data-width="874" data-height="1240">А5: 874×1240 px</li>
+                        <li data-width="1200" data-height="1200">(1:1): 1200×1200 px</li>
+                        <li data-width="1800" data-height="1200">(3:2): 1800×1200 px</li>
+                        <li data-width="1600" data-height="1200">(4:3): 1600×1200 px</li>
+                        <li data-width="1920" data-height="1080">(16:9): 1920×1080 px</li>
+                        <li data-width="1080" data-height="1080">Instagram для поста: 1080×1080 px</li>
+                        <li data-width="1200" data-height="630">Facebook для поста: 1200×630 px</li>
+                        <li data-width="1000" data-height="700">ВКонтакте для поста: 1000×700 px</li>
+                        <li data-width="1680" data-height="1680">Одноклассники для поста: 1680×1680 px</li>
+                    </ul>
+                </div>
+            </div>
+            <div id="canvasOptSizeInput"> <input id="newCanvas_width" type="text" maxlength="4" value="1240"> <em>ширина</em> <button id="canvasOptSizeValShift"> <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16" height="16" viewBox="0 0 16 16">
+                        <path fill="#000000" d="M2 5h10v3l4-4-4-4v3h-12v6h2zM14 11h-10v-3l-4 4 4 4v-3h12v-6h-2z"></path>
+                    </svg> </button> <em>высота</em> <input id="newCanvas_height" type="text" maxlength="4" value="1754"> px </div>
+            <p><label><input type="checkbox" id="canvasOptSizeStore" value="" checked> Сохранять пропорции</label></p>
+            <p> &nbsp;<span class="text-red" id="canvasOptSizeError"></span></p>
+            <p class="text-center"><input class="button blue big" id="canvasOptSizeBild" type="button" value="Выбрать"></p>
+        </div>
+        <div class="display-none" id="fileTab">
+            <h4>Создать из фото</h4>
+            <p><label for="canvasOptSizeImgWidth">Максимальная ширина</label> <input value="500" id="canvasOptSizeImgWidth" type="text" size="3" maxlength="4"> <em>(100 - 500)</em></p>
+            <p><label for="canvasOptSizeImgHeight">Максимальная высота</label> <input value="500" id="canvasOptSizeImgHeight" type="text" size="3" maxlength="4"> <em>(100 - 500)</em></p>
+            <p> &nbsp;<span class="text-red" id="errCanvasImgSize"></span></p>
+            <p class="buttonbox"> <label id="canvasIsFile" class="labelfile button blue ico big">Выбрать фото<input accept="image/*" class="baseuplfile" data-box="list_upl_box" type="file" id="inputphotocreate"></label> </p>
+        </div>
+    </div>
+</div>   <!--     canvasOptSizeBox    --> 
+
+
+<div class="pop flashPop" id="text_color_mobil_box"> <span title="Закрыть" class="closePop" onclick="closeFlashPop()">✖</span>
+    <div id="text_color_mobil"></div>
+</div>
+
+
+
+            <!--       text_colortbox     -->                 
+
+<div class="pop flashPop" id="text_colortbox">
+ <span title="Закрыть" class="closePop" onclick="closeFlashPop()">✖</span>
+    <h4>Цвет</h4>
+    <div id="tabFontFill">
+        <div class="tabbut"> <a id="tabs_forfontcolor" href="#tab_forfontcolor">Цвет</a> <a id="tabs_fontGradient" href="#tab_fontGradient">Градиент</a> <a id="tabs_fontPattern" href="#tab_fontPattern">Узор</a> </div>
+        <div class="tabcocntent">
+            <div id="tab_forfontcolor">
+                <div>Монохромный цвет: <input data-color="#FF0000" class="colorpick" id="forfontcolor" type="button"></div>
+                <div id="libforfontcolor"></div>
+            </div>
+            <div id="tab_fontGradient">
+                <p><label>Верх:</label><input data-color="FF0000" class="colorpick" type="button" id="fontGradientA"></p>
+                <p><label>Середина:</label><input data-color="ffbf00" class="colorpick" type="button" id="fontGradientB"></p>
+                <p><label>Низ:</label><input data-color="00b4ee" class="colorpick" type="button" id="fontGradientC"></p>
+            </div>
+            <div id="tab_fontPattern"> <a href="#"><img src="/publish/pattern_txt/thumb/1.png"></a><a href="#"><img src="/publish/pattern_txt/thumb/10.png"></a><a href="#"><img src="/publish/pattern_txt/thumb/11.png"></a><a href="#"><img src="/publish/pattern_txt/thumb/12.png"></a><a href="#"><img src="/publish/pattern_txt/thumb/13.png"></a><a href="#"><img src="/publish/pattern_txt/thumb/14.png"></a><a href="#"><img src="/publish/pattern_txt/thumb/15.png"></a><a href="#"><img src="/publish/pattern_txt/thumb/16.png"></a><a href="#"><img src="/publish/pattern_txt/thumb/17.png"></a><a href="#"><img src="/publish/pattern_txt/thumb/18.png"></a><a href="#"><img src="/publish/pattern_txt/thumb/19.png"></a><a href="#"><img src="/publish/pattern_txt/thumb/2.png"></a><a href="#"><img src="/publish/pattern_txt/thumb/20.png"></a><a href="#"><img src="/publish/pattern_txt/thumb/21.png"></a><a href="#"><img src="/publish/pattern_txt/thumb/22.png"></a><a href="#"><img src="/publish/pattern_txt/thumb/23.png"></a><a href="#"><img src="/publish/pattern_txt/thumb/24.png"></a><a href="#"><img src="/publish/pattern_txt/thumb/3.png"></a><a href="#"><img src="/publish/pattern_txt/thumb/4.png"></a><a href="#"><img src="/publish/pattern_txt/thumb/5.png"></a><a href="#"><img src="/publish/pattern_txt/thumb/6.png"></a><a href="#"><img src="/publish/pattern_txt/thumb/7.png"></a><a href="#"><img src="/publish/pattern_txt/thumb/8.png"></a><a href="#"><img src="/publish/pattern_txt/thumb/9.png"></a> </div>
+        </div>
+    </div>
+</div>   <!--       text_colortbox     --> 
+
+
+
+<div class="pop flashPop" id="text_colorfbox"> <span title="Закрыть" class="closePop" onclick="closeFlashPop()">✖</span> 
+</div>
+
+   <!--     fontFamily_list -->
+
+<div class="pop flashPop" id="fontFamily_list"> <span title="Закрыть" class="closePop" onclick="closeFlashPop()">✖</span>
+    <h4>Семейство Шрифтов</h4>
+    <div id="font_select_box"> <a title="Arial" style="font-family:Arial" href="#Arial">Arial</a><a title="Comic Sans MS" style="font-family:Comic Sans MS" href="#Comic Sans MS">Comic Sans MS</a><a title="Courier New" style="font-family:Courier New" href="#Courier New">Courier New</a><a title="Georgia" style="font-family:Georgia" href="#Georgia">Georgia</a><a title="Impact" style="font-family:Impact" href="#Impact">Impact</a><a title="Times New Roman" style="font-family:Times New Roman" href="#Times New Roman">Times New Roman</a><a title="Trebuchet MS" style="font-family:Trebuchet MS" href="#Trebuchet MS">Trebuchet MS</a><a title="Verdana" style="font-family:Verdana" href="#Verdana">Verdana</a><a title="Sans" style="font-family:Sans" href="#Sans">Sans</a><a title="Andantino" class="font-andantino" style="font-family:andantino; " href="#Andantino">Andantino</a><a title="Angry Birds" class="font-angry birds" style="font-family:angry birds; " href="#Angry Birds">Angry Birds</a><a title="Arbat" class="font-arbat" style="font-family:arbat; " href="#Arbat">Arbat</a><a title="Casanova" class="font-casanova" style="font-family:casanova; " href="#Casanova">Casanova</a><a title="Caveat" class="font-caveat" style="font-family:caveat; " href="#Caveat">Caveat</a><a title="Comfortaa" class="font-comfortaa" style="font-family:comfortaa; " href="#Comfortaa">Comfortaa</a><a title="Denistina" class="font-denistina" style="font-family:denistina; " href="#Denistina">Denistina</a><a title="Fantazyor" class="font-fantazyor" style="font-family:fantazyor; " href="#Fantazyor">Fantazyor</a><a title="Iron" class="font-iron" style="font-family:iron; " href="#Iron">Iron</a><a title="Izhitsa" class="font-izhitsa" style="font-family:izhitsa; " href="#Izhitsa">Izhitsa</a><a title="Lobster" class="font-lobster" style="font-family:lobster; " href="#Lobster">Lobster</a><a title="Malahit" class="font-malahit" style="font-family:malahit; " href="#Malahit">Malahit</a><a title="Matreshka" class="font-matreshka" style="font-family:matreshka; " href="#Matreshka">Matreshka</a><a title="Olietta" class="font-olietta" style="font-family:olietta; " href="#Olietta">Olietta</a><a title="Telegraphshodwn" class="font-telegraphshodwn" style="font-family:telegraphshodwn; " href="#Telegraphshodwn">Telegraphshodwn</a> </div>
+</div>  <!--     fontFamily_list -->
+
+<div class="pop flashPop" id="transparent_box"> <span title="Закрыть" class="closePop" onclick="closeFlashPop()">✖</span>
+    <div>Прозрачность: <span id="txtTransparent">0</span></div> <input class="" oninput="transparent(this.value)" id="transparent" type="range" max="100" min="0" value="0" step="1">
+</div>
+
+<div class="pop flashPop" id="font_size_box"> <span title="Закрыть" class="closePop" onclick="closeFlashPop()">✖</span>
+    <div>Маштаб: <span id="objScale">0</span></div> <input class="" oninput="setScale(this.value)" id="size" type="range" max="4" min="0.1" value="0" step="0.01">
+</div>
+
+<div id="font_register_opt" class="pop flashPop"> <span title="Закрыть" class="closePop" onclick="closeFlashPop()">✖</span>
+    <h4>Регистр</h4> <a onclick="font_register('up');return false" href="#">ВСЕ-ПРОПИСНЫЕ</a> <a onclick="font_register('low');return false" href="#">все-строчные</a>
+</div>
+
+<div id="anglebox" class="pop flashPop"> <span title="Закрыть" class="closePop" onclick="closeFlashPop()">✖</span>
+    <div>Угол накона: <span id="txtangle">0</span><br> <input class="" id="angle" oninput="angleObj(this.value)" max="360" min="-360" value="0" step="1" type="range"> </div>
+</div>
+
+<div id="ch_page_clear_box" class="winAlert winPop">
+    <p>Вы действительно хотите очистить холст ?</p>
+    <p> <input class="button red" id="page_clear" type="button" value="Да" /><input class="button modalcloses" type="button" value="Нет" /> </p>
+    <p> <label><input id="memory_clear" type="checkbox" value="1" /> Не показывать снова</label> </p>
+</div>
+
+
+<div id="ch_page_delete_box" class="winAlert winPop">
+    <p>Вы действительно хотите удалить ?</p>
+    <p> <input class="button red" id="page_delete" type="button" value="Да" /><input class="button modalcloses" type="button" value="Нет" /> </p>
+    <p> <label><input id="cook_delete" type="checkbox" value="1" /> Не показывать снова</label> </p>
+</div>
+
+         <!--     download_box   -->
+
+<div id="download_box" class="winPop">
+    <h1>Сохранить файл проекта.<span class="close_download_box" id="close_download_box"></span></h1>
+    <div class="download_step" id="download_step_1">
+        <p id="get_typefile_box"> <strong>Тип файла:</strong> <select id="get_typefile">
+                <option value="gif">GIF</option>
+                <option value="jpg">JPG</option>
+                <option value="png">PNG</option>
+                <option value="webp">WEBP</option>
+            </select> </p>
+        <div id="ch_uplfile-gif" class="ch_uplfile">
+            <p><strong>GIF</strong> <span>- используется для веб-изображений и анимированной графики, имеет ограничение в 256 цветов.</span></p>
+            <p><span>Можно открыть любой программой для просмотра изображений, для просмотра анимици открыть любым браузером.</span></p>
+            <p class="download_set"><label><input class="checkbox-animated" id="animatedGif" type="checkbox" value=""> анимационное изображение</label></p>
+        </div>
+        <div id="ch_uplfile-jpg" class="ch_uplfile">
+            <p><strong>JPG</strong><span> - Распространённый формат изображений, небольшой размер, хорошее качество</span>.</p>
+            <p><span> Можно открыть любой программой для просмотра изображений.</span></p>
+            <p><label>Качество изображения: <input type="number" id="number_jpg_quality" min="1" max="100" value="85"></label> % <input id="input_jpg_quality" type="range" max="100" min="1" value="85" step="1"></p>
+        </div>
+        <div id="ch_uplfile-png" class="ch_uplfile">
+            <p><strong>PNG</strong><span> - Распространённый формат изображений, большой размер, высокое качество</span>.</p>
+            <p><span> Можно открыть любой программой для просмотра изображений</span>.</p>
+        </div>
+        <div id="ch_uplfile-webp" class="ch_uplfile">
+            <p><strong>Webp</strong><span> - используется для веб-изображений и анимированной графики, небольшой размер, высокое качество.</span></p>
+            <p><span>Можно открыть во всех современных браузерах</span></p>
+            <p><label>Качество изображения: <input type="number" id="number_webp_quality" min="1" max="100" value="85"></label> % <input id="input_webp_quality" type="range" max="100" min="1" value="85" step="1"></p>
+            <p class="download_set"><label><input class="checkbox-animated" id="animatedWebp" type="checkbox" value=""> анимационное изображение</label></p>
+        </div>
+        <div id="download_go">Скачать</div>
+    </div>
+    <div id="download_step_2" class="download_step display-none">
+        <h3>Создание файла:</h3>
+        <p id="i_progress_post" class="progress-row">Процесс сбора данных проекта <strong id="post_file_count">?</strong></p>
+        <p id="i_progress_coll" class="progress-row">Создание и компиляция файла проекта. </p>
+        <div id="download_done_box" class="display-none">
+            <table width="100%" border="0">
+                <tr>
+                    <td>
+                        <div id="download_done_prev"></div>
+                    </td>
+                    <td>
+                        <div id="download_done_link"> Если скачивание не началось автоматически, <a id="hand_download" href="#" target="_blank">нажмите здесь</a>. </div>
+                        <div style="display:none">
+                            <div id="download_share_link"> <a class="share pinterest" id="link_share_pinterest" href="#" target="_blank">Сохранить на Pinterest</a> </div>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+            <p class="text-center btnboxdownlod"> <input class="close_download_box" type="button" value="Венуться к проекту"> <input class="out_editor" type="button" value="Закончить и выйти из редактора"> </p>
+        </div>
+    </div>
+    <div id="download_error" class="download_step display-none">
+        <h3>Ошибка Создания файла:</h3>
+        <div id="error_msg_download"></div>
+        <p class="text-center btnboxdownlod"> <input class="close_download_box" type="button" value="Венуться к проекту"> <input class="out_editor" type="button" value="Закончить и выйти из редактора"> </p>
+    </div>
+</div>   <!--     download_box   -->
+
+<script defer src="/content/js/jquery.base.js"></script>
+<link href="/content/skin/e/photo_animation.css" rel="stylesheet" type="text/css">
+
+<div id="selectFotoBox" class="winPop"> <input id="closeAniSize" type="button">
+    <div id="selectFotoBoxContent">
+        <h3>Размер файла анимации:</h3>
+        <div id="anisizebox">
+            <p><label for="maxnew_width">Максимальная ширина</label> <input data-iwidth="500" data-cwidth="500" value="500" id="maxnew_width" type="text" size="3" maxlength="3"> <em>(от 100 - до 500)</em></p>
+            <p><label for="maxnew_height">Максимальная высота</label> <input data-iheight="500" data-cheight="500" value="500" id="maxnew_height" type="text" size="3" maxlength="3"> <em>(от 100 - до 500)</em></p>
+        </div>
+        <p> <span id="errAniSize">Введите правильный размер!</span> <span id="aniFileLouds">Загружаем</span>&nbsp; </p>
+        <p class="buttonbox"> <label class="labelfile button blue ico medium">Загрузить фото<input accept="image/*" class="baseuplfile" data-box="list_upl_box" type="file" id="inputphotoanimation"></label> <input title="Создать свою анимацию" class="button blue ico medium" id="btn_empty_ani" type="button" value="Чистый лист"> </p>
+    </div>
+</div>
+
+
+<script src="/content/js/jquery.animation.js"></script>
+<div id="iloder" class="winPop">Загрузка...</div> <a id="downloads" href="#" target="_blank">g</a>
+<script>
+var xxxx = 0;
+var yyyy = 0;
+var bll = 'none';
+var yg = 0;
+var pict = 's.png';
+
+var colorText = '#000000';
+    var editAllow = 0;
+    var sticker1Text = '100% вискоза';
+    var sticker2Text = 'Дизайн Миди';
+    
+    
+/**
+ * Формирование и добавление 
+ * двух стикеров
+ */
+ 
+ 
+ 
+    var canvas = new fabric.Canvas('c');
+    
+
+  
+     
+   
+function clip() {
+
+document.getElementById('aniBox').style.display = "none";
+document.getElementById('clipartBox').style.display = "block";
+document.getElementById('clipart_menu').style.display = "block";
+document.getElementById('ani_menu').style.display = "none";
+}
+
+function ani() {
+document.getElementById('aniBox').style.display = "block";
+document.getElementById('clipartBox').style.display = "none";
+document.getElementById('clipart_menu').style.display = "none";
+document.getElementById('ani_menu').style.display = "block";
+document.getElementById('ani_animals').style.display = "block";
+
+}
+
+
+document.onclick = function(e){
+    
+    
+    //alert(e.target.tagName); 
+    //e.target.style.backgroundColor = "red";
+    
+ var fff = e.target.getAttribute("data-select");
+    
+    
+    if (fff == 'animals')
+    {
+    document.getElementById('ani_animals').style.display = "block";
+    document.getElementById('ani_menu').style.display = "none";
+    
+    document.getElementById('clipart_animals').style.display = "block";
+    document.getElementById('clipart_menu').style.display = "none";
+    
+    }
+    
+    
+    
+    if (e.target.tagName == 'IMG')
+    {
+    
+    var bbb = e.target.getAttribute("src");
+    
+    //alert('bbb ' + bbb);
+    
+    var parts = bbb.split('/');
+   
+    var bb = bbb;
+    bbbb = parts[0] + '/' + parts[1] + '/' + parts[2] + '/lage/' + parts[3];
+    
+    
+    if (parts[1] == 'clipart')
+    {bb = bbbb; 
+     
+     fabric.Image.fromURL(bb,
+        function (img1) {
+            canvas.add(img1.set({
+                left: 150,
+                top: 150,
+                scaleX: 0.2,
+                scaleY: 0.2,
+                originX: 'left',
+                originY: 'top'               
+            }));
+        },
+    ); 
+  }  
+  if (parts[1] == 'animation')
+  
+    {
+   
+
+     document.getElementById('canvas').style.display = "block";
+     bll = 'block';
+     
+     if (parts[3] == '-101-150-24-.gif')
+     { pict = 's.png';
+     freim(xxxx, yyyy, yg, pict, bll);
+     }
+     
+      if (parts[3] == '-110-150-19-.gif')
+     { pict = 's2.png'
+     freim(xxxx, yyyy, yg, pict, bll);
+     }
+     
+     if (parts[3] == '-114-150-8-.gif')
+     { pict = 's3.png'
+     freim(xxxx, yyyy, yg, pict, bll);
+     }
+     fabric.Image.fromURL(bbb,
+        function (img1) {
+            canvas.add(img1.set({
+                left: 75,
+                top: 75,
+                scaleX: 1.7,
+                scaleY: 1.7,
+                 
+                originX: 'top',
+                originY: 'left',
+                opacity: 0
+            }));
+        },
+    ); 
+   
+ 
+            
+            
+  //canvas.selection = false;
+ //var lll = canvas.img1.getLeft(); // 0
+//var ttt = img1.getTop(); // 0      
+//console.log('left ', lll);
+
+//canvas.renderAll();
+
+
+/*
+canvas.on('mouse:down', function(options) {
+  if (options.target) {
+    console.log('an object was clicked! ', options.target.type);
+     
+    alert('33');
+    //canvas.selection = false;
+    img1.angle = 0;canvas.hoverCursor = 'default';alert('33');
+            canvas.requestRenderAll();
+    
+    canvas.requestRenderAll();
+  }
+});
+*/
+
+  canvas.on('mouse:down', function(options) {
+        
+      
+        xxxx = canvas.item(0).left - 50;
+        yyyy = canvas.item(0).top - 75;
+        yg = canvas.item(0).angle;
+       console.log('yg ', yg);
+     freim(xxxx, yyyy, yg, pict, bll);
+    });     
+        
+   
+    canvas.on('mouse:move', function(options) {
+       
+            xxxx = canvas.item(0).left - 50;
+        yyyy = canvas.item(0).top - 75;
+       yg = canvas.item(0).angle;
+       
+        freim(xxxx, yyyy, yg, pict, bll);
+    });
+    
+    canvas.on('mouse:up', function(options) {
+         xxxx = canvas.item(0).left - 50;
+        yyyy = canvas.item(0).top - 75;
+        yg = canvas.item(0).angle;
+       console.log('yg ', yg);  
+     freim(xxxx, yyyy, yg, pict, bll);
+    });
+    
+    
+    
+  }  //if (parts[1] == 'animation')
+
+}  //if (e.target.tagName == 'IMG')
+}   //onclick
+
+
+//drawImage('sprite.png', 100, 10, 500, 150, 0, 0, 50, 50); 
+
+//drawImage(image, sx, sy, sWidth, sHeight, dx, dy, dWidth, dHeight)
+    
+ 
+   
+</script>
+<script>
+function freim(xxxx, yyyy, yg, pict, bll) {
+
+class Sprite {
+    constructor(options) {
+        this.ctx = options.ctx;
+
+        this.image = options.image;
+
+        this.frameIndex = 0;
+        this.tickCount = 0;
+        this.ticksPerFrame = options.ticksPerFrame || 0;
+        this.numberOfFrames = options.numberOfFrames || 1;
+
+        this.width = options.width;
+        this.height = options.height;
+
+        this.start();
+    }
+
+    update() {
+        this.tickCount++;
+
+        if (this.tickCount > this.ticksPerFrame) {
+            this.tickCount = 0;
+            if (this.frameIndex < this.numberOfFrames - 1) {
+                this.frameIndex++;
+            } else {
+                this.frameIndex = 0;
+            }
+        }
+    }
+
+    render() {
+      this.ctx.clearRect(0, 0, this.width / this.numberOfFrames, this.height);
+        this.ctx.drawImage(
+            this.image,
+            this.frameIndex * this.width / this.numberOfFrames,
+            0,
+            this.width / this.numberOfFrames,
+            this.height,
+            0,
+            0,
+            this.width / this.numberOfFrames,
+            this.height
+        )
+    }
+
+    start() {
+        let loop = () => {
+            this.update();
+            this.render();
+
+            window.requestAnimationFrame(loop);
+        }
+
+        window.requestAnimationFrame(loop);
+    }
+}
+
+let canvas2 = document.getElementById('canvas');
+canvas2.style.display = bll;
+canvas2.width = 101;
+canvas2.height = 150;
+
+canvas2.style.left = xxxx + 'px';
+canvas2.style.top = yyyy + 'px';
+canvas2.style.transform = 'rotate(' + yg + 'deg)';
+
+
+
+
+//canvas2.style.backgroundColor = "#fff";
+
+let coinImage = new Image();
+coinImage.src = pict;
+
+let sprite = new Sprite({
+  ctx: canvas2.getContext('2d'),
+  image: coinImage,
+  width: 1010,
+  height: 150,
+  numberOfFrames: 10,
+  ticksPerFrame: 4,
+})
+
+}
+freim(xxxx, yyyy, yg, pict, 'none');
+ </script> 
+
+
+</body>
+</html>
+
+        

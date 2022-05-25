@@ -1,0 +1,1 @@
+#OptBox { padding:0; margin: 0 auto; list-style:none; } #OptBox img { display:block; margin: 0 auto; } #OptBox li { display:inline-block; cursor:pointer; border: 2px solid #FFF; } #OptBox li:hover { background-color: #CCC; border: 2px solid #CCC; } #OptBox li.select { background-color: #FFF; border: 2px solid #36F; box-shadow: 2px 2px 4px #666666; } 

@@ -1,0 +1,22 @@
+.colorPicker-box { position: absolute; top: 0; left: 0; height: auto; width: 235px; z-index: 1000; background: #E8E8E8; display: none; border: 1px solid #999; box-shadow: 3px 3px 5px #333 }
+.colorPicker-last { position: absolute; top: 2px; right: 2px; height: 15px; width: 15px; border-radius: 9px; cursor: pointer }
+.colorPicker-palette { margin: 5px; background: #FFF; padding: 3px; border: 1px solid #999; }
+.colorPicker-pick { position: relative; float: left; cursor: pointer; border-width: 1px; border-style: solid; border-color: transparent; margin: 1px; width: 14px; height: 14px }
+.colorPicker-pick span { display: block; height: auto; width: auto; position: absolute; top: 0; left: 0; right: 0; bottom: 0; border: 1px solid #FFF; display: none; }
+.colorPicker-hover { border: 1px solid #F60 !important }
+.colorPicker-hover span,
+.colorPicker-select span { display: block }
+.colorPicker-select { border: red 1px solid !important }
+.colorPicker-preview { height: 30px; margin: 5px; border: 1px solid #999 }
+.colorPicker-preview { height: 30px; margin: 5px; border: 1px solid #999 }
+.pcolorClose { text-align: center; color: #F00; height: 25px; line-height: 25px; }
+.pcolorSelector { border: none; margin: 0; padding: 0; text-indent: 100px; height: 24px !important; width: 40px !important; cursor: pointer; background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAwCAYAAABjezibAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAALEgAACxIB0t1+/AAAABZ0RVh0Q3JlYXRpb24gVGltZQAxMC8wNi8xNZ5tfewAAAAcdEVYdFNvZnR3YXJlAEFkb2JlIEZpcmV3b3JrcyBDUzbovLKMAAABcElEQVRYhe2XUWqEMBCG/5QFXzxA7+EVPExZlqVH6VV8CUHmCt6gsLCw0BOYB5vJPti0FRXZpEYL+SEvmZnwZRLHjCAiC8BinxIgIra9eIVhich3bUtEfPgitQCeVsiAOxnhu8Bh2SVc1vrfoCiAzOwdGwXQGOMdmzIIJMBw/SvAsixn/YhoNLdGcR6Jmb9HXdeTPnVdD/zcpqIDMjOUUgO7UmrksykgM0NKCQCQUk7aHWCUO9h13eR8VVWzNqcogFpr79gECABt23rHpscCAOR57hWntY4DmGWZd2yUOhgil0EBwP+PvqJEhLZTBKwvYhxx2OZTX9xr332xCfj8EiCQAMO1e8CArjMO4OfeAX9n8Plt3u/jdTwX5TVj+GfcztM+t/PQz93b6ICGgetpaL+exj6bAhoGLsfedjlO2x3gpmXm/WW5BHllsGmah55QcxlaGoBnBouieOh1svtCnQBDlQBD9ReAq/bFIYC774vv1hJg4cRrK80AAAAASUVORK5CYII="); background-repeat: no-repeat !important; background-position: left top !important; background-color: transparent; }
+.pcolorSelector:hover { background-position: left bottom !important; }
+ @media screen and (max-width: 400px) {
+.colorPicker-box { height: auto; width: 98%; text-align: center; }
+.colorPicker-pick { float: none; display: inline-block; margin: 3px; width: 28px; height: 28px; border-radius: 18px; box-shadow: 1px 1px 3px #000000; }
+}
+ @media screen and (max-height: 400px) {
+.colorPicker-box { height: auto; width: 98%; text-align: center; }
+.colorPicker-pick { float: none; display: inline-block; margin: 3px; width: 28px; height: 28px; border-radius: 18px; box-shadow: 1px 1px 3px #000000; }
+}

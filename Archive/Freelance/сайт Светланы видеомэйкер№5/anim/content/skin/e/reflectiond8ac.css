@@ -1,0 +1,210 @@
+@charset "utf-8";
+
+.wraplabel label {
+	border: 1px solid #999;
+	border-radius: 4px;
+	padding: 9px 5px;
+	margin-right: 5px;
+}
+
+.wraplabel label:hover { background: #EAEAEA; }
+.wraplabel label.checked {
+	border: 1px solid #39F;
+	background:#379BFF;
+	color: #FFF;
+	
+	}
+#areaopt { position: relative; }
+
+#uplwrap {
+	text-align: center;
+	display: none;
+	border: 1px solid #0080C0;
+	border-radius: 4px;
+	margin: 18px 0px;
+}
+
+#loder {
+	position:relative;
+	border: 1px solid #0080C0;
+	border-radius: 4px;
+	padding: 0 16px 0 70px;
+	background: #18A3ED url(circle-w.svg) 12px center no-repeat;
+	background-size: 46px 46px;
+	color: #FFF;
+	margin: 18px 0px;
+	display: none;
+}
+#progres {
+	position:absolute;
+	top: 50%;
+	margin-top: -8px;
+	left:24px;
+	height:16px;
+	width:22px;
+	z-index:auto;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+	
+	}
+
+#areaopt_modal {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	bottom: 0px;
+	height: auto;
+	width: auto;
+	z-index: auto;
+	display: none;
+	cursor: progress;
+}
+
+#wrapcanvas {
+	display: none;
+	border: 1px solid #999;
+	border-radius: 4px;
+	margin: 18px 0px;
+}
+
+
+
+
+.wrapcanvas { text-align: center; }
+
+.wrapcanvas canvas { max-width: 99%; }
+
+.bigbtn {
+	padding: 12px 22px;
+	text-decoration: none;
+	color: #FFF;
+	background: #2c8bbe;
+	border-radius: 4px;
+}
+
+#a_pinterest {
+	display: inline-block;
+	height: 32px;
+	width: 32px;
+	text-decoration: none;
+	background: url(share.png) 0px 0px no-repeat;
+}
+
+#a_facebook {
+	display: inline-block;
+	height: 32px;
+	width: 32px;
+	text-decoration: none;
+	background: url(share.png) 0px -32px no-repeat;
+}
+
+#backpage { display: none; }
+
+#linkresulrimg {
+	display: block;
+	position: relative;
+	margin: 0 auto;
+	height: 50px;
+	line-height: 50px;
+	width: 250px;
+	background: #2c8bbe;
+	border-radius: 4px;
+	text-decoration: none;
+	color: #FFF;
+}
+
+#linkresulrimg:hover { box-shadow: 0 0 5px #666666; }
+
+#resulrimg { max-height: 400px; }
+
+#wrapfileimage {
+	display: inline-block;
+	border: 1px solid #CCC;
+	padding: 0;
+}
+
+#wrapfileimage canvas {
+	display: block;
+	margin: 0 auto;
+	padding: 0;
+}
+
+.fileField {
+	text-align: center;
+	border: 1px solid #666;
+	background: #E9E9E9;
+	border-radius: 4px;
+}
+
+.radio {
+	border: 1px solid #CCC;
+	border-radius: 4px;
+	padding: 12px;
+	background: #FFF;
+}
+
+.file {
+	display: block;
+	position: relative;
+	margin: 0 auto;
+	height: 50px;
+	line-height: 50px;
+	width: 250px;
+	background: #28a745 url(folder29x24.png) 12px center no-repeat;
+	border-radius: 4px;
+}
+
+.file:hover { box-shadow: 0 0 5px #666666; }
+
+.fileField span {
+	color: #FFF;
+	padding-left: 40px;
+}
+
+.file input[type="file"] {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	height: auto;
+	width: auto;
+	z-index: auto;
+	cursor: pointer;
+	opacity: 0;
+}
+
+.buttons {
+	font-family: inherit;
+	font-size: inherit;
+	border-radius: 4px;
+	height: 50px;
+	width: 250px;
+	border: none;
+	color: #FFF;
+	background: #7d2ae8;
+}
+
+.buttons:hover { box-shadow: 0 0 5px #666666; }
+
+
+ @media screen and (max-width: 700px) {
+.wraplabel label { 
+display: block;
+text-align:left;
+margin: 2px auto;
+max-width: 250px;
+margin-bottom:4px; 
+}
+}
+
+ @media screen and (max-width: 400px) {
+.radio {
+	display:block;
+	width: 200px;
+	margin: 0 auto 9px auto;
+	text-align:left;
+}
+
+}
