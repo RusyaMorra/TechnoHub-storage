@@ -1,0 +1,61 @@
+{
+    "packages": [
+        {
+            "name": "krugozor/database",
+            "version": "V2.0",
+            "version_normalized": "2.0.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Vasiliy-Makogon/Database.git",
+                "reference": "836b7ff80604f748910f00d92a35a3ccaab77b0a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Vasiliy-Makogon/Database/zipball/836b7ff80604f748910f00d92a35a3ccaab77b0a",
+                "reference": "836b7ff80604f748910f00d92a35a3ccaab77b0a",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "time": "2021-06-09T21:33:52+00:00",
+            "type": "library",
+            "installation-source": "dist",
+            "autoload": {
+                "psr-4": {
+                    "Krugozor\\Database\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "Vasiliy Makogon",
+                    "email": "makogon-vs@yandex.ru"
+                }
+            ],
+            "description": "Database — библиотека PHP классов для простой, удобной, быстрой и безопасной работы с базой данных MySql, использующая расширение PHP mysqli и имитацию подготовленных запросов. Database — is a PHP class library for easy, convenient, fast and safe work with the MySql database, using the PHP mysqli extension and simulating prepared statements.",
+            "homepage": "https://github.com/Vasiliy-Makogon/Database",
+            "keywords": [
+                "database",
+                "mysql",
+                "mysql class",
+                "mysql database class",
+                "mysql database php class",
+                "mysqli",
+                "placeholder",
+                "placeholders",
+                "prepare statement"
+            ],
+            "support": {
+                "issues": "https://github.com/Vasiliy-Makogon/Database/issues",
+                "source": "https://github.com/Vasiliy-Makogon/Database/tree/V2.0"
+            },
+            "install-path": "../krugozor/database"
+        }
+    ],
+    "dev": true,
+    "dev-package-names": []
+}
