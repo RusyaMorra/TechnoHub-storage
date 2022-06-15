@@ -284,6 +284,8 @@ _________________
                         -Paper.js то фреймворк сценариев векторной графики с открытым исходным кодом
                         -Библиотека BitmapDataChannels: HTML5 Canvas API реализация класса AS3 BitmapData.
                         -StreamSaver.js на его основе сделали fileSever.js
+                        -whammy.js для декодирования видео в mp4
+                        -APImediarecorder для захвата медиа
 	        }
 
 
