@@ -1,8 +1,6 @@
 <?php
 
 
-
-
 function addPost($connect, $dataText, $dataFiles){
     //тект
     $text = $dataText['text'];
@@ -20,63 +18,146 @@ function addPost($connect, $dataText, $dataFiles){
         $resFilearray[] =  $_FILES['fileToUpload']['name'][$i];
         $resFilearray[] =  $_FILES['fileToUpload']['size'][$i];
         $resFilearray[] =  $_FILES['fileToUpload']['tmp_name'][$i];
-     
+        $resFilearray[] =  $_FILES['fileToUpload']['type'][$i];
     }
 
+
+    $arr_3 = [];
    
+    for( $i = 0; $i < count($resFilearray); $i=$i+4){
+             
+               $tmp_arr = [];
+               $tmp_arr[] = $resFilearray[$i];
+             
+             
+                if(isset($resFilearray[$i+1])){
+                   $tmp_arr[] = $resFilearray[$i+1];
+               }
+             
+               if(isset($resFilearray[$i+2])){
+                   $tmp_arr[] = $resFilearray[$i+2];
+                }
+             
+               if(isset($resFilearray[$i+3])){
+                   $tmp_arr[] = $resFilearray[$i+3];
+                }
+             
+               $arr_3[] = $tmp_arr;
+   }
+
+
+  
      
-    http_response_code(201);
+    if (!empty($text) && !empty($filemusic) && !empty($arr_3) ){
+        $filemusicF = time() . $filemusic['name'];
+        $arrayOfpicsNames = [];
 
+        for ($i = 0; $i < count($arr_3); $i++) {
+            $arrayOfpicsNames[] = time() . $arr_3[$i][0];
+            
+        }
+        $strOfpicsForDb = implode('/', $arrayOfpicsNames);
 
-    $res = [
-        "status"=>true,
-        "dataText"=> $text,
-        "pic"=> $resFilearray ,
-        "music"=> $filemusic,
-    ];
-
-    echo json_encode($res);
-
-  /*
-
-    if (!empty($text) && !empty($filemusic) && !empty($resFilearray) ){
-        $filemusic = time() . $filemusic['name'];
-        $fileimg = time() .  $resFilearray[0]['name'];
         
-        insert_post($footageID, $IDwp, $text, $filemusic, $fileimg);
+        
+        insert_post($footageID, $IDwp, $text, $filemusicF, $strOfpicsForDb); 
         buildFolder();
 
-        $path = __DIR__ .'/ffmpeg/data/users/ID'. get_last_id()['id'] . '/img//'. time().  $_FILES['fileimg']['name'];
-        $pathmusic = __DIR__ .'/ffmpeg/data/users/ID'. get_last_id()['id'] . '/music//'. time().  $_FILES['filemusic']['name'];
 
-        if( !$_FILES['fileimg']['size'] < 3*1024*1024 && !$_FILES['filemusic']['size'] < 3*1024*1024  ){
-            $filesimg = glob(__DIR__ .'/ffmpeg/data/users/ID'. get_last_id()['id'] . '/img//' . '*.*'); 
-            $filesmusic = glob(__DIR__ .'/ffmpeg/data/users/ID'. get_last_id()['id'] . '/music//' . '*.*'); 
-        
+
+   
+
+       
+        for ($i = 0; $i < count($arrayOfpicsNames); $i++) {
+
+            $path = __DIR__ .'/ffmpeg/data/users/ID'. get_last_id()['id'] . '/img//' ;
+           
+            if( $arr_3[$i][1] < 3*1024*1024 ){
+                $isfilesimg = glob(__DIR__ .'/ffmpeg/data/users/ID'. get_last_id()['id'] . '/img//' . '*.*'); 
+               
             
-            if(empty($filesimg)){
-                move_uploaded_file( $_FILES['fileimg']['tmp_name'], $path);
+                
+                if(empty($isfilesimg)){
+                    move_uploaded_file($arr_3[$i][2], $path . $arrayOfpicsNames[$i]);
+                    $resIsCreatedPic = [
+                        "type" => 'picture',
+                        "status"=>true,
+                        "isCreated"=> true,
+                        "massage" =>'Успешно загруженно'
+                    ];
+
+                    $res['imgCreated'] =  $resIsCreatedPic;
+                    
+                // header('location: ../userprofile.php');
+                }else{
+                    $resNotCreatedPic = [
+                    "type" => 'picture',
+                    "status"=>false,
+                    "isCreated"=> false,
+                    "massage" =>'уже загруженно'
+                    ];
+
+                    $res['picNotCreated'] = $resNotCreatedPic;
+                
+                }
+            }
+        } //цикл  
+
+
+
+
+
+
+
+        if($filemusic['size'] < 3*1024*1024*3 ){
+            $pathmusic = __DIR__ .'/ffmpeg/data/users/ID'. get_last_id()['id'] . '/music//'.  $filemusicF;
+            $isfilesmusic = glob(__DIR__ .'/ffmpeg/data/users/ID'. get_last_id()['id'] . '/music//' . '*.*'); 
+
+            if(empty($isfilesmusic)){
+                move_uploaded_file( $filemusic['tmp_name'], $pathmusic);
+                $resIsCreatedMusic = [
+                    "type" => 'music',
+                    "status"=>true,
+                    "isCreated"=> true,
+                    "massage" =>'Успешно загруженно'
+                ];
+                    
+                $res['musicCreated'] = $resIsCreatedMusic;
+                
             // header('location: ../userprofile.php');
             }else{
+                    
+                $resNotCreatedMusic = [
+                    "type" => 'music',
+                    "status"=>false,
+                    "isCreated"=> false,
+                    "massage" =>'уже загруженно'
+                ];
+                $res['musicNotCreated'] =  $resNotCreatedMusic;
                 
-            echo 'уже загруженно';
-        
             }
 
-            if(empty($filesmusic)){
-                move_uploaded_file( $_FILES['filemusic']['tmp_name'], $pathmusic);
-                echo 'ура';
-            // header('location: ../userprofile.php');
-            }else{
-                
-                echo 'уже загруженно аудиофайл';
-        
-            }
+        }//условие
 
-        }
+        
 
     
-    }*/
+    }
+
+    
+   http_response_code(201);
+
+   $res = [
+    "status"=>true,
+    "dataText"=> $text,
+    "pic"=> $arr_3,
+    "music"=> $filemusic,
+    
+    ];
+
+   echo json_encode($res);
+
+  
 }
 
 
@@ -90,27 +171,8 @@ function addPost($connect, $dataText, $dataFiles){
 
    
     
-$arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
    
-    $arr_3 = [];
-   
- for( $i = 0; $i < $arr.length; $i=$i+3){
-          
-            $tmp_arr = [];
-            $tmp_arr.push($arr[$i]);
-          
-          
-             if(typeof $arr[$i+1] != 'undefined'){
-                $tmp_arr.push($arr[$i+1]);
-            }
-          
-            if(typeof $arr[$i+2] != 'undefined'){
-                $tmp_arr.push($arr[$i+2]);
-             }
-          
-            $arr_3.push($tmp_arr);
-        }
-      
+  
     
 
     
