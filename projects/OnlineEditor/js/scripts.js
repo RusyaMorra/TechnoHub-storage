@@ -1,17 +1,9 @@
-//input files img and music
+	//input files img and music
 
-
-
-let inputs = document.querySelectorAll('.input__file');
-Array.prototype.forEach.call(inputs, function (input) {
-
-    
-   
-
-
-
+	let inputs = document.querySelectorAll('.input__file');
+	Array.prototype.forEach.call(inputs, function () {
+	});
 	//console.dir( inputs);
-	
 	let resvalidate = document.querySelector('.result-massage'); //текст валидации
 	let label = inputs[0].nextElementSibling,//инпуты
 		labelVal = label.querySelector('.input__file-button-text').innerText;// текст на кнопке типо файла: 3
@@ -33,9 +25,12 @@ Array.prototype.forEach.call(inputs, function (input) {
 	btn2.style.backgroundColor = 'rgba(255, 140, 0, 0.5)';
 	btn3.style.backgroundColor = 'rgba(255, 140, 0, 0.5)';
 	resbtn.style.backgroundColor = 'rgba(161, 161, 161, 0.5)';
+    inputs[0].setAttribute('disabled', 'disabled');
+    inputs[1].setAttribute('disabled', 'disabled');
+    resbtn.setAttribute('disabled', 'disabled');
 
-
-    
+   //or grab it by tagname etc
+  
 
 	// my-script.js ищем внутренний номер элемента для того что бы подставлять под него футажи
 	setTimeout(() => {
@@ -156,7 +151,7 @@ Array.prototype.forEach.call(inputs, function (input) {
 					resvalidatetext.classList.remove('error');
 					resvalidatetext.classList.add('success');
 					btn1.style.backgroundColor = 'orange';
-					
+					inputs[0].removeAttribute('disabled', 'disabled');
 					inputs[0].addEventListener('change',imgvalid);
 					texterrors = 0
 					return texterrors;
@@ -219,6 +214,10 @@ Array.prototype.forEach.call(inputs, function (input) {
 								resvalidate.innerText = `Отлично, файлы загружены!`;
 								resvalidate.classList.remove('error');
 								resvalidate.classList.add('success');
+								
+							
+							    //отображение файлов
+
 									//console.log(this.files[i].type)
 								if (countFiles){
 									label.querySelector('.input__file-button-text').innerText = 'Выбрано файлов: ' + countFiles;
@@ -228,7 +227,23 @@ Array.prototype.forEach.call(inputs, function (input) {
 								errors = 0
 								btn2.style.backgroundColor = 'orange';
 								btn3.style.backgroundColor = 'orange';
+								inputs[1].removeAttribute('disabled', 'disabled');
+								btn3.href = "#openModal"
 								inputs[1].addEventListener('change', validmusic);
+								previewFile(this.files);
+									//отображение файлов
+									function previewFile(file) {
+									
+										for (let index = 0; index <= file.length; index++) {
+											let reader = new FileReader()
+											reader.readAsDataURL(file[index])
+											reader.onloadend = function() {
+											let img = document.createElement('img')
+											img.src = reader.result
+											document.getElementById('prew-list').appendChild(img)
+											}
+										}
+									} 
 								return errors;
 							}else{
 								this.files[0] = ''; 
@@ -321,6 +336,8 @@ Array.prototype.forEach.call(inputs, function (input) {
 		let countFiles = '';
 		if (this.files && this.files.length > 0 && this.files && this.files.length < 2  ){
 			countFiles = this.files.length;
+			btn3.href = "#"
+			btn3.style.backgroundColor = 'rgba(255, 140, 0, 0.5)';
 			var fileTypesaudio = [
 				'audio/mpeg',
 				
@@ -343,10 +360,23 @@ Array.prototype.forEach.call(inputs, function (input) {
 					}
 
 					errorsaudio = 0
+					resbtn.removeAttribute('disabled', 'disabled');
 					resbtn.style.backgroundColor = 'grey';
-					console.log(res);
-					console.log('текст' + ' ' + texterrors + ' ' + 'фото '+ ' ' + errors + ' ' + 'аудио' + ' ' + errorsaudio)
-					return errorsaudio;
+					
+					//console.log('текст' + ' ' + texterrors + ' ' + 'фото '+ ' ' + errors + ' ' + 'аудио' + ' ' + errorsaudio)
+					//console.log(inputs[0].files.length );
+					//console.log(inputs[1].files.length );
+					if(inputs[0].files.length >= 3 && inputs[1].files.length > 0 && texterrors === 0 && errors === 0 && errorsaudio === 0 ){
+						//console.log('отправленно на сервер');
+						//const Form = document.getElementById('formsend');
+						//Form.addEventListener('submit', fromProcessing)
+					}
+
+
+
+
+
+
 				}else{
 					this.files[0] = ''; 
 					resvalidateaudio.classList.remove('success');	
@@ -387,49 +417,13 @@ Array.prototype.forEach.call(inputs, function (input) {
 
 
 
-
-
-
-	//return object
-	// result = {
-	// 	'textErrors': texterrors,
-	// 	'photoErrors': errors,
-	// 	'audioErrors': errorsaudio,
-
-	// };
- 
-//	if(inputs[0].files.length > 3 && inputs[0].files.length > 0 && texterrors === 0 && errors === 0 && errorsaudio === 0  )
-		
-
-	//return result;
-	//console.log('текст' + ' ' + texterrors + ' ' + 'фото '+ ' ' + errors + ' ' + 'аудио' + ' ' + errorsaudio)
 	
-});
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
 
 //Edit slider for admin
-/*
+
 const stract = {
 	"footage": 1,
 	"wpID": 32,
@@ -440,19 +434,10 @@ const stract = {
 }
 
 
-const Form = document.getElementById('formsend');
-
-Form.addEventListener('submit', fromProcessing)
 
 function fromProcessing(event){
 	event.preventDefault(); 
-	
 	addPost();
-// if(errors === 0){
-	// 	addPost();
-	// }else{
-	// 	'ошибки валидации, не все поля заполнены'
-	// }
 }
 
 async function addPost(){
@@ -495,7 +480,7 @@ async function addPost(){
 	  
 }
 
-*/
+
 
 
 

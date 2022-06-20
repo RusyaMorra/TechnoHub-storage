@@ -123,6 +123,7 @@ body{
     position: absolute;
     
 }
+
 .photo-btn{
     width: 100%;
     height: 50px;
@@ -714,4 +715,31 @@ body{
    }
    
 .close2:hover { background: #00d9ff; }
+
+
+
+.previews-box{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+.handlers{
+    width: 100%;
+    height: 10px; 
+    
+}
+
+.prew-list{
+    width: 100%;
+    display: flex;
+    flex-direction:row;
+    flex-wrap: wrap;
+}
+.prew-list img{
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+    margin-bottom: 10px ;
+}
 
