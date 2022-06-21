@@ -111,24 +111,28 @@
 
        // ищем жлемент футажа 
 		dots.addEventListener('click', findInner );
-		
 		function findInner(){
+			
 			for (let index = 0; index < dots.children.length; index++) {
-
+	
 				if(dots.children[index].classList.contains("slick-active")){
+	
 					let res = 	dots.children[index].textContent;
+					let tempfootagenum = document.querySelector('.tempfootagenum');
+					tempfootagenum.innerText = res;
 					
-					return	res;  // результат который нужно будет добавить в  form data
+					 // результат который нужно будет добавить в  form data
 				}
 			
 				
 			}
+			
 		}
 		
 		
-		
-
 	}, 1000);	
+
+
 
  
 	// валидация текста
@@ -236,7 +240,7 @@
 									
 										for (let index = 0; index <= file.length; index++) {
 											let reader = new FileReader()
-											reader.readAsDataURL(file[index])
+											reader.readAsDataURL(file[index]);
 											reader.onloadend = function() {
 											let img = document.createElement('img')
 											img.src = reader.result
@@ -368,8 +372,8 @@
 					//console.log(inputs[1].files.length );
 					if(inputs[0].files.length >= 3 && inputs[1].files.length > 0 && texterrors === 0 && errors === 0 && errorsaudio === 0 ){
 						//console.log('отправленно на сервер');
-						//const Form = document.getElementById('formsend');
-						//Form.addEventListener('submit', fromProcessing)
+						const Form = document.getElementById('formsend');
+						Form.addEventListener('submit', fromProcessing)
 					}
 
 
@@ -444,10 +448,10 @@ async function addPost(){
 	
 	const text = document.getElementById('text').value,
 	      pictures =document.getElementById('input__file'),
-	  	  music = document.getElementById('input__file_music');
-	  	  
+	  	  music = document.getElementById('input__file_music'),
+	  	  footage = document.querySelector('.tempfootagenum').textContent;
 
-
+console.log(footage)
 		
 	let pectureFiles  =	pictures.files;	
     let musicFile  = music.files[0];		
@@ -461,6 +465,7 @@ async function addPost(){
 		}
 	}
 	formData.append('music',  musicFile);
+	formData.append('footagenum',  footage);
 
 	const res = await fetch('http://plugin/api/v1/formdata',{
 	

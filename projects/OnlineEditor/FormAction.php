@@ -2,6 +2,7 @@
 
 
 function addPost($connect, $dataText, $dataFiles){
+    $footageNUM =  $dataText['footagenum'];
     //тект
     $text = $dataText['text'];
     //файл музыки mp3
@@ -9,7 +10,7 @@ function addPost($connect, $dataText, $dataFiles){
     //массив файлов
     $resFilearray = [];
     //id футажа
-    $footageID = 2 .'.mp4';
+    $footageID = $footageNUM .'.mp4';
     //id с wordpress
     $IDwp = 134;
     
@@ -156,7 +157,7 @@ function addPost($connect, $dataText, $dataFiles){
     "dataText"=> $text,
     "pic"=> $arr_3,
     "music"=> $filemusic,
-    
+    'footage' => $footageNUM
     ];
 
    echo json_encode($res);
