@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html,
+        body{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .video-wrapper{
+            width: 90%;
+            height: 90%;
+           background-color:green;
+            position: relative;
+        }
+        .img1{
+            position: absolute;
+            top: 75px;
+            left: 0%;
+            z-index: 0;
+        }
+        .video1{
+            position: absolute;
+            top: 95px;
+            left: 14%;
+            z-index: 0;
+            mix-blend-mode: screen;
+        }
+        .convas{
+            position: absolute;
+            top: 95px;
+            left: 14%;
+            z-index: 10;
+            mix-blend-mode: screen;
+        }
+
+    </style>
+</head>
+<body id="body1">
+   
+   <button id="btnSave">download</button>
+
+    <div class="video-wrapper">
+    <div class="img-wrapper">
+        
+       <!-- <img  id="photo" class="img1" src="canva.jpg" alt="" width="1280px" height="730px">-->
+    </div>
+    <!--<img  id="video"class="video1" src="../../../../slidershow/Media/footages/video2.gif" alt="" width="1280px" height="730px">-->
+    <video   autoplay class="video1" preload="auto" autobuffer="" width="0px" height="0px" muted="muted" loop="loop" id="video" playsinline="playsinline" webkit-playsinline="webkit-playsinline"><source   src="../../../slidershow/Media/footages/video2.mp4"></video>
+    <canvas  width="1280px" height="720px" class="convas" id="canvas"></canvas>
+    </div> 
+
+
+
+
+    
+   
+   <script src="../../../js/convas.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.0/FileSaver.min.js"></script>
+   
+</body>
+</html>

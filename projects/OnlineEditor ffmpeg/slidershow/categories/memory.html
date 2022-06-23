@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory</title>
+    <link rel="stylesheet" type="text/css" href="../../css/style.min.css"/>
+</head>
+<body>
+    <div class="container">
+        
+        <form action="" id="add-tamplate" class="add-tamplate">
+            <input type="text" class="img-cover">
+            <input type="file" accept=".jpg,.jpeg,.png">
+            <button type="submit">отправить</button>
+        </form>
+        <main class="panel" id="1" data-type-categoty="Memory">
+            <div class="tempfootagenum">1</div>
+            <div class="slider-area">
+                <p class="slider-text">Видео клипы из ваших фото! Сделай сам, всё просто и быстро! Выберите нужный видео шаблон</p>
+                <div class="slider-wrapper">
+                    <div class="slider">
+                        <div id="item"><iframe class="sl-iframe" width="1132" height="94.7%" src="https://www.youtube.com/embed/qQGYeFIWs4M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+                        <div id="item"><iframe class="sl-iframe" width="1132" height="94.7%" src="https://www.youtube.com/embed/CL1LH-BO5Q4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+                        <div id="item"><iframe class="sl-iframe" width="1132" height="94.7%" src="https://www.youtube.com/embed/qQGYeFIWs4M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+                        <div id="item"><iframe class="sl-iframe" width="1132" height="94.7%" src="https://www.youtube.com/embed/qQGYeFIWs4M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+                        <div id="item"><iframe class="sl-iframe" width="1132" height="94.7%" src="https://www.youtube.com/embed/qQGYeFIWs4M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+                        <div id="item"><iframe class="sl-iframe" width="1132" height="94.7%" src="https://www.youtube.com/embed/qQGYeFIWs4M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+                        <div id="item"><iframe class="sl-iframe" width="1132" height="94.7%" src="https://www.youtube.com/embed/qQGYeFIWs4M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+                        <div id="item"><iframe class="sl-iframe" width="1132" height="94.7%" src="https://www.youtube.com/embed/qQGYeFIWs4M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+                        <div id="item"><iframe class="sl-iframe" width="1132" height="94.7%" src="https://www.youtube.com/embed/qQGYeFIWs4M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+                        <div id="item"><iframe class="sl-iframe" width="1132" height="94.7%" src="https://www.youtube.com/embed/qQGYeFIWs4M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+                        <div id="item"><iframe class="sl-iframe" width="1132" height="94.7%" src="https://www.youtube.com/embed/qQGYeFIWs4M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="edit">
+                <a href="#openModal1"> <p class="slider-text">Инструкция <img src="../../img/helpinfo_104306.svg" class="help-img"   alt=""></p></a>
+                <div class="edit-wrapper">
+                    <form id="formsend" class="form-edit" method="POST" enctype="multipart/form-data">
+                        <div class="edit-inputs">
+                            <div class="input-wpapper">
+                                <input type="text" id="text" placeholder="Введите текст к видео">
+                                <p class="result-massage-text">добавьте ваш текст</p>
+                            </div>
+                            <div id="previews-box" class="previews-box">
+                                <div class="handlers"></div>
+                                <div id="prew-list" class="prew-list"></div>
+                               <!-- <progress id="progress-bar" max=100 value=0></progress>-->
+                            </div>
+                            <div class="files-block">
+                                <div class="upload-photo">
+                                    <input name="file" type="file"  id="input__file" class="input input__file"  multiple >
+                                    <label for="input__file" class="input__file-button"  >
+                                        <span class="input__file-icon-wrapper"><img src="../../img/icons8-компактная-камера-24.png" class="img-btn-camera" alt=""></span>
+                                        <span class="input__file-button-text">Выберите минимум 3 фото</span>
+                                     </label>
+                                    <p class="result-massage">Вы можете загрузить: Min - 3. Max - 30 фотографий</p>
+                                </div>
+                                <div class="upload-music">
+                                    <input name="filemp3"  type="file" type="file" id="input__file_music" class="input input__file" >
+                                    <label for="input__file_music" class="input__file-button cl-change"  >
+                                        <span class="input__file-icon-wrapper"><img src="../../img/music.png" class="img-btn-camera" alt=""></span>
+                                        <span class="input__file-button-text-audio">Вы можете добавить свою музыку</span>
+                                     </label>
+                                     <p class="result-massage-audio">Прикрепите mp3 файл</p>
+                                </div>
+                                <div class="upload-music-collection">
+                                    
+                                    <a href="#" class="music-btn-col"><img src="../../img/burger.png" class="img-btn-icons" alt=""> Вы можете выбрать музыку из коллекции </a>
+                                    <p class="result-massage-audio">выберайте</p>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="res-btn" type="submit" ><img src="../../img/icons8-приблизить-50.png" class="img-btn-icons" alt=""  >Посмотреть результат</button> 
+                    </form>
+                </div>
+            </div>
+        </main>
+    </div>
+
+   
+    
+
+
+    <div id="openModal" class="modalDialog">
+        <div>
+            <a href="#close" title="Close" class="close">X</a>
+            <h2>Выберите музыку из нашей коллекции!</h2>
+            <p>Вы можете создать слайд-шоу самым простым способом, выберайте музыку которая вам нравиться. Ничего лишнего, все просто :)</p>
+            <div class="audio-wrapper">  <audio controls src="../music/audio.mp3"></audio><input class="checkbox" type="checkbox"></div> 
+            <div class="audio-wrapper">  <audio controls src="../music/audio1.mp3"></audio><input class="checkbox" type="checkbox"></div> 
+            <div class="audio-wrapper">  <audio controls src="../music/audio2.mp3"></audio><input class="checkbox" type="checkbox"></div> 
+            <div class="audio-wrapper">  <audio controls src="../music/audio3.mp3"></audio><input class="checkbox" type="checkbox"></div> 
+            <div class="audio-wrapper">  <audio controls src="../music/audio4.mp3"></audio><input class="checkbox" type="checkbox"></div> 
+            <div class="audio-wrapper">  <audio controls src="../music/audio5.mp3"></audio><input class="checkbox" type="checkbox"></div> 
+            <div class="audio-wrapper">  <audio controls src="../music/audio5.mp3"></audio><input class="checkbox" type="checkbox"></div> 
+            <div class="audio-wrapper">  <audio controls src="../music/audio5.mp3"></audio><input class="checkbox" type="checkbox"></div> 
+            <div class="audio-wrapper">  <audio controls src="../music/audio5.mp3"></audio><input class="checkbox" type="checkbox"></div> 
+            <div class="audio-wrapper">  <audio controls src="../music/audio5.mp3"></audio><input class="checkbox" type="checkbox"></div> 
+        </div>
+    </div>
+
+
+    <div id="openModal1" class="modalDialog2">
+        <div >
+            <a href="#close" title="Close" class="close2">X</a>
+            <h2>Как сделать слайд шоу всего за пару секунд?</h2>
+            <p class="text-instruction">Сделать фото видео с днем рождения самостоятельно стало просто и очень быстро с помощью нашего профессионального онлайн-сервиса. Больше нет необходимости загружать сложные программы по видеомонтажу и фоторедакторов или оплачивать заказ своих видеороликов и видеоклипов, ожидая их многочасового выполнения и доплачивая приличную сумму за якобы скорость их исполнения. А главное, вы не имеете понятия, что же вам пришлют, так как полноценного и качественного предварительного просмотра никто не предлагает. У нас всё просто, быстро и понятно: вы сами являетесь автором своего фильма, редактируя, меняя местами и накладывая свои любимые музыкальные звуковые аудио треки на фотографии. :)</p>
+           
+        </div>
+    </div>
+    
+    
+    <script  src="../../js/jquery.min.js" defer></script>
+    <script  src="../../js/slick.min.js"  defer ></script>
+    <script  src="../../js/pluginConfig.js" defer ></script>
+    <script  src="../../js/scripts.js" defer ></script>
+</body>
+</html><!--  accept=".jpg, .jpeg, .png"-->
