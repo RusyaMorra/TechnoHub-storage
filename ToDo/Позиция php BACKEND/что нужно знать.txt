@@ -1,0 +1,75 @@
+php 
+laravel
+bootstrap
+jquery(js) 
+PHP
+алгоритмы
+wordpress, Joomla, Drupal, DLE , Bitrix,prestashop. 
+тесты
+
+Крутые программы которые будут полезны:
+
+-Postman
+-Zeal docs
+-packeges
+-Awesome php-проект где собраны крутые библиотеки для php{
+  -Twig - крутой шаблонизатор
+  -RedBeanPHP - мощная и простая ORM
+  -Stash - крутая система кеширования
+  -PHPMailer - библиотека для работы с почтой,
+  -Faker - генерация рандомных данных вроде имен и телефонов
+  -Imagine - работа с изображениями
+  -xDebug ну или XHProf - как уже понятно для эффективного дебаггинга
+  -SXGeo - для работы с геолокацией, например, чтобы узнать страну по айпи
+  -Monolog - наверное лучшая система логирования
+  -PHPSpreadsheet - для работы с офисными документами
+  -xCRUD - лучшая CRUD система которую я знаю
+  -Guzzle - для работы с HTTP
+  -phpQuery и PHP Simple HTML DOM Parser - конечно же для парсинга страниц
+  -Silex - крутой мини фреймворк
+  -Fuse - отличная либа для реализации "нечёткого" поиска
+  -MSGPack - как более эффективная альтернатива JSON
+  -ПО для кеширования байткода php скриптов, например:eAccelerator, XCache и т.д.
+   и другие...
+
+
+
+			Jquery плагины:
+
+			-slick.js,
+			-owljs,
+			-carousel,
+			-flickity,
+			-mansory pkgd,
+			-jQuerry UI sortable,
+			-Photo swipe,
+			-Magnific popup,
+			-cute slider,
+			-jQuerry Form Validation, 
+			-Select2, 
+			-jQuerry JSON editor, 
+			-Face detection, 
+			-progress.js,
+			-tooltipister,
+			-tupehead,
+			-fittext,
+			-prettymbed,
+			-fitvids,
+			-fullpage.js,
+			-velocity.JS,
+			-tree.js.
+			-MatchHeight,
+			-slideout.js,
+			-focuspoint,
+			-liquid images,
+			-vide,
+			-swipe,
+			-autocomplete.js,
+			-swiper,
+			-template7,
+			-jsbarcode,
+			-inputmask,
+			-remodal,
+			-gldatepicker,
+			-chart.js,
+			-easy tabs и так далее...

@@ -1,0 +1,12 @@
+
+1)сделать php парсер с импортом через ui на js(typescript) и jquery
+
+
+
+2)сайт на laravel c bootstrap
+
+
+3)не большие сайты на 7 cms и конструкторах
+
+
+4)Своя cms

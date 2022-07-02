@@ -1,6 +1,3 @@
-Алгоритмы
-Книги
-
 css
 html
 gulp
@@ -8,7 +5,7 @@ scss pug
 webpack
 js
 typescript
-react|vue|angular|svetle|bigbone|nuxt|jquery
+react         |vue|angular|svetle|bigbone|nuxt|jquery
 redux
 тесты 
 докер
@@ -17,12 +14,7 @@ ci/cd
 git
 разные API 
 convas
-паттерны gof grasp solid 
-ООП и теорию
-mvc mvp mmvp mpv итд
 различные библиотеки на jquery react итд:
-
-
 
 будет плюсом:
 node js
@@ -33,14 +25,11 @@ nest.js
 monguse
 uuid
 propvalidet
-dependency ingection(DI)
-инверсия управления(Ioc)
 restAPi
 soap
 grafQl apollo
 JSON
 xml
-регулярные фыражения
+регулярные выражения
 
-http/https/tcp/ip/websockets
-и погружение в compscience
+
