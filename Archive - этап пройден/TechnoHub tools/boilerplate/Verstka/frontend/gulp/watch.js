@@ -1,35 +1,35 @@
-let path = require('./path/path.js')
+const {watch}     = require('gulp');      //Добавляем Gulp src и Watch dest parallel
+//const browserSync = require('browser-sync').create();         //Добавляем автообнавление браузера
 
-module.exports = function () {
-	$.gulp.task('watch', () => {
-		// Without critical
-		$.gulp.watch(path.path.watch.json, { usePolling: true }, $.gulp.series('pug:build'))
-		$.gulp.watch(path.path.watch.pug, { usePolling: true }, $.gulp.series('pug:build'))
 
-		// If ftp
-		if ($.yargs.ftp) {
-			const ftp = 'ftp:build'
-			$.gulp.watch(path.path.watch.style, { usePolling: true }, $.gulp.series('style:build', ftp))
-			$.gulp.watch(path.path.src.js, { usePolling: true }, $.gulp.series('js:build', ftp))
-			$.gulp.watch([path.path.src.img, '!src/images/icons/**/*'], { usePolling: true }, $.gulp.parallel('img:build', ftp))
-			$.gulp.watch(path.path.src.imgComp, { usePolling: true }, $.gulp.parallel('img:build', ftp))
-			$.gulp.watch(path.path.src.pngIcons, $.gulp.series('spriteImg:build', ftp))
-			$.gulp.watch(path.path.src.svgIcons, $.gulp.series('spriteSvg:build', ftp))
-			$.gulp.watch(path.path.src.resources, $.gulp.series('resources:build', ftp))
-		} else {
-			$.gulp.watch(path.path.watch.style, { usePolling: true }, $.gulp.series('style:build'))
-			$.gulp.watch(path.path.src.js, { usePolling: true }, $.gulp.series('js:build'))
-			$.gulp.watch([path.path.src.img, '!src/images/icons/**/*'], { usePolling: true }, $.gulp.series('img:build'))
-			$.gulp.watch(path.path.src.imgComp, { usePolling: true }, $.gulp.series('img:build'))
-			$.gulp.watch(path.path.src.pngIcons, $.gulp.series('spriteImg:build'))
-			$.gulp.watch(path.path.src.svgIcons, $.gulp.series('spriteSvg:build'))
-			$.gulp.watch(path.path.src.resources, $.gulp.series('resources:build'))
-		}
-	})
+const task  =   require('./browserSync');        //task browserSync
+const browserSync = task.browserSync;           //task briwserSync
 
-	// Critical
-	// $.gulp.watch(path.path.watch.json, {usePolling: true}, $.gulp.series('pug:build', 'critical:build'));
-	// $.gulp.watch(path.path.watch.pug, {usePolling: true}, $.gulp.series('pug:build', 'critical:build'));
-	// eslint-disable-next-line max-len
-	// $.gulp.watch(path.path.watch.style, {usePolling: true}, $.gulp.series('style:build', 'pug:build', 'critical:build'));
+
+const path        = require('./path/path');
+const watchStyles = path.path.watch.style;
+const watchStylesComponetns = path.path.watch.styleComponents;
+const watchJS= path.path.watch.js;
+const pugJS= path.path.watch.pug;
+
+
+const task2       =   require('./pug');          //task pug
+const task5       =   require('./scripts');      //scripts
+const task6       =   require('./styles');       //styles
+
+const pugCompile  = task2.pugCompile;            //task pug
+const styles      = task6.styles;                //styles
+const scripts     = task5.scripts;               //scripts
+
+
+
+ //Слежение за изменениями
+module.exports = {
+    watching:function (){
+        watch([watchStyles], styles);                                          // слежение за всеми файлами scss
+        watch([watchStylesComponetns], styles);                                  // слежение за всеми файлами scss
+        watch([watchJS, '!app/js/script.min.js'], scripts);                 // слежение за всеми файлами js
+        watch([pugJS], pugCompile).on('change', browserSync.reload);            // отслеживание Html или pug
+    }
+
 }

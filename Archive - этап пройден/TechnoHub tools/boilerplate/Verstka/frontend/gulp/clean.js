@@ -1,8 +1,13 @@
-let path = require('./path/path.js')
-module.exports = function () {
-	$.gulp.task('clean', () => {
-		return $.del([
-			path.path.clean.all
-		])
-	})
+const del  =  require('del');    //Добавляем плагин чистки dist
+
+const path = require('./path/path');
+const serverPath = path.path.build.root;
+
+
+//Функция что бы чистить dist папку
+module.exports = {
+    cleanDist:function(){
+    return del(serverPath)
+
+    }
 }

@@ -1,16 +1,19 @@
-let path = require('./path/path.js')
-let fs = require('fs')
-module.exports = function () {
-	$.gulp.task('pug:build', () => {
-		return $.gulp.src(path.path.src.pug)
-			.pipe($.plugins.plumber())
-			.pipe($.plugins.data(() => { // Парсим JSON
-				return JSON.parse(fs.readFileSync('./src/base/data/data.json', 'utf8'))
-			}))
-			.pipe($.plugins.pug({
-				pretty: !$.yargs.minifyHtml
-			}))
-			.pipe($.gulp.dest(path.path.build.root))
-			.on('end', $.browserSync.reload)
-	})
+const {src, dest} = require('gulp');      //Добавляем Gulp src и Watch dest parallel
+const pug         = require('gulp-pug');       //pug
+
+const path = require('./path/path');
+const serverPath = path.path.src.pug;
+const output = path.path.src.root;
+
+//Функция копиляции pug
+module.exports = {
+    pugCompile: function (){
+        return src(serverPath)
+        .pipe(
+            pug({
+                pretty:true
+            })
+        )
+        .pipe(dest(output));
+    }
 }
