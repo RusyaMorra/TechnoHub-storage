@@ -1,0 +1,58 @@
+1)PHP 7 в подлиннике», Дмитрий Котеров;
+
+2)Совершенный код», С. Макконнелл;
+
+3)Рефакторинг», М. Фаулер;
+
+4)Паттерны проектирования», Э. Гамма, Р. Хелм, Р. Джонсон, Д. Влиссидес;
+
+5)Чистый код», Р. Мартин;
+
+6)Профессиональное программирование на PHP», Джордж Шлосснейгл.
+
+7)боб мартин»
+
+8)javaScript для детей +++
+
+9)Теоретический минимум по Computer Science.
+
+10)Крокаем алгоритмы
+
+
+Inside the Machine Jon Stokes 
+Introduction to computing systems 
+Code Petzold 
+Computer Science
+Computer Science An Overview 
+Grokking Algorithms  
+
+
+*Operation Systems
+
+The design of the unix operation system 
+
+Computer Construction Niklaus Wirth
+
+Crafting Interrepers Robert Nystrom 
+
+
+*Sotware development
+
+
+Object-Oriented Analysis and design with applications Third Edition 4:48
+Introduction to computer systems 5:24
+...
+*Python
+Learning Python Orelly 6:45
+Python Crash Course 6:58
+Python Cookbook Orelly 7:20
+*C
+
+
+Learn C the hard way  7:30
+The C programming language 7:55
+beginning c,Expert C programming 8:40-8:50
+
+
+
+
